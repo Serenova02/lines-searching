@@ -812,8 +812,9 @@ html.reduce-motion .edge-layer .new-edge {
   font-size: 1rem;
   line-height: 1.6;
   text-shadow: 0 0 2px rgba(39,30,20,0.18);
-  max-width: min(92vw, 920px);
-  padding: 1.3rem 1.6rem;
+  width: 85vw;
+  max-width: 900px;
+  padding: 1.3rem 2rem;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.25s ease, transform 0.25s ease;
@@ -1839,8 +1840,9 @@ body.theme-work .toast {
   font-size: 1rem;
   line-height: 1.6;
   text-shadow: 0 0 2px rgba(39,30,20,0.18);
-  max-width: min(92vw, 920px);
-  padding: 1.3rem 1.6rem;
+  width: 85vw;
+  max-width: 900px;
+  padding: 1.3rem 2rem;
 }
 
 body.theme-work .toast::before {
