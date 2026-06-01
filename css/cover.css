@@ -1,0 +1,393 @@
+/* 封面：使用背景图片 */
+
+.cover-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  overflow: hidden;
+  background-color: #000000;
+  background-image: url("background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Source Han Serif SC", "Noto Serif SC", "SimSun", "STSong", "Songti SC", "Microsoft YaHei", serif;
+}
+
+.cover-screen[hidden] {
+  display: none !important;
+}
+
+.cover-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 60%);
+  pointer-events: none;
+}
+
+.cover-ui {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(1.25rem, 4vh, 2.25rem) 1rem clamp(1.5rem, 5vh, 2.5rem);
+  box-sizing: border-box;
+}
+
+.cover-title-block {
+  text-align: center;
+  margin-top: clamp(0.5rem, 3vh, 1.5rem);
+}
+
+.cover-title {
+  margin: 0;
+  font-size: clamp(2.35rem, 8.5vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  line-height: 1.15;
+  color: #ffffff;
+  text-indent: 0.35em;
+  overflow:visible;
+}
+
+.cover-title-char {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+}
+
+.cover-title-blood {
+  color: #ffffff;
+  text-shadow:
+    0 0 1px rgba(255, 255, 255, 0.9),
+    0.06em 0.28em 0 rgba(56, 8, 8, 0.95),
+    0.1em 0.52em 0.12em rgba(110, 18, 24, 0.85),
+    -0.02em 0.15em 0 rgba(90, 12, 16, 0.9);
+}
+
+.cover-title-blood::after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  top: 58%;
+  bottom: -35%;
+  background: linear-gradient(180deg, rgba(110, 20, 26, 0.55) 0%, rgba(60, 6, 8, 0.75) 55%, transparent 100%);
+  border-radius: 0 0 40% 40%;
+  filter: blur(1px);
+  opacity: 0.85;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.cover-subtitle {
+  margin: 3rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.cover-subtitle-rule {
+  width: clamp(2rem, 12vw, 4.5rem);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+}
+
+.cover-subtitle-text {
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(0.72rem, 2.8vw, 0.88rem);
+  font-weight: 300;
+  letter-spacing: 0.28em;
+  color: rgba(255, 255, 255, 0.92);
+  white-space: nowrap;
+}
+
+.cover-nav {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: clamp(3rem, 10vh, 4rem);
+}
+
+.cover-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cover-menu li {
+  width: 100%;
+  max-width: 280px;
+}
+
+.cover-menu li + li {
+  margin-top: 0.15rem;
+}
+
+.cover-menu li + li::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin: 0 auto 0.55rem;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.12) 18%,
+    rgba(255, 255, 255, 0.88) 50%,
+    rgba(255, 255, 255, 0.12) 82%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.12);
+}
+
+.cover-menu-item {
+  display: block;
+  width: 100%;
+  padding: 0.62rem 0.5rem;
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-size: clamp(0.98rem, 3.2vw, 1.12rem);
+  font-weight: 500;
+  letter-spacing: 0.38em;
+  text-indent: 0.38em;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  line-height: 1.5;
+  transition: color 0.2s ease, letter-spacing 0.25s ease, text-shadow 0.2s ease;
+}
+
+.cover-menu-item:hover:not(:disabled) {
+  color: #ffffff;
+  letter-spacing: 0.48em;
+  text-indent: 0.48em;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.35);
+}
+
+.cover-menu-item:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.cover-menu-item:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 0.45);
+  outline-offset: 3px;
+}
+
+.cover-menu-item-exit {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.cover-menu-item-exit:hover:not(:disabled) {
+  color: #ffb4b4;
+  text-shadow: 0 0 14px rgba(180, 40, 40, 0.45);
+}
+
+.cover-help-card {
+  background: rgba(12, 12, 14, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e8e6e3;
+}
+
+.cover-help-card h3 {
+  color: #ffffff;
+}
+
+.cover-help-body strong {
+  color: #ffffff;
+}
+
+.cover-setting-row {
+  color: var(--text);
+}
+
+.modal.modal-front {
+  z-index: 5500;
+}
+
+.chapter-select-card {
+  width: min(760px, 100%);
+  border-radius: 6px;
+  background:
+    linear-gradient(180deg, rgba(26, 26, 28, 0.98), rgba(14, 14, 16, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f2f2f1;
+  position: relative;
+  padding: 1.2rem 1.2rem 1rem;
+}
+
+.chapter-select-card .modal-hint {
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.62);
+  text-align: center;
+  font-size: 0.86rem;
+  letter-spacing: 0.04em;
+}
+
+.chapter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.25rem;
+  padding-right: 16px;
+}
+
+
+.chapter-select-card::-webkit-scrollbar,
+.modal-card.chapter-select-card::-webkit-scrollbar {
+  width: 2px;
+}
+
+.chapter-select-card::-webkit-scrollbar-track,
+.modal-card.chapter-select-card::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chapter-select-card::-webkit-scrollbar-thumb,
+.modal-card.chapter-select-card::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background: linear-gradient(to bottom, transparent 0%, transparent 30%, #991B1B 40%, #991B1B 70%, transparent 80%, transparent 100%);
+}
+
+.chapter-list::-webkit-scrollbar,
+#chapter-list::-webkit-scrollbar {
+  width: 2px;
+}
+
+.chapter-list::-webkit-scrollbar-track,
+#chapter-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chapter-list::-webkit-scrollbar-thumb,
+#chapter-list::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background: linear-gradient(to bottom, transparent 0%, #991B1B 25%, #991B1B 75%, transparent 100%);
+}
+
+.chapter-group {
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+.chapter-group.is-collapsed .chapter-level-list {
+  display: none;
+}
+
+.chapter-group-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: left;
+}
+
+.chapter-group-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.chapter-group-arrow {
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.1rem;
+}
+
+.chapter-group:not(.is-collapsed) .chapter-group-toggle {
+  color: #ffffff;
+}
+
+.chapter-level-list {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0 0 1.1rem;
+}
+
+.chapter-level-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.82rem 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  background:
+    linear-gradient(180deg, rgba(44, 44, 46, 0.92), rgba(28, 28, 30, 0.96));
+  color: rgba(241, 241, 240, 0.9);
+  text-align: left;
+  cursor: pointer;
+}
+
+.chapter-level-item:hover:not(:disabled) {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(50, 50, 52, 0.98);
+}
+
+.chapter-level-item:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.chapter-level-item.preview {
+  opacity: 0.72;
+  border-style: dashed;
+}
+
+.chapter-level-name {
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.chapter-level-meta {
+  flex-shrink: 0;
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.38);
+  letter-spacing: 0.04em;
+}
+
+.chapter-end-note {
+  margin: 1rem 0 0.25rem;
+  text-align: center;
+  font-size: 0.92rem;
+  letter-spacing: 0.28em;
+  color: rgba(170, 18, 30, 0.92);
+}
+
+.chapter-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.85rem;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.chapter-close:hover {
+  color: #ffffff;
+}

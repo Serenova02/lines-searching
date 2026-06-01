@@ -1,0 +1,286 @@
+{
+  "id": "chapter2_part1",
+  "title": "第一节：密室",
+  "overview": {
+    "title": "背景概述",
+    "text": "你接到案件委托，钟表大亨林老爷死在自己绝对隔音的地下收藏室里，门从内反锁。报案的管家声称，他在晚上21点整听到收藏室传来花瓶碎裂的巨响……"
+  },
+  "startNodeIds": ["underground_collecting_room"],
+  "hints": [
+    "走遍每一个区域，认真阅读每条线索。",
+    "尝试关联两条线索，它们之间可能相互矛盾、彼此印证，或是存在因果关联。",
+    "尸表现象与恒温空调面板之间可能存在联系",
+    "管家的证词与死亡时间之间可能存在矛盾",
+    "展示空台与布谷鸟钟之间可能存在联系",
+    "缺失的摆锤、地上的碎瓷片与正上方的悬挂物之间可能存在联系",
+    "机械插销、门底缝隙与水渍/碎冰之间可能存在联系",
+    "所有结论都得出后，点击「密室诡计的真相」揭晓完整案情。"
+  ],
+  "truthAssembly": {
+    "truthNodeId": "truth_secret_room",
+    "appearWhenAllDiscovered": ["conclusion_fake_noise", "conclusion_time_delay_device", "conclusion_ice_lock_trick"],
+    "requiredIds": ["conclusion_fake_noise", "conclusion_time_delay_device", "conclusion_ice_lock_trick"],
+    "title": "拼合真相：密室",
+    "epilogue": "这根本不是什么密室，而是一场利用时间和物理常识精心编排的戏剧。\n\n凶手在傍晚18点左右潜入地下室，用毒镖杀死了林老爷，为了制造自己不在场的证明，他需要将死亡时间推迟到晚上21点。\n\n他将花瓶放在布谷鸟钟的正下方，利用右侧控制整点报时的机械结构做了一个联动。当指针指向晚上21点整时，几公斤重的纯铜摆锤失去拉力垂直坠落，将花瓶砸得粉碎。门外经过的管家听到的那声巨响，其实是布谷鸟钟延时机关发出的伪装。\n\n离开房间时，凶手带上门，通过宽大的门缝塞入一块冰柱，死死顶住门内的垂直插销。在26度的室温下，冰柱融化，插销随重力落下，最终形成了一个完美的冰块反锁密室……\n\n凶手费尽心机将时间修改为21点，那么真正的凶手，必然是那个急需「21点不在场证明」的人。\n\n【第一节：密室】已解开。"
+  },
+  "nodes": [
+    {
+      "id": "underground_collecting_room",
+      "title": "地下收藏室现场",
+      "type": "location",
+      "x": 1000,
+      "y": 1040,
+      "description": "门被撞开后，你走进了林老爷引以为傲的地下钟表收藏室，空气中弥漫着血腥味和名贵木材的香气。墙上挂满了各式各样的古董钟，滴答滴答的秒针声在死寂的房间里显得格外刺耳。",
+      "readUnlocks": ["oak_door", "center_of_room", "east_wall", "witness_testimony"]
+    },
+    {
+      "id": "oak_door",
+      "title": "厚重的橡木门",
+      "type": "location",
+      "x": 720,
+      "y": 880,
+      "description": "房间的唯一入口，刚刚被管家带人强行撞开。",
+      "readUnlocks": ["vertical_bolt", "door_gap", "ac_panel"]
+    },
+    {
+      "id": "vertical_bolt",
+      "title": "垂直机械插销",
+      "type": "item",
+      "x": 580,
+      "y": 760,
+      "description": "门内侧的一个垂直金属插销，刚才管家带人撞门时，强行把插销底座撞裂了才进来。没有任何电子结构，纯靠重力落下锁死。"
+    },
+    {
+      "id": "door_gap",
+      "title": "门底缝隙",
+      "type": "item",
+      "x": 680,
+      "y": 640,
+      "description": "由于地下室需要铺设特殊防潮地垫，门底距离地面有大约两厘米的宽大缝隙。",
+      "actions": [
+        {
+          "id": "look_ground",
+          "label": "贴地观察",
+          "unlockIds": ["water_and_ice"],
+          "toast": "你蹲下身，仔细观察门底的缝隙……"
+        }
+      ]
+    },
+    {
+      "id": "water_and_ice",
+      "title": "一滩水渍与碎冰",
+      "type": "item",
+      "x": 520,
+      "y": 520,
+      "description": "在插销正下方的地垫上，有一小滩尚未干透的水迹，里面居然还混杂着两颗极小的碎冰碴。"
+    },
+    {
+      "id": "ac_panel",
+      "title": "恒温空调面板",
+      "type": "item",
+      "x": 840,
+      "y": 720,
+      "description": "面板亮着绿灯，显示当前地下室温度恒定在26℃。"
+    },
+    {
+      "id": "center_of_room",
+      "title": "房间中央",
+      "type": "location",
+      "x": 1280,
+      "y": 880,
+      "description": "尸体和各种痕迹集中的区域。",
+      "readUnlocks": ["lin_laoye_corpse", "broken_porcelain", "spilled_tea_cup"]
+    },
+    {
+      "id": "spilled_tea_cup",
+      "title": "翻倒的红茶杯",
+      "type": "item",
+      "x": 1420,
+      "y": 720,
+      "description": "桌角翻倒的茶杯，茶水已经完全干涸在桌面上，没有检测到毒物反应。"
+    },
+    {
+      "id": "broken_porcelain",
+      "title": "地上的碎瓷片",
+      "type": "item",
+      "x": 1160,
+      "y": 720,
+      "description": "一地的青花瓷碎片，看粉碎程度，绝对是遭受了极其猛烈的重物垂直撞击，绝非简单的滑落跌碎。",
+      "readUnlocks": ["empty_display_stand"]
+    },
+    {
+      "id": "empty_display_stand",
+      "title": "高高的展示空台",
+      "type": "item",
+      "x": 1100,
+      "y": 560,
+      "description": "碎片正上方是一个两米高的红木展示台，原本应该放着那个青花瓷瓶。"
+    },
+    {
+      "id": "lin_laoye_corpse",
+      "title": "林老爷的尸体",
+      "type": "character",
+      "x": 1280,
+      "y": 640,
+      "description": "林老爷仰面倒在血泊中，死不瞑目。",
+      "readUnlocks": ["fatal_wound_dart", "corpse_phenomenon"]
+    },
+    {
+      "id": "fatal_wound_dart",
+      "title": "致命伤：毒镖",
+      "type": "item",
+      "x": 1180,
+      "y": 460,
+      "description": "胸口正中插着一支锋利的金属吹镖，伤口周围血液发黑，一击毙命。"
+    },
+    {
+      "id": "corpse_phenomenon",
+      "title": "尸表现象",
+      "type": "item",
+      "x": 1380,
+      "y": 460,
+      "description": "尸体四肢极度僵硬，背部（贴地的一面）已经出现了完全固定、按压不褪色的紫红色尸斑。"
+    },
+    {
+      "id": "east_wall",
+      "title": "东侧墙壁",
+      "type": "location",
+      "x": 1000,
+      "y": 760,
+      "description": "挂满钟表的东侧墙壁，可能藏着机关的线索。",
+      "readUnlocks": ["vent_pipe", "giant_cuckoo_clock"]
+    },
+    {
+      "id": "vent_pipe",
+      "title": "通风管道口",
+      "type": "item",
+      "x": 860,
+      "y": 560,
+      "description": "墙角的一个百叶排风口。",
+      "actions": [
+        {
+          "id": "open_vent",
+          "label": "拆开查看",
+          "unlockIds": [],
+          "toast": "你拆开通风口，发现里面积满了厚厚的灰尘，完全没有被破坏或爬行的痕迹，连一只猫都钻不过去。"
+        }
+      ]
+    },
+    {
+      "id": "giant_cuckoo_clock",
+      "title": "巨型布谷鸟钟",
+      "type": "item",
+      "x": 1000,
+      "y": 520,
+      "description": "挂在展示台正上方墙壁上的德制纯铜机械钟。秒针还在走动，显示现在是晚上09:45。",
+      "actions": [
+        {
+          "id": "open_clock_case",
+          "label": "打开钟摆箱",
+          "unlockIds": ["missing_right_pendulum"],
+          "toast": "你打开钟摆箱，仔细检查内部结构……"
+        }
+      ]
+    },
+    {
+      "id": "missing_right_pendulum",
+      "title": "缺失的右侧摆锤",
+      "type": "item",
+      "x": 1140,
+      "y": 400,
+      "description": "这种钟通常有两个重达几公斤的黄铜松果形摆锤提供动力，但现在右边控制整点报时的那个摆锤不见了，只剩下一截断裂的承重线。"
+    },
+    {
+      "id": "witness_testimony",
+      "title": "相关人员口供",
+      "type": "location",
+      "x": 1000,
+      "y": 920,
+      "description": "案件相关人员的证词记录。",
+      "readUnlocks": ["butler_testimony"]
+    },
+    {
+      "id": "butler_testimony",
+      "title": "管家的证词",
+      "type": "item",
+      "x": 1000,
+      "y": 640,
+      "description": "「晚上20点55分我来送夜宵，敲门老爷没理我（门锁着）。由于隔音太好，我贴在门上听，什么动静都没有。直到21点整，里面突然传来'砰'的一声极其恐怖的巨响！应该是花瓶碎了！我吓坏了，赶紧去找人撞门……」"
+    },
+    {
+      "id": "death_time_3hours_ago",
+      "title": "死亡时间：大概三小时前",
+      "type": "conclusion",
+      "x": 700,
+      "y": 320,
+      "description": "在26度的温暖环境下，尸斑完全固定且按压不褪色，需要极长的时间。法医学常识判定，死者绝对不可能刚刚死去。"
+    },
+    {
+      "id": "conclusion_fake_noise",
+      "title": "结论：被伪造的21点响声",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 200,
+      "description": "一个死去了三个小时的人，是如何在21点整砸碎花瓶的？这绝不是意外。"
+    },
+    {
+      "id": "hanging_object_above",
+      "title": "正上方的悬挂物",
+      "type": "conclusion",
+      "x": 860,
+      "y": 260,
+      "description": "高高的展示台正上方，挂着什么东西？"
+    },
+    {
+      "id": "conclusion_time_delay_device",
+      "title": "结论：布谷鸟钟延时机关",
+      "type": "conclusion",
+      "x": 700,
+      "y": 140,
+      "description": "右侧摆锤控制整点报时，凶手去掉了承重线，改用某种能在21点整自动断裂的装置悬挂沉重的摆锤。21点整机器一动，几公斤的纯铜摆锤垂直落下，精准砸碎了正下方的花瓶。"
+    },
+    {
+      "id": "conclusion_ice_lock_trick",
+      "title": "结论：冰块反锁诡计",
+      "type": "conclusion",
+      "x": 1300,
+      "y": 140,
+      "description": "凶手离开时门没锁，他在门外通过宽大的门缝，用一根细长冰块顶住了门内的垂直插销，使其无法落下。随着26℃的室温，冰块逐渐融化。当冰块不足以支撑插销重量时，插销在重力作用下自然掉落，「咔哒」一声，形成完美的内部反锁密室，地上的水渍就是证据。"
+    },
+    {
+      "id": "truth_secret_room",
+      "title": "密室诡计的真相",
+      "type": "truth",
+      "x": 1000,
+      "y": 80,
+      "description": ""
+    }
+  ],
+  "combinations": [
+    {
+      "ids": ["corpse_phenomenon", "ac_panel"],
+      "resultId": "death_time_3hours_ago",
+      "toast": "尸斑固定的时间推算……死亡时间应该在三个小时前。"
+    },
+    {
+      "ids": ["death_time_3hours_ago", "butler_testimony"],
+      "resultId": "conclusion_fake_noise",
+      "toast": "一个死去了三个小时的人，是如何在21点整砸碎花瓶的？这绝不是意外。"
+    },
+    {
+      "ids": ["empty_display_stand", "giant_cuckoo_clock"],
+      "resultId": "hanging_object_above",
+      "toast": "展示台正上方，挂着那个巨型布谷鸟钟……"
+    },
+    {
+      "ids": ["hanging_object_above", "missing_right_pendulum", "broken_porcelain"],
+      "resultId": "conclusion_time_delay_device",
+      "toast": "21点整，沉重的摆锤垂直落下，砸碎了花瓶。"
+    },
+    {
+      "ids": ["vertical_bolt", "door_gap", "water_and_ice"],
+      "resultId": "conclusion_ice_lock_trick",
+      "toast": "冰柱融化，插销落下，完美的密室形成了。"
+    }
+  ]
+}

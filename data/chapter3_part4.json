@@ -1,0 +1,420 @@
+{
+  "id": "chapter3_part4",
+  "title": "第四节：剧毒的协奏",
+  "overview": {
+    "title": "背景概述",
+    "text": "华丽的宴会厅里，在一场庆祝演出的私密晚宴上，剧院经理唐纳德先生在饮下最后一杯年份香槟后，突然痛苦地扼住喉咙，片刻后窒息身亡。令人费解的是，这瓶香槟是由侍者在众目睽睽下开瓶，并依次倒入四位宾客（市长、女歌手、男演员及唐纳德）的杯中。其余三人饮后安然无恙，经检测，酒瓶中残留的酒液也完全无毒。\n\n凶手是如何在不触碰酒杯、不进行物理换杯的情况下，让剧毒精准地只进入唐纳德一人的杯中？"
+  },
+  "startNodeIds": ["luxury_banquet_hall_scene"],
+  "hints": [
+    "走遍每一个区域，认真阅读每条线索。",
+    "尝试关联两条线索，它们之间可能相互矛盾、彼此印证，或是存在因果关联。",
+    "醒酒器凹槽与白银珠子之间可能存在联系",
+    "倾角测试与环状滑道结论之间可能存在联系",
+    "倒酒倾角手势与特定倾角释放机制结论之间可能存在联系",
+    "指尖/面部发绀与苦杏仁味粘液之间可能存在联系",
+    "高浓度盐水痕迹与饱和盐水冰块熔点之间可能存在联系",
+    "氰化物中毒与极低冰点盐载体结论之间可能存在联系",
+    "主厨配膳温度记录与冰桶底部温度之间可能存在联系",
+    "杯底银色金属珠与极限温差环境结论之间可能存在联系",
+    "死者舌尖灼伤与金属集热效应结论之间可能存在联系",
+    "所有结论都得出后，点击「剧毒协奏的真相」揭晓完整案情。"
+  ],
+  "truthAssembly": {
+    "truthNodeId": "truth_deadly_concerto",
+    "appearWhenAllDiscovered": ["conclusion_gravity_trap_groove", "conclusion_saltwater_ice_poison_pill", "conclusion_heat_conduction_melting"],
+    "requiredIds": ["conclusion_gravity_trap_groove", "conclusion_saltwater_ice_poison_pill", "conclusion_heat_conduction_melting"],
+    "title": "拼合真相：剧毒协奏",
+    "epilogue": "看似普通的醒酒器，在重力与热力学的精妙操纵下，沦为了定向投毒的工具。\n\n凶手将氰化钠与饱和盐水混合，包裹着一颗实心白银珠，冷冻制成了直径2厘米的特制冰球。由于饱和盐水冰点极低，为了防止其在灌装前融化，凶手利用主厨的习惯，将醒酒器置于零下18℃的急冻库中极限预冷，再把毒冰球投入其中，依靠低温维持冰球形态。\n\n侍者在倒前三杯香槟时，倾斜角度均小于60度。受重力影响，沉重的冰球卡在醒酒器底部凹槽内无法移动。直到为第四位的唐纳德倒酒时，因酒液将尽，侍者将瓶身折成了近80度，冰球顺势滑入杯中，发出微弱的「叮」的一声。\n\n接触到24℃的常温空气和温热的酒杯后，导热性优异的银珠从内部快速融解冰球，剧毒氰化钠瞬间溶于酒中，在死者舌尖留下了轻微的化学灼伤。一杯致命的毒酒就这样在众目睽睽下，精准而无声地完成了对目标猎物的绞杀……\n\n【第四节：剧毒的协奏】已解开。"
+  },
+  "nodes": [
+    {
+      "id": "luxury_banquet_hall_scene",
+      "title": "豪华宴会厅现场",
+      "type": "location",
+      "x": 1000,
+      "y": 1040,
+      "description": "华丽的宴会厅里吊灯倾泻着柔和的光芒，长条形餐桌上杯盘狼藉。在一场庆祝演出的私密晚宴上，剧院经理唐纳德先生在饮下最后一杯年份香槟后，突然痛苦地扼住喉咙，片刻后窒息身亡。",
+      "readUnlocks": ["donalds_wine_glass", "decanter_ice_bucket", "waiter_guests_behavior", "physics_chemistry_tests"]
+    },
+    {
+      "id": "donalds_wine_glass",
+      "title": "唐纳德的酒杯",
+      "type": "location",
+      "x": 680,
+      "y": 880,
+      "description": "受害者唐纳德使用的高脚酒杯，成为此案的核心物证。",
+      "readUnlocks": ["donalds_corpse", "fingertips_face_cyanosis", "bitter_almond_mucus", "high_salt_residue", "silver_metal_bead_bottom"]
+    },
+    {
+      "id": "donalds_corpse",
+      "title": "唐纳德的尸体",
+      "type": "character",
+      "x": 500,
+      "y": 720,
+      "description": "唐纳德仰面靠在椅背上，双手仍保持着扼住喉咙的姿态。"
+    },
+    {
+      "id": "fingertips_face_cyanosis",
+      "title": "指尖与面部发绀",
+      "type": "item",
+      "x": 600,
+      "y": 600,
+      "description": "死者面部及指甲呈现明显的紫绀色（缺氧特征），瞳孔散大。"
+    },
+    {
+      "id": "bitter_almond_mucus",
+      "title": "苦杏仁味粘液",
+      "type": "item",
+      "x": 760,
+      "y": 720,
+      "description": "从死者嘴角流出的粘液以及杯底残留液中，均能闻到一股明显的苦杏仁味（典型氰化物特征）。"
+    },
+    {
+      "id": "high_salt_residue",
+      "title": "高浓度盐水痕迹",
+      "type": "item",
+      "x": 680,
+      "y": 480,
+      "description": "化验显示，唐纳德杯底残留的液体中，氯化钠（盐分）浓度极高，接近饱和状态。"
+    },
+    {
+      "id": "silver_metal_bead_bottom",
+      "title": "杯底的银色金属珠",
+      "type": "item",
+      "x": 820,
+      "y": 600,
+      "description": "一颗直径约1.5厘米的实心白银圆珠，正静静躺在唐纳德的杯底。",
+      "actions": [
+        {
+          "id": "magnify_glass_wall",
+          "label": "用放大镜观察杯壁",
+          "unlockIds": ["faint_scratch_glass_wall"],
+          "toast": "你用放大镜仔细检查杯壁……"
+        }
+      ]
+    },
+    {
+      "id": "faint_scratch_glass_wall",
+      "title": "杯壁微弱划痕",
+      "type": "item",
+      "x": 740,
+      "y": 440,
+      "description": "高脚杯内侧底部有一道新鲜的、呈放射状的轻微硬物撞击划痕。"
+    },
+    {
+      "id": "decanter_ice_bucket",
+      "title": "醒酒器与冰桶",
+      "type": "location",
+      "x": 1320,
+      "y": 880,
+      "description": "用于盛放和冰镇香槟的关键容器。",
+      "readUnlocks": ["crystal_decanter", "deep_groove_bottom", "non_toxic_remaining_wine", "ice_bucket_water_temp", "kitchen_trash_empty_mold"]
+    },
+    {
+      "id": "crystal_decanter",
+      "title": "水晶醒酒器",
+      "type": "item",
+      "x": 1480,
+      "y": 720,
+      "description": "这是一种带有醒酒功能的水晶广口瓶，用于盛放香槟。"
+    },
+    {
+      "id": "deep_groove_bottom",
+      "title": "底部的深凹槽",
+      "type": "item",
+      "x": 1360,
+      "y": 600,
+      "description": "醒酒器底部中心向上深深凹陷（业内称为Punt结构），在凹陷周围形成了一圈环状的深沟。"
+    },
+    {
+      "id": "non_toxic_remaining_wine",
+      "title": "残留的无毒酒液",
+      "type": "item",
+      "x": 1220,
+      "y": 720,
+      "description": "醒酒器最底部还残留着约20毫升香槟，经化验，完全不含毒素。"
+    },
+    {
+      "id": "ice_bucket_water_temp",
+      "title": "冰桶底部的融水温度",
+      "type": "item",
+      "x": 1400,
+      "y": 480,
+      "description": "用于冰镇醒酒器的冰桶，底部的融水温度居然只有2℃，比正常冰镇温度低得多。"
+    },
+    {
+      "id": "kitchen_trash_empty_mold",
+      "title": "厨房垃圾桶空模具",
+      "type": "item",
+      "x": 1280,
+      "y": 480,
+      "description": "在后厨的垃圾桶里，发现了一个废弃的硅胶制球形冰格模具，直径刚好为2厘米。",
+      "actions": [
+        {
+          "id": "check_decanter_metal_parts",
+          "label": "检查醒酒器金属配件",
+          "unlockIds": ["decanter_filter"],
+          "toast": "你注意到醒酒器本应有的过滤网……"
+        }
+      ]
+    },
+    {
+      "id": "decanter_filter",
+      "title": "醒酒器过滤网",
+      "type": "item",
+      "x": 1340,
+      "y": 360,
+      "description": "这只高端醒酒器原本配有防止冰块倒出的金属过滤网，但今天下午该滤网被恶意拆除。"
+    },
+    {
+      "id": "waiter_guests_behavior",
+      "title": "侍者与宾客",
+      "type": "location",
+      "x": 660,
+      "y": 960,
+      "description": "侍者的倒酒行为与宾客的状态记录。",
+      "readUnlocks": ["waiter_pouring_order_testimony", "pouring_angle_gesture", "mayor_safe_glass", "female_singer_safe_glass", "chef_temperature_record"]
+    },
+    {
+      "id": "waiter_pouring_order_testimony",
+      "title": "侍者倒酒顺序口供",
+      "type": "item",
+      "x": 480,
+      "y": 820,
+      "description": "「开瓶后，我按照市长、女歌手、男演员、最后是唐纳德先生的顺序依次倒酒。」"
+    },
+    {
+      "id": "pouring_angle_gesture",
+      "title": "倒酒倾角手势",
+      "type": "item",
+      "x": 600,
+      "y": 700,
+      "description": "侍者表示，前三杯酒倒出时，瓶内酒液充足，瓶身只需微微倾斜约30到45度；而倒给唐纳德的第四杯是瓶底残酒，瓶身几乎折成了80度垂直角。"
+    },
+    {
+      "id": "mayor_safe_glass",
+      "title": "市长的安全酒杯",
+      "type": "item",
+      "x": 720,
+      "y": 820,
+      "description": "市长的酒杯已经空了，化验显示无任何毒物和盐分残留。"
+    },
+    {
+      "id": "female_singer_safe_glass",
+      "title": "女歌手的安全酒杯",
+      "type": "item",
+      "x": 560,
+      "y": 560,
+      "description": "女歌手的杯中还剩半杯香槟，同样安全无毒。"
+    },
+    {
+      "id": "chef_temperature_record",
+      "title": "主厨的配膳温度记录",
+      "type": "item",
+      "x": 720,
+      "y": 560,
+      "description": "主厨的日志写着：「为了保证极致口感，今晚盛装香槟的水晶醒酒器在灌装前，被放入了零下18℃的急冻库中进行了两小时的极限预冷。」",
+      "actions": [
+        {
+          "id": "ask_musician_details",
+          "label": "向乐师询问倒酒细节",
+          "unlockIds": ["metal_clink_when_pouring"],
+          "toast": "你找到当晚的乐师询问……"
+        }
+      ]
+    },
+    {
+      "id": "metal_clink_when_pouring",
+      "title": "倒酒时的金属碰撞声",
+      "type": "item",
+      "x": 640,
+      "y": 440,
+      "description": "乐师回忆，在侍者为唐纳德倒第四杯酒的瞬间，背景乐刚好有一个停顿，他隐约听到了一声细微的「叮」的金属撞击声。"
+    },
+    {
+      "id": "physics_chemistry_tests",
+      "title": "物理与化学测试",
+      "type": "location",
+      "x": 1340,
+      "y": 960,
+      "description": "通过物理和化学实验分析，揭示投毒的科学原理。",
+      "readUnlocks": ["sodium_cyanide_toxicity", "saltwater_ice_melting_point", "silver_bead_fit_test", "angle_sliding_test"]
+    },
+    {
+      "id": "sodium_cyanide_toxicity",
+      "title": "氰化钠毒性特征",
+      "type": "item",
+      "x": 1480,
+      "y": 800,
+      "description": "氰化钠（NaCN）极易溶于水，且在酸性或中性液体中释放极快，微量即可致死。"
+    },
+    {
+      "id": "saltwater_ice_melting_point",
+      "title": "饱和盐水冰块熔点",
+      "type": "item",
+      "x": 1340,
+      "y": 680,
+      "description": "普通纯水冰块在0℃融化；而高浓度饱和盐水制成的冰块，其冰点极低（最低可达零下21℃），在急冻库（-18℃）中可以保持坚硬，但一旦接触常温或2℃以上液体就会以数倍于普通冰的速度疯狂融化。"
+    },
+    {
+      "id": "silver_bead_fit_test",
+      "title": "白银珠子物理契合度",
+      "type": "item",
+      "x": 1220,
+      "y": 800,
+      "description": "物理测试显示，那颗银珠的直径加上一层0.25厘米厚的冰壳后，总直径正好为2厘米，与厨房发现的球形模具完美吻合。"
+    },
+    {
+      "id": "angle_sliding_test",
+      "title": "不同倾角滑动测试",
+      "type": "item",
+      "x": 1420,
+      "y": 560,
+      "description": "当醒酒器倾斜度小于60度时，圆球会受重力自然滚入底部的凹槽环沟内卡死，无法向上滚动；只有当倾斜度大于75度时，圆球才能越过中心凹槽的突起脊梁，顺着瓶颈滑出。",
+      "actions": [
+        {
+          "id": "check_mouth_cavity",
+          "label": "检查死者口腔",
+          "unlockIds": ["deceased_tongue_burn"],
+          "toast": "你仔细检查死者的口腔内部……"
+        }
+      ]
+    },
+    {
+      "id": "deceased_tongue_burn",
+      "title": "死者舌尖的灼伤",
+      "type": "item",
+      "x": 1260,
+      "y": 560,
+      "description": "死者舌尖有一处小范围的化学低温灼伤，并伴有强碱反应。"
+    },
+    {
+      "id": "intermediate_ring_slide_lock",
+      "title": "中间结论：环状滑道卡合状态",
+      "type": "conclusion",
+      "x": 700,
+      "y": 420,
+      "description": "银珠包冰后的尺寸，在醒酒器底部的环状沟槽中运动轨迹被死死限制。"
+    },
+    {
+      "id": "intermediate_angle_release_mechanism",
+      "title": "中间结论：特定倾角释放机制",
+      "type": "conclusion",
+      "x": 500,
+      "y": 280,
+      "description": "只有当醒酒器几乎垂直倒扣时，圆球才会脱离环沟槽向瓶口滑落。"
+    },
+    {
+      "id": "intermediate_fast_cyanide_poisoning",
+      "title": "中间结论：快速氰化物中毒",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 420,
+      "description": "唐纳德死于高浓度氰化钠急性中毒。"
+    },
+    {
+      "id": "intermediate_low_freezing_salt_ice",
+      "title": "中间结论：极低冰点盐冰载体",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 280,
+      "description": "毒素被包裹在饱和盐水制成的冰壳中，该冰壳在-18℃下极硬，但在常温下融化速度极快。"
+    },
+    {
+      "id": "intermediate_extreme_temp_diff",
+      "title": "中间结论：极限温差传热环境",
+      "type": "conclusion",
+      "x": 1300,
+      "y": 420,
+      "description": "醒酒器在极低的零下温度装酒，使毒冰球在倒出前能完美保持固态，不污染前半瓶酒。"
+    },
+    {
+      "id": "intermediate_metal_core_heat",
+      "title": "中间结论：金属核心集热效应",
+      "type": "conclusion",
+      "x": 1500,
+      "y": 280,
+      "description": "导热极快的白银珠子作为冰球核心，一旦进入常温酒杯，会迅速吸收热量并从冰球内部往外剧烈传导，使冰球在几秒钟内彻底融解。"
+    },
+    {
+      "id": "conclusion_gravity_trap_groove",
+      "title": "结论：重力卡位的凹槽陷阱",
+      "type": "conclusion",
+      "x": 500,
+      "y": 180,
+      "description": "在前三杯低角度倒酒时，毒珠因重力卡在底槽无法滑出；只有第四杯大幅度倾斜时，毒珠才会滑入杯中。"
+    },
+    {
+      "id": "conclusion_saltwater_ice_poison_pill",
+      "title": "结论：饱和盐水冰封毒丸",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 140,
+      "description": "凶手将氰化钠溶液与饱和盐水混合，冷冻制成包覆着银珠的特制高密度毒冰球。"
+    },
+    {
+      "id": "conclusion_heat_conduction_melting",
+      "title": "结论：热传导加速的温差熔毒",
+      "type": "conclusion",
+      "x": 1500,
+      "y": 180,
+      "description": "银珠加速了盐水冰球的瞬间融化，使氰化钠在受害者接触酒杯的第一时间完全溶于酒液，甚至造成了局部强碱灼伤。"
+    },
+    {
+      "id": "truth_deadly_concerto",
+      "title": "剧毒协奏的真相",
+      "type": "truth",
+      "x": 1000,
+      "y": 80,
+      "description": ""
+    }
+  ],
+  "combinations": [
+    {
+      "ids": ["deep_groove_bottom", "silver_bead_fit_test"],
+      "resultId": "intermediate_ring_slide_lock",
+      "toast": "银珠加冰壳后的尺寸，正好卡在醒酒器底部的环状沟槽中。"
+    },
+    {
+      "ids": ["intermediate_ring_slide_lock", "angle_sliding_test"],
+      "resultId": "intermediate_angle_release_mechanism",
+      "toast": "只有倾斜度超过75度，圆球才能越过凹槽脊梁滑出。"
+    },
+    {
+      "ids": ["intermediate_angle_release_mechanism", "pouring_angle_gesture"],
+      "resultId": "conclusion_gravity_trap_groove",
+      "toast": "前三杯30-45度倾角无法释放，第四杯80度垂直才触发重力陷阱。"
+    },
+    {
+      "ids": ["fingertips_face_cyanosis", "bitter_almond_mucus"],
+      "resultId": "intermediate_fast_cyanide_poisoning",
+      "toast": "紫绀与苦杏仁味——典型的氰化钠急性中毒特征。"
+    },
+    {
+      "ids": ["high_salt_residue", "saltwater_ice_melting_point"],
+      "resultId": "intermediate_low_freezing_salt_ice",
+      "toast": "高浓度盐水冰的冰点可达零下21℃，-18℃下保持坚硬，常温下极速融化。"
+    },
+    {
+      "ids": ["intermediate_low_freezing_salt_ice", "intermediate_fast_cyanide_poisoning"],
+      "resultId": "conclusion_saltwater_ice_poison_pill",
+      "toast": "氰化钠被冰封在饱和盐水制成的特制冰球中，低温保存，极速释放。"
+    },
+    {
+      "ids": ["chef_temperature_record", "ice_bucket_water_temp"],
+      "resultId": "intermediate_extreme_temp_diff",
+      "toast": "零下18℃极限预冷配合2℃融水，创造了毒冰球保持固态的完美环境。"
+    },
+    {
+      "ids": ["intermediate_extreme_temp_diff", "silver_metal_bead_bottom"],
+      "resultId": "intermediate_metal_core_heat",
+      "toast": "白银珠作为冰球核心，导热极快，常温下数秒内即可从内部融解冰球。"
+    },
+    {
+      "ids": ["intermediate_metal_core_heat", "deceased_tongue_burn"],
+      "resultId": "conclusion_heat_conduction_melting",
+      "toast": "银珠集热效应导致冰球瞬间爆炸式融化，氰化物极速释放，舌尖留下灼伤。"
+    }
+  ]
+}

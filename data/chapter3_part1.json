@@ -1,0 +1,288 @@
+{
+  "id": "chapter3_part1",
+  "title": "第一节：断裂的序曲",
+  "overview": {
+    "title": "背景概述",
+    "text": "沉重的大马士革金丝帷幕半开，金色歌剧院的舞台上一片死寂。本应在今晚担任独奏的首席小提琴手肖恩，此时正悬挂在离地五米高的3号舞台吊杆上。他的双手被琴弦死死反绑在身后，头颅低垂。舞台下方的乐池里，他那把价值连城的古董小提琴摔得粉碎……"
+  },
+  "startNodeIds": ["opera_stage_scene"],
+  "hints": [
+    "走遍每一个区域，认真阅读每条线索。",
+    "尝试关联两条线索，它们之间可能相互矛盾、彼此印证，或是存在因果关联。",
+    "后颈部钝器伤与颈部绞痕之间可能存在联系",
+    "乐池边缘划痕与摔碎的古董小提琴之间可能存在联系",
+    "手腕上的琴弦与琴箱坠入乐池的结论之间可能存在联系",
+    "死后悬吊与重物坠落自动束缚的结论之间可能存在联系",
+    "配重金属砂袋与控制台下焦黑石蜡之间可能存在联系",
+    "经理的证词与蜡烛烧绳延时的结论之间可能存在联系",
+    "打击轨迹与乐手的排练日志之间可能存在联系",
+    "所有结论都得出后，点击「断裂序曲的真相」揭晓完整案情。"
+  ],
+  "truthAssembly": {
+    "truthNodeId": "truth_broken_prelude",
+    "appearWhenAllDiscovered": ["conclusion_postmortem_hanging", "conclusion_candle_time_delay", "conclusion_left_handed_conductor"],
+    "requiredIds": ["conclusion_postmortem_hanging", "conclusion_candle_time_delay", "conclusion_left_handed_conductor"],
+    "title": "拼合真相：断裂的序曲",
+    "epilogue": "舞台上的追光灯冷冷地照在半空的尸体上，而凶手的退路已被逻辑的绳索彻底切断。\n\n今晚19点半，左撇子指挥在舞台上与肖恩发生激烈争执，指挥顺手拿起沉重的金属乐谱架，从肖恩的右后方猛击其后脑，致其当场死亡。为了逃脱罪责，指挥决定利用剧院的物理机械构造，伪造一出「肖恩因精神压力在舞台反绑双手自杀」的荒诞戏码。\n\n他用滑轮润滑油降低了3号吊杆的摩擦力，在控制台下点燃了一支半小时高度的石蜡蜡烛，用火焰慢慢炙烤吊挂着50公斤配重砂袋的麻绳。随后，他用肖恩小提琴的琴弦在尸体双腕上打好活络结，并用一根引线将琴弦与沉重的琴箱相连，将琴箱抛入乐池。完成这一切后，指挥在19点45分从内部锁死舞台门，并利用备用暗道离开，回到了前厅制造不在场证明。\n\n晚上20点整，蜡烛烧断了麻绳，配重砂袋猛然坠地。巨大的重力差将肖恩的尸体拉向半空。与此同时，乐池里琴箱的重力向下拉扯活络结，瞬间完成了「死后反绑」的物理诡计。那声重物坠地巨响被前厅的剧院经理听到，恰恰成为了指挥案发时不在现场的完美谎言，却也成为了他自作聪明的丧钟……\n\n【第一节：断裂的序曲】已解开。"
+  },
+  "nodes": [
+    {
+      "id": "opera_stage_scene",
+      "title": "歌剧院舞台现场",
+      "type": "location",
+      "x": 1000,
+      "y": 1040,
+      "description": "沉重的大马士革金丝帷幕半开，金色歌剧院的舞台上一片死寂。本应在今晚担任独奏的首席小提琴手肖恩，此时正悬挂在离地五米高的3号舞台吊杆上。空气中除了一股淡淡的松脂味，还隐约弥漫着一股石蜡燃烧后的焦糊气味。",
+      "readUnlocks": ["hanging_corpse", "stage_floor_orchestra_pit", "backstage_boom_control", "scene_witness_testimony"]
+    },
+    {
+      "id": "hanging_corpse",
+      "title": "悬空吊起的尸体",
+      "type": "location",
+      "x": 720,
+      "y": 880,
+      "description": "首席小提琴手肖恩悬挂在离地五米高的3号舞台吊杆上，双手被琴弦死死反绑在身后，头颅低垂。",
+      "readUnlocks": ["back_neck_blunt_injury", "victim_neck_strangulation", "wrist_strings"]
+    },
+    {
+      "id": "back_neck_blunt_injury",
+      "title": "后颈部钝器伤",
+      "type": "item",
+      "x": 560,
+      "y": 720,
+      "description": "死者后脑勺有一处严重的钝器击打伤口，伴有局部皮下出血与颅骨轻微凹陷。根据伤口边缘形态，打击物表面圆滑且硬度极高。"
+    },
+    {
+      "id": "victim_neck_strangulation",
+      "title": "死者颈部绞痕",
+      "type": "item",
+      "x": 680,
+      "y": 600,
+      "description": "颈部有一道极深的麻绳勒痕，方向呈垂直向上。然而，死者面部无明显淤血紫绀，舌骨完好无折断，且气管内无窒息挣扎时产生的典型黏液。"
+    },
+    {
+      "id": "wrist_strings",
+      "title": "手腕上的琴弦",
+      "type": "item",
+      "x": 800,
+      "y": 720,
+      "description": "死者双腕被高韧性的钢丝琴弦紧紧捆绑在身后。结扣采用的是一种精巧的单向自锁活络结——拉得越用力，结扣越紧。"
+    },
+    {
+      "id": "stage_floor_orchestra_pit",
+      "title": "舞台地面与乐池",
+      "type": "location",
+      "x": 1280,
+      "y": 880,
+      "description": "舞台下方的乐池和地面区域。",
+      "readUnlocks": ["shattered_antique_violin", "orchestra_pit_edge_scratch", "music_stand_blood_spatter"]
+    },
+    {
+      "id": "shattered_antique_violin",
+      "title": "摔碎的古董小提琴",
+      "type": "item",
+      "x": 1440,
+      "y": 720,
+      "description": "一把名贵的古董小提琴，在舞台正下方的乐池里摔得粉碎。奇怪的是，琴身上的四根琴弦全部不翼而飞，且破碎的琴板上干干净净，没有沾染任何血迹。"
+    },
+    {
+      "id": "orchestra_pit_edge_scratch",
+      "title": "乐池边缘的划痕",
+      "type": "item",
+      "x": 1200,
+      "y": 720,
+      "description": "下沉式乐池的木质边缘上，有一道非常新且相当深的磨损勒痕，其宽度与舞台吊杆所用的粗麻绳吻合。"
+    },
+    {
+      "id": "music_stand_blood_spatter",
+      "title": "乐谱架上的飞溅血迹",
+      "type": "item",
+      "x": 1320,
+      "y": 560,
+      "description": "指挥位旁边的铁质乐谱架上有几滴呈放射状的飞溅血迹。",
+      "actions": [
+        {
+          "id": "analyze_spatter_direction",
+          "label": "分析飞溅方向",
+          "unlockIds": ["strike_trajectory_right_to_left"],
+          "toast": "你仔细分析血迹的形态……"
+        }
+      ]
+    },
+    {
+      "id": "strike_trajectory_right_to_left",
+      "title": "打击轨迹：自右向左",
+      "type": "item",
+      "x": 1160,
+      "y": 420,
+      "description": "血迹圆弧形尾端朝向左侧，说明死者在遭到重击时头部猛烈向左偏。这意味着施暴者是一名惯用左手（左撇子）的人，从死者右后方发起了袭击。"
+    },
+    {
+      "id": "backstage_boom_control",
+      "title": "后台吊杆控制区",
+      "type": "location",
+      "x": 700,
+      "y": 960,
+      "description": "剧院后台的吊杆机械控制区域，操纵着舞台上各种悬吊装置的升降。",
+      "readUnlocks": ["boom_3_pulley", "counterweight_sandbag", "control_panel_charcoal_wax"]
+    },
+    {
+      "id": "boom_3_pulley",
+      "title": "3号吊杆滑轮",
+      "type": "item",
+      "x": 520,
+      "y": 820,
+      "description": "负责悬吊舞台幕布及死者的3号滑轮。轴承上残留有大量新鲜的、尚未风干的工业润滑油——这使得滑轮摩擦力极小，运转极度顺滑。"
+    },
+    {
+      "id": "counterweight_sandbag",
+      "title": "配重金属砂袋",
+      "type": "item",
+      "x": 700,
+      "y": 700,
+      "description": "吊杆另一端用来平衡幕布重量的金属砂袋，重达50公斤。砂袋此时静静悬挂在半空。连接砂袋与滑轮的绳索不是钢丝，而是较粗的天然麻绳，且麻绳中部有一截被明显火烧变黑、纤维高度炭化的痕迹。"
+    },
+    {
+      "id": "control_panel_charcoal_wax",
+      "title": "控制台下焦黑与石蜡",
+      "type": "item",
+      "x": 880,
+      "y": 820,
+      "description": "在3号吊杆麻绳正下方的地面上，有一处直径约5厘米的圆形焦黑痕迹。焦黑边缘散落着几滴已经完全凝固的白色石蜡（蜡烛油）。"
+    },
+    {
+      "id": "scene_witness_testimony",
+      "title": "现场相关证词",
+      "type": "location",
+      "x": 1300,
+      "y": 960,
+      "description": "案件相关人员的证词记录。",
+      "readUnlocks": ["theater_manager_testimony", "backstage_prop_master_testimony", "chief_musician_rehearsal_log"]
+    },
+    {
+      "id": "theater_manager_testimony",
+      "title": "剧院经理的证词",
+      "type": "item",
+      "x": 1420,
+      "y": 800,
+      "description": "「晚上19点半，我看到肖恩在舞台上练习。20点整，我正在一楼前台，突然听到舞台方向传来一声重物坠地的巨响！等我急忙跑过去时，发现舞台的大门从里面被反锁了。我回去拿备用钥匙开门，前后花了十分钟，进来就看到他已经吊在上面了……」"
+    },
+    {
+      "id": "backstage_prop_master_testimony",
+      "title": "后台道具师的证词",
+      "type": "item",
+      "x": 1260,
+      "y": 700,
+      "description": "「3号吊杆平时是挂轻质幕布的，但今天下午有人给滑轮上了大量润滑油。另外，我发誓下午17点下班前，吊杆控制台下绝对没有任何石蜡和烧焦痕迹。」"
+    },
+    {
+      "id": "chief_musician_rehearsal_log",
+      "title": "首席乐手的排练日志",
+      "type": "item",
+      "x": 1100,
+      "y": 800,
+      "description": "死者肖恩写道：「那个该死的指挥，因为他是左撇子，就总是固执地要求我调整小提琴的持琴角度来迎合他的视觉习惯！今晚19点半排练结束后，我要在舞台上找他彻底解决这个问题。」"
+    },
+    {
+      "id": "intermediate_postmortem_hanging",
+      "title": "中间结论：死后悬吊",
+      "type": "conclusion",
+      "x": 640,
+      "y": 460,
+      "description": "死者后脑受过致命重击，而颈部绞痕虽然深，却完全没有活体悬吊窒息时的特征。这证明死者在被挂上去之前就已经死亡或濒死。"
+    },
+    {
+      "id": "intermediate_violin_fall_pit",
+      "title": "中间结论：琴箱坠入乐池",
+      "type": "conclusion",
+      "x": 1260,
+      "y": 460,
+      "description": "乐池边缘的新勒痕与坠落的古董琴箱位置吻合，说明曾有重物被绳索系住并扔进乐池，向下产生拉力。"
+    },
+    {
+      "id": "intermediate_weight_fall_auto_bind",
+      "title": "中间结论：重物坠落自动束缚",
+      "type": "conclusion",
+      "x": 900,
+      "y": 340,
+      "description": "琴弦采用单向自锁活络结。当琴箱坠落产生的向下拉力，作用于绑在死者手腕的琴弦时，活络结会在相反方向的拉力下瞬间自动收紧。"
+    },
+    {
+      "id": "conclusion_postmortem_hanging",
+      "title": "结论：死后悬吊与反绑伪装",
+      "type": "conclusion",
+      "x": 500,
+      "y": 180,
+      "description": "将死后吊起和自动束缚手腕的逻辑整合，揭示了凶手通过物理机制伪造自杀的完整现场布置。"
+    },
+    {
+      "id": "intermediate_candle_burn_rope_delay",
+      "title": "中间结论：蜡烛烧绳延时",
+      "type": "conclusion",
+      "x": 1100,
+      "y": 340,
+      "description": "控制台地面的蜡烛火焰在持续燃烧后，烧断了吊挂50公斤砂袋的麻绳，导致砂袋在失去拉力后坠落，这是一个典型的热能延时机制。"
+    },
+    {
+      "id": "conclusion_candle_time_delay",
+      "title": "结论：蜡烛烧绳延时起吊",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 140,
+      "description": "剧院经理在8点听到的重物坠地巨响，正是砂袋因绳断而落地的声音。这证明案发起吊的时间是由蜡烛燃烧进度决定的，而非人力实时操作，从而瓦解了凶手利用此时间段制造的不在场证明。"
+    },
+    {
+      "id": "conclusion_left_handed_conductor",
+      "title": "结论：锁定左撇子指挥",
+      "type": "conclusion",
+      "x": 1500,
+      "y": 180,
+      "description": "喷溅血迹分析表明袭击者惯用左手。而肖恩的日志直接指明，与其在19点半发生冲突的乐团指挥正是一名左撇子。"
+    },
+    {
+      "id": "truth_broken_prelude",
+      "title": "断裂序曲的真相",
+      "type": "truth",
+      "x": 1000,
+      "y": 80,
+      "description": ""
+    }
+  ],
+  "combinations": [
+    {
+      "ids": ["back_neck_blunt_injury", "victim_neck_strangulation"],
+      "resultId": "intermediate_postmortem_hanging",
+      "toast": "致命重击在前，悬吊窒息在后——这是一场伪装。"
+    },
+    {
+      "ids": ["orchestra_pit_edge_scratch", "shattered_antique_violin"],
+      "resultId": "intermediate_violin_fall_pit",
+      "toast": "新勒痕与琴箱位置吻合，有重物被系绳投入乐池。"
+    },
+    {
+      "ids": ["intermediate_violin_fall_pit", "wrist_strings"],
+      "resultId": "intermediate_weight_fall_auto_bind",
+      "toast": "活络结加下坠拉力——手腕的捆绑是自动收紧的。"
+    },
+    {
+      "ids": ["intermediate_postmortem_hanging", "intermediate_weight_fall_auto_bind"],
+      "resultId": "conclusion_postmortem_hanging",
+      "toast": "死后悬吊配合自动反绑，这是精心布置的自杀现场。"
+    },
+    {
+      "ids": ["counterweight_sandbag", "control_panel_charcoal_wax"],
+      "resultId": "intermediate_candle_burn_rope_delay",
+      "toast": "石蜡蜡烛的火焰在持续炙烤麻绳——这是一个热能延时装置。"
+    },
+    {
+      "ids": ["intermediate_candle_burn_rope_delay", "theater_manager_testimony"],
+      "resultId": "conclusion_candle_time_delay",
+      "toast": "那声巨响不是自杀，而是蜡烛烧断绳子、砂袋坠地的信号。"
+    },
+    {
+      "ids": ["strike_trajectory_right_to_left", "chief_musician_rehearsal_log"],
+      "resultId": "conclusion_left_handed_conductor",
+      "toast": "血迹轨迹锁定左手施暴者，日志指向那位左撇子指挥。"
+    }
+  ]
+}

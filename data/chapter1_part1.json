@@ -1,0 +1,198 @@
+{
+  "id": "chapter1_part1",
+  "title": "第一节：老屋",
+  "overview": {
+    "title": "背景概述",
+    "text": "作为私人侦探，接到一封匿名委托信后，你来到郊外一座废弃的老屋，发现屋内弥漫着血腥味……"
+  },
+  "startNodeIds": ["room"],
+  "hints": [
+    "从「房间」开始，依次点击查看每个区域的详情，会有新的线索。",
+    "将一条线索按住拖向另一条线索可尝试组合，若无关联会提示。",
+    "锤头上的暗褐色包浆与尸体之间可能有联系",
+    "墙面凹痕与指甲里的碎屑之间可能有联系",
+    "死者手中的钥匙与房间中的大铁箱之间可能有联系",
+    "所有结论都得出后，点击「老屋惨案真相」揭晓完整案情。"
+  ],
+  "truthAssembly": {
+    "truthNodeId": "truth_old_house",
+    "appearWhenAllDiscovered": ["weapon_blood_hammer", "box_contents", "first_crime_scene"],
+    "requiredIds": ["weapon_blood_hammer", "box_contents", "first_crime_scene"],
+    "title": "拼合真相：老屋",
+    "epilogue": "死者与他的弟弟（凶手）因为身背巨额债务陷入绝境。弟弟无意中得知哥哥购买了巨额意外险，且受益人是自己，便心生杀机。\n\n在这个偏僻的老屋里，弟弟逼问哥哥保险单的下落，哥哥拒绝交出。愤怒的弟弟在书架旁用锤子砸碎了哥哥的后脑勺（第一案发现场）。哥哥倒地时绝望地抓挠墙面，手中死死攥着铁箱的钥匙。\n\n凶手将尸体拖到大铁箱旁，却发现怎么也掰不开哥哥僵硬的手获取钥匙，做贼心虚的他听到门外有动静，只能仓皇逃离现场……\n\n【第一节：老屋】已解开。"
+  },
+  "nodes": [
+    {
+      "id": "room",
+      "title": "房间",
+      "type": "location",
+      "x": 1000,
+      "y": 1020,
+      "description": "昏暗潮湿的老屋主卧室，空气中弥漫着霉味和令人作呕的铁锈味。",
+      "readUnlocks": ["cabinet", "bookshelf", "iron_box"]
+    },
+    {
+      "id": "cabinet",
+      "title": "柜子",
+      "type": "location",
+      "x": 820,
+      "y": 860,
+      "description": "一扇门已经掉落的破衣柜，里面堆积着杂物。",
+      "readUnlocks": ["toolbox"]
+    },
+    {
+      "id": "bookshelf",
+      "title": "书架",
+      "type": "location",
+      "x": 1180,
+      "y": 860,
+      "description": "木质书架已经腐朽，几本破旧的书籍散落一地。",
+      "readUnlocks": ["wall", "diary_fragment"]
+    },
+    {
+      "id": "iron_box",
+      "title": "大铁箱",
+      "type": "item",
+      "x": 1000,
+      "y": 720,
+      "description": "房间中央极其突兀的一个大号防盗铁箱，挂着一把厚重的铜锁。",
+      "readUnlocks": ["corpse"]
+    },
+    {
+      "id": "wall",
+      "title": "墙",
+      "type": "item",
+      "x": 1320,
+      "y": 700,
+      "description": "书架后方的墙纸大面积剥落，石灰墙面上有一处不自然的凹痕，边缘沾着一点黑色污渍。"
+    },
+    {
+      "id": "diary_fragment",
+      "title": "日记残页",
+      "type": "item",
+      "x": 1240,
+      "y": 580,
+      "description": "夹在书中掉落的一页日记，字迹极其潦草：“他最近疯了，一直在逼问我钥匙在哪。那个铁箱子里的东西，绝对不能让他独吞……”"
+    },
+    {
+      "id": "toolbox",
+      "title": "工具箱",
+      "type": "item",
+      "x": 680,
+      "y": 740,
+      "description": "压在旧衣服下的一个墨绿色铁皮箱，搭扣并没有扣紧。",
+      "readUnlocks": ["hammer"]
+    },
+    {
+      "id": "hammer",
+      "title": "锤子",
+      "type": "item",
+      "x": 560,
+      "y": 620,
+      "description": "一把沉重的羊角锤。奇怪的是，锤头部分不仅没有生锈，反而有一种暗褐色的干涸包浆。"
+    },
+    {
+      "id": "corpse",
+      "title": "尸体",
+      "type": "character",
+      "x": 1000,
+      "y": 520,
+      "description": "一具男性尸体仰面倒在铁箱旁。后脑勺有严重的钝器击打伤口，是致命伤。",
+      "readUnlocks": ["hand", "floor_blood"]
+    },
+    {
+      "id": "hand",
+      "title": "手",
+      "type": "item",
+      "x": 860,
+      "y": 400,
+      "description": "一只苍白僵硬的手，死死攥着拳头。指甲缝里有黑色的污渍，似乎在死前用力抓挠过什么。",
+      "actions": [
+        {
+          "id": "spread_fingers",
+          "label": "掰开手指",
+          "unlockIds": ["bloody_copper_key", "black_debris"],
+          "toast": "你小心掰开僵硬的手指……"
+        }
+      ]
+    },
+    {
+      "id": "floor_blood",
+      "title": "地板血迹",
+      "type": "item",
+      "x": 1140,
+      "y": 400,
+      "description": "尸体头部下方蔓延开的大滩血迹。血泊中有一道清晰的拖拽痕迹，一直延伸向书架的方向。"
+    },
+    {
+      "id": "bloody_copper_key",
+      "title": "带血的铜钥匙",
+      "type": "item",
+      "x": 740,
+      "y": 320,
+      "description": "从死者掌中取出的铜钥匙，表面沾着干涸的血迹。"
+    },
+    {
+      "id": "black_debris",
+      "title": "黑色碎屑",
+      "type": "item",
+      "x": 900,
+      "y": 280,
+      "description": "指甲缝深处嵌着的细小黑色碎屑，像是墙面或某种涂层剥落物。"
+    },
+    {
+      "id": "weapon_blood_hammer",
+      "title": "凶器：血锤",
+      "type": "conclusion",
+      "x": 520,
+      "y": 480,
+      "description": "锤头上的暗褐色包浆与现场血液吻合，尸体伤口形态符合钝器击打，致命的敲击。"
+    },
+    {
+      "id": "first_crime_scene",
+      "title": "第一案发现场",
+      "type": "conclusion",
+      "x": 1280,
+      "y": 480,
+      "description": "死者是在书架旁的墙边被重物击中后脑，死前曾绝望地抓挠墙面留下凹痕和碎屑，随后被拖拽到了大铁箱旁边。"
+    },
+    {
+      "id": "box_contents",
+      "title": "箱中之物",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 320,
+      "description": "咔哒一声，沉重的铁箱被打开。里面没有金银财宝，只有两样东西：一份巨额的意外身故保险单（受益人写着死者弟弟的名字），以及一叠厚厚的催债信。"
+    },
+    {
+      "id": "truth_old_house",
+      "title": "老屋惨案真相",
+      "type": "truth",
+      "x": 1000,
+      "y": 180,
+      "description": ""
+    }
+  ],
+  "combinations": [
+    {
+      "ids": ["hammer", "floor_blood"],
+      "resultId": "weapon_blood_hammer",
+      "toast": "致命的敲击……"
+    },
+    {
+      "ids": ["hammer", "corpse"],
+      "resultId": "weapon_blood_hammer",
+      "toast": "致命的敲击……"
+    },
+    {
+      "ids": ["wall", "black_debris"],
+      "resultId": "first_crime_scene",
+      "toast": "墙面与碎屑对上了拖拽血迹的方向……"
+    },
+    {
+      "ids": ["iron_box", "bloody_copper_key"],
+      "resultId": "box_contents",
+      "toast": "钥匙与锁舌咬合，箱盖缓缓抬起……"
+    }
+  ]
+}

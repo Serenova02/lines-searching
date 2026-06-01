@@ -1,0 +1,442 @@
+{
+  "id": "chapter2_part4",
+  "title": "第四节：遗书",
+  "overview": {
+    "title": "背景概述",
+    "text": "凶手的伪装被彻底撕碎，你拿着证据冲向律师的客房准备将其逮捕。然而，等待你的却是一具冰冷的尸体，以及一封承认自己「谋财害命并布置密室，绝望自杀」的遗书，案件似乎画上了圆满的句号。但直觉告诉你，真正的幕后黑手正试图让一个死人背下所有的黑锅……"
+  },
+  "startNodeIds": ["silent_mansion_finale"],
+  "hints": [
+    "走遍每一个区域，认真阅读每条线索。",
+    "尝试关联两条线索，它们之间可能相互矛盾、彼此印证，或是存在因果关联。",
+    "撕毁的机票与认罪书之间可能存在矛盾",
+    "打字机色带与绝笔信之间可能存在联系",
+    "新遗嘱与旧遗嘱之间可能存在联系",
+    "利益博弈与认罪书之间可能存在矛盾",
+    "备忘草稿与毒镖化验单之间可能存在矛盾",
+    "法医报告与谬误的死亡推演之间可能存在矛盾",
+    "时间悖论与尸体上的毒镖孔之间可能存在联系",
+    "女仆口供与警方毒物提取单之间可能存在联系",
+    "夺命红茶与毒镖化验单之间可能存在联系",
+    "所有结论都得出后，点击「逆转的死亡刻度」揭晓完整案情。"
+  ],
+  "truthAssembly": {
+    "truthNodeId": "truth_reversed_death_clock",
+    "appearWhenAllDiscovered": ["conclusion_corpse_whipper", "conclusion_perfect_cause_death", "conclusion_scapegoat_killed"],
+    "requiredIds": ["conclusion_corpse_whipper", "conclusion_perfect_cause_death", "conclusion_scapegoat_killed"],
+    "title": "拼合真相：遗书",
+    "epilogue": "我们都误解了密室的用意，它并非凶手脱罪的手段，而是一场围绕遗产、刻意篡改死亡时间的闹剧。\n\n真正的凶手是【夫人】，她知道新遗嘱明早就会生效，为了独吞财产，在下午16:00的红茶方糖中下了毒。18:00整，毒药准时发作，林老爷安静地死在了地下室。\n\n18:30分，律师登门商议遗嘱。他不仅惦记着完成委托后的高额佣金，还因利益纠纷对老爷积怨已久，早有行凶报复的念头，故而随身带着毒镖。没想到他赶到时，老爷已经身亡。\n\n律师知道，老爷死于今天，他的巨额佣金将全部泡汤。为了保住自己的钱，律师做出了丧心病狂的举动——他把毒镖扎进尸体，借助冰块反锁房门，并布置了晚上21:00的花瓶延时机关！律师费尽心机布置密室，根本不是为了杀人，而是为了将死亡时间强行拖延到今天深夜，甚至明天早晨！他在为死人“续命”。\n\n然而，夫人很快察觉了律师在疯狂搅浑水，为了防止真相败露，她在律师的茶里下了同样的毒药，并伪造了打字机认罪书，将杀人与伪造密室的罪名，全部死死地钉在了这个贪婪的替罪羊身上！\n\n古宅之中，贪欲蒙蔽了人心。时间无法被篡改，谎言终究会随冰块一同消融……\n\n【第四节：遗书】已解开。\n\n<strong>【第二章：钟摆下的谎言】已全部解开。</strong>"
+  },
+  "nodes": [
+    {
+      "id": "silent_mansion_finale",
+      "title": "沉寂的古宅",
+      "type": "location",
+      "x": 1000,
+      "y": 1080,
+      "description": "凶手的伪装被彻底撕碎，你拿着证据冲向律师的客房准备将其逮捕。然而，等待你的却是一具冰冷的尸体，以及一封承认自己「谋财害命并布置密室，绝望自杀」的遗书。案件似乎画上了圆满的句号。",
+      "readUnlocks": ["lawyer_guest_room_final", "family_archives", "wife_living_room", "basement_ruins"]
+    },
+    {
+      "id": "lawyer_guest_room_final",
+      "title": "律师的客房",
+      "type": "location",
+      "x": 500,
+      "y": 920,
+      "description": "律师的临时客房，如今已成了他生命的终点。",
+      "readUnlocks": ["lawyer_corpse", "messy_desk", "wastebasket", "corner_shredder"]
+    },
+    {
+      "id": "lawyer_corpse",
+      "title": "律师的遗体",
+      "type": "item",
+      "x": 360,
+      "y": 760,
+      "description": "律师的尸体坐在椅子上，嘴角残留着一丝诡异的微笑。",
+      "actions": [
+        {
+          "id": "body_examination",
+          "label": "尸表检查",
+          "unlockIds": ["cyanotic_lips"],
+          "toast": "你开始仔细检查尸体的特征……"
+        }
+      ]
+    },
+    {
+      "id": "cyanotic_lips",
+      "title": "发绀的嘴唇",
+      "type": "item",
+      "x": 220,
+      "y": 620,
+      "description": "法医常识提示，典型的剧毒物（氰化物类）中毒特征，死亡时间为今晚23:30（半小时前）。"
+    },
+    {
+      "id": "messy_desk",
+      "title": "凌乱的书桌",
+      "type": "item",
+      "x": 500,
+      "y": 760,
+      "description": "书桌上散落着各种文件，显得异常凌乱。",
+      "readUnlocks": ["printed_confession", "half_cold_tea"]
+    },
+    {
+      "id": "printed_confession",
+      "title": "打印的认罪书",
+      "type": "item",
+      "x": 360,
+      "y": 620,
+      "description": "「我因贪图林老爷的财富，于今晚18:30潜入地下室用毒镖将他杀害，并布置了延时机关。罪孽深重，服毒自尽。」"
+    },
+    {
+      "id": "half_cold_tea",
+      "title": "半杯冷茶",
+      "type": "item",
+      "x": 540,
+      "y": 620,
+      "description": "茶水散发着微弱的苦杏仁味。"
+    },
+    {
+      "id": "wastebasket",
+      "title": "废纸篓",
+      "type": "item",
+      "x": 640,
+      "y": 760,
+      "description": "废纸篓里有一些撕碎的纸片。",
+      "readUnlocks": ["torn_one_way_ticket"]
+    },
+    {
+      "id": "torn_one_way_ticket",
+      "title": "撕毁的单程机票",
+      "type": "item",
+      "x": 640,
+      "y": 620,
+      "description": "一张飞往南美的头等舱机票，起飞时间赫然印着明天中午12点。"
+    },
+    {
+      "id": "corner_shredder",
+      "title": "墙角的碎纸机",
+      "type": "item",
+      "x": 740,
+      "y": 760,
+      "description": "墙角的碎纸机里塞满了碎纸。",
+      "actions": [
+        {
+          "id": "piece_paper",
+          "label": "拼凑碎纸",
+          "unlockIds": ["assembled_memo_draft"],
+          "toast": "你开始耐心地拼凑碎纸……"
+        }
+      ]
+    },
+    {
+      "id": "assembled_memo_draft",
+      "title": "拼凑的备忘草稿",
+      "type": "item",
+      "x": 740,
+      "y": 620,
+      "description": "律师生前留下的加密备忘录：「18:30进入地下室。太迟了，老爷已经……必须马上启动后备计划掩人耳目。」"
+    },
+    {
+      "id": "family_archives",
+      "title": "家族档案室",
+      "type": "location",
+      "x": 1000,
+      "y": 920,
+      "description": "林家的家族档案室，存放着重要的法律文件。",
+      "readUnlocks": ["old_inheritance_code", "top_secret_safe", "police_evidence_folder"]
+    },
+    {
+      "id": "old_inheritance_code",
+      "title": "旧版遗嘱",
+      "type": "item",
+      "x": 860,
+      "y": 760,
+      "description": "「若家主突发意外死亡且无生效遗嘱，所有遗产由合法配偶（夫人）全额继承。」"
+    },
+    {
+      "id": "top_secret_safe",
+      "title": "绝密保险柜",
+      "type": "item",
+      "x": 1000,
+      "y": 760,
+      "description": "保险柜已被打开，里面的文件散落一地。",
+      "readUnlocks": ["new_will_tomorrow"]
+    },
+    {
+      "id": "new_will_tomorrow",
+      "title": "明日生效的新遗嘱",
+      "type": "item",
+      "x": 1000,
+      "y": 620,
+      "description": "「本人所有财产捐给慈善基金，私人律师作为执行人，将获总资产5%的巨额佣金。本遗嘱于明日早晨8:00正式生效。」"
+    },
+    {
+      "id": "police_evidence_folder",
+      "title": "警方物证卷宗",
+      "type": "item",
+      "x": 1140,
+      "y": 760,
+      "description": "警方移交的物证卷宗，包含法医报告和化验结果。",
+      "readUnlocks": ["forensic_final_report", "poison_dart_lab"]
+    },
+    {
+      "id": "forensic_final_report",
+      "title": "法医最终定调报告",
+      "type": "item",
+      "x": 1080,
+      "y": 620,
+      "description": "经多重内脏温度交叉对比，死者林老爷的精确死亡时间定死在傍晚18:00整，误差不超过5分钟。"
+    },
+    {
+      "id": "poison_dart_lab",
+      "title": "毒镖化验单",
+      "type": "item",
+      "x": 1200,
+      "y": 620,
+      "description": "地下室毒镖上涂抹的X神经毒素极其罕见，注入人体后有精确的2小时潜伏期，随后瞬间致死。"
+    },
+    {
+      "id": "wife_living_room",
+      "title": "夫人的起居室",
+      "type": "location",
+      "x": 1500,
+      "y": 920,
+      "description": "年轻夫人的私人起居室，优雅而精致。",
+      "readUnlocks": ["abandoned_fireplace", "old_typewriter", "exquisite_tea_trolley"]
+    },
+    {
+      "id": "abandoned_fireplace",
+      "title": "废弃的壁炉",
+      "type": "item",
+      "x": 1360,
+      "y": 760,
+      "description": "壁炉很久没有使用了，里面有一些未烧尽的杂物。",
+      "readUnlocks": ["half_burned_ribbon"]
+    },
+    {
+      "id": "half_burned_ribbon",
+      "title": "未烧尽的打字机色带",
+      "type": "item",
+      "x": 1260,
+      "y": 620,
+      "description": "色带上隐约能辨认出「贪图...18:30潜入...自尽」的反向字模印记。"
+    },
+    {
+      "id": "old_typewriter",
+      "title": "老式机械打字机",
+      "type": "item",
+      "x": 1500,
+      "y": 760,
+      "description": "缺少了色带，且所有键位被擦拭得干干净净，没有任何指纹。"
+    },
+    {
+      "id": "exquisite_tea_trolley",
+      "title": "精致的下午茶车",
+      "type": "item",
+      "x": 1640,
+      "y": 760,
+      "description": "下午茶车上摆放着精致的茶具。",
+      "readUnlocks": ["leftover_tea_cup", "special_sugar_box", "maid_additional_statement"]
+    },
+    {
+      "id": "leftover_tea_cup",
+      "title": "残渣红茶杯",
+      "type": "item",
+      "x": 1540,
+      "y": 620,
+      "description": "茶杯底部残留着少许红茶渣。"
+    },
+    {
+      "id": "special_sugar_box",
+      "title": "特制方糖盒",
+      "type": "item",
+      "x": 1640,
+      "y": 620,
+      "description": "精美的方糖盒，里面还剩下几块方糖。",
+      "actions": [
+        {
+          "id": "send_for_testing",
+          "label": "送检化验",
+          "unlockIds": ["police_poison_extract"],
+          "toast": "你将方糖送去警方化验……"
+        }
+      ]
+    },
+    {
+      "id": "maid_additional_statement",
+      "title": "女仆的补充口供",
+      "type": "item",
+      "x": 1740,
+      "y": 620,
+      "description": "「今天下午16:00整，夫人亲自为老爷泡了红茶，并加了他最爱的方糖。老爷喝完后就去了地下室。」"
+    },
+    {
+      "id": "police_poison_extract",
+      "title": "警方毒物提取单",
+      "type": "item",
+      "x": 1640,
+      "y": 480,
+      "description": "起居室剩余的方糖中，检测出极高浓度的X神经毒素！"
+    },
+    {
+      "id": "basement_ruins",
+      "title": "地下密室",
+      "type": "location",
+      "x": 1000,
+      "y": 1040,
+      "description": "命案现场，被警方勘查后的地下室。",
+      "readUnlocks": ["cuckoo_clock_remains", "melted_ice_trace", "chest_dart_hole"]
+    },
+    {
+      "id": "cuckoo_clock_remains",
+      "title": "布谷鸟钟的残骸",
+      "type": "item",
+      "x": 860,
+      "y": 900,
+      "description": "被拆解的定时机械力装置，设定在晚上21:00准时让摆锤落下打碎花瓶。"
+    },
+    {
+      "id": "melted_ice_trace",
+      "title": "门缝的化水痕迹",
+      "type": "item",
+      "x": 1000,
+      "y": 900,
+      "description": "法证确认是门外有人用冰块顶住机械插销，冰化后插销落下形成物理密室。"
+    },
+    {
+      "id": "chest_dart_hole",
+      "title": "死者胸口的毒镖孔",
+      "type": "item",
+      "x": 1140,
+      "y": 900,
+      "description": "法医追加判定，毒镖射入的伤口极其平滑，没有任何生活反应（出血/红肿）。"
+    },
+    {
+      "id": "unreasonable_suicide_note",
+      "title": "不合理的绝笔信",
+      "type": "conclusion",
+      "x": 300,
+      "y": 420,
+      "description": "一个买好了明天头等舱准备跑路或去度假的人，怎么可能突然在今晚打印遗书自杀？"
+    },
+    {
+      "id": "conclusion_scapegoat_killed",
+      "title": "结论：被灭口的替罪羊",
+      "type": "conclusion",
+      "x": 400,
+      "y": 240,
+      "description": "色带在夫人的壁炉里找到，且打字机被擦除了指纹，证明认罪书是夫人伪造的！律师根本不是自杀，而是被灭口！"
+    },
+    {
+      "id": "life_death_interest_game",
+      "title": "生死时速的利益博弈",
+      "type": "conclusion",
+      "x": 800,
+      "y": 420,
+      "description": "老爷活到明天，律师赢；老爷今天死，夫人赢。这是一场生与死的时速赛跑。"
+    },
+    {
+      "id": "conclusion_lawyer_saving_life",
+      "title": "结论：竭力保命的律师",
+      "type": "conclusion",
+      "x": 900,
+      "y": 240,
+      "description": "为了利益，律师必须拼命「保护」老爷活到明早！认罪书上写他为了钱去杀老爷，简直滑天下之大稽！"
+    },
+    {
+      "id": "false_death_deduction",
+      "title": "谬误的死亡推演",
+      "type": "conclusion",
+      "x": 1100,
+      "y": 420,
+      "description": "如果按表面物证，律师18:30打了毒镖，死者应该在20:30才会死亡。"
+    },
+    {
+      "id": "time_paradox_conclusion",
+      "title": "时间悖论：18:30刺向死尸",
+      "type": "conclusion",
+      "x": 1200,
+      "y": 300,
+      "description": "法医证明，死者18:00已经死亡。律师18:30潜入地下室，拿着毒镖对着死者扎下去的时候……死者已经是一具尸体了！"
+    },
+    {
+      "id": "conclusion_corpse_whipper",
+      "title": "结论：篡改时间的鞭尸者",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 120,
+      "description": "伤口没有出血，证实了毒镖是打在死人身上的！律师伪造冰块密室和布谷鸟延时花瓶，根本不是为了洗脱嫌疑，而是为了强行把死亡时间往后拖延，掩盖老爷「今天已经死了」的事实！"
+    },
+    {
+      "id": "afternoon_fatal_tea",
+      "title": "下午16点的夺命红茶",
+      "type": "conclusion",
+      "x": 1600,
+      "y": 420,
+      "description": "下午16点喝下带毒的方糖。"
+    },
+    {
+      "id": "conclusion_perfect_cause_death",
+      "title": "结论：完美闭环的死因",
+      "type": "conclusion",
+      "x": 1600,
+      "y": 240,
+      "description": "16:00喝毒药 + 2小时发作 = 精准在18:00死亡，完美契合法医报告。"
+    },
+    {
+      "id": "truth_reversed_death_clock",
+      "title": "逆转的死亡刻度",
+      "type": "truth",
+      "x": 1000,
+      "y": 60,
+      "description": ""
+    }
+  ],
+  "combinations": [
+    {
+      "ids": ["torn_one_way_ticket", "printed_confession"],
+      "resultId": "unreasonable_suicide_note",
+      "toast": "明天中午就要坐飞机的人，今晚怎么会自杀？这绝笔信有问题！"
+    },
+    {
+      "ids": ["half_burned_ribbon", "unreasonable_suicide_note"],
+      "resultId": "conclusion_scapegoat_killed",
+      "toast": "色带在夫人的壁炉里，打字机被擦除指纹——认罪书是夫人伪造的！"
+    },
+    {
+      "ids": ["new_will_tomorrow", "old_inheritance_code"],
+      "resultId": "life_death_interest_game",
+      "toast": "老爷活到明天律师赚5%佣金，今天死夫人独吞——这是一场生死时速！"
+    },
+    {
+      "ids": ["life_death_interest_game", "printed_confession"],
+      "resultId": "conclusion_lawyer_saving_life",
+      "toast": "律师必须让老爷活过今晚！认罪书说他为了钱杀人，完全是颠倒黑白！"
+    },
+    {
+      "ids": ["assembled_memo_draft", "poison_dart_lab"],
+      "resultId": "false_death_deduction",
+      "toast": "18:30打毒镖，按2小时潜伏期，死者应该20:30才死……"
+    },
+    {
+      "ids": ["false_death_deduction", "forensic_final_report"],
+      "resultId": "time_paradox_conclusion",
+      "toast": "法医说18:00就死了！那18:30律师刺的是……一具尸体？"
+    },
+    {
+      "ids": ["time_paradox_conclusion", "chest_dart_hole"],
+      "resultId": "conclusion_corpse_whipper",
+      "toast": "伤口没有生活反应，律师在鞭尸，他布置密室是为了拖延死亡时间！"
+    },
+    {
+      "ids": ["police_poison_extract", "maid_additional_statement"],
+      "resultId": "afternoon_fatal_tea",
+      "toast": "下午16点，夫人亲自加的方糖里有毒！"
+    },
+    {
+      "ids": ["afternoon_fatal_tea", "poison_dart_lab"],
+      "resultId": "conclusion_perfect_cause_death",
+      "toast": "16:00下毒 + 2小时潜伏期 = 18:00死亡，证据确凿！"
+    }
+  ]
+}

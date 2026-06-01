@@ -1,0 +1,398 @@
+{
+  "id": "chapter3_part3",
+  "title": "第三节：发条木偶的假面",
+  "overview": {
+    "title": "背景概述",
+    "text": "帷幕徐徐落下，全场掌声雷动。在刚刚结束的芭蕾舞剧《发条葛蓓莉娅》中，首席女舞者艾琳以一段极其震撼、充满机械质感的「木偶独舞」征服了全场。然而，当舞台监督走到后台准备协助艾琳脱下那套沉重的钢制发条外骨骼时，却惊恐地发现——艾琳早已气绝多时。她被几道精钢卡扣死死锁在外骨骼衣甲内，胸腹部有一处致命的刺伤，而她的尸体已经僵硬如石。根据法医初步判定，她的死亡时间至少在4小时之前。\n\n这意味着，在刚才整整20分钟的舞台表演中，在数万瓦聚光灯与数百名观众的众目睽睽下，在舞台上翩翩起舞并完成谢幕致意的……竟然是一具早已冰冷的尸体。"
+  },
+  "startNodeIds": ["post_curtain_stage_scene"],
+  "hints": [
+    "走遍每一个区域，认真阅读每条线索。",
+    "尝试关联两条线索，它们之间可能相互矛盾、彼此印证，或是存在因果关联。",
+    "法医的尸检报告与盐水冰袋之间可能存在联系",
+    "防逆锁销与配重底座之间可能存在联系",
+    "人工冷冻成尸僵与刚性锁定结论之间可能存在联系",
+    "旋转舞台隐藏轨道与暗设的机械离合器之间可能存在联系",
+    "吊线钢丝与乐团指挥证词之间可能存在联系",
+    "地轨传动路径与钢丝拉吊结论之间可能存在联系",
+    "灯光师口供与陶瓷假面之间可能存在联系",
+    "暖宝宝加热贴与强逆光结论之间可能存在联系",
+    "所有结论都得出后，点击「发条木偶的真相」揭晓完整案情。"
+  ],
+  "truthAssembly": {
+    "truthNodeId": "truth_clockwork_puppet",
+    "appearWhenAllDiscovered": ["conclusion_rigor_mortis_steel_bone", "conclusion_track_wire_puppet_dance", "conclusion_backlight_mask_visual_blind"],
+    "requiredIds": ["conclusion_rigor_mortis_steel_bone", "conclusion_track_wire_puppet_dance", "conclusion_backlight_mask_visual_blind"],
+    "title": "拼合真相：发条木偶",
+    "epilogue": "掌声和鲜花送给了一具冰冷的尸体，而真正的幕后导演，正站在机械控制台旁冷笑着。\n\n下午16点，木偶设计师在化妆间里杀害了艾琳。他利用极度严苛的力学计算，将尸体塞入外骨骼，调整至标准的独舞姿态，并用盐水冰袋快速冷却。尸僵在3小时内完全固定，让尸体的骨骼和肌肉化作了外骨骼中最坚固的承重柱。随后，他拆掉了原本沉重的平衡底座，因为尸体本身已经成为了完美的自平衡轴。\n\n晚上20点40分，独舞部分开始。设计师踩下离合器，地下的旋转槽轨拖动着外骨骼在舞台上滑动、旋转。上空的钢丝随着旋转的拉扯，带着艾琳死硬的右臂上下起伏。在强烈的逆光照射下，台下观众只能看到一个神圣、优雅的黑色剪影，将那种由机械带动的「尸体抖动」误认为是登峰造极的木偶拟真表演。陶瓷假面和残存的微温也蒙蔽了后台人员，直到谢幕结束，这场由齿轮、钢丝和尸体共同排演的死亡芭蕾，才终于落下了帷幕……\n\n【第三节：发条木偶的假面】已解开。"
+  },
+  "nodes": [
+    {
+      "id": "post_curtain_stage_scene",
+      "title": "谢幕后的舞台现场",
+      "type": "location",
+      "x": 1000,
+      "y": 1040,
+      "description": "帷幕徐徐落下，观众席上爆发出雷鸣般的掌声。首席女舞者艾琳以一段极其震撼、充满机械质感的「木偶独舞」征服了全场。然而，当舞台监督走到后台时，却惊恐地发现——艾琳早已气绝多时。",
+      "readUnlocks": ["clockwork_puppet_armor", "stage_mechanism_tracks", "erins_dressing_room", "audio_visual_testimony"]
+    },
+    {
+      "id": "clockwork_puppet_armor",
+      "title": "发条木偶衣甲",
+      "type": "location",
+      "x": 680,
+      "y": 880,
+      "description": "艾琳身上那套沉重的钢制发条外骨骼，本是舞台表演的道具，此刻却成了禁锢死者的牢笼。",
+      "readUnlocks": ["steel_humanoid_exoskeleton", "erins_corpse", "joint_anti_reverse_lock_pin", "ceramic_mask_heavy_makeup", "abdominal_stab_wound_lubricant"]
+    },
+    {
+      "id": "steel_humanoid_exoskeleton",
+      "title": "钢制人形外骨骼",
+      "type": "item",
+      "x": 500,
+      "y": 720,
+      "description": "一套用于舞台表演的精钢骨架，包裹着死者的四肢和躯干，后背有粗大的主支撑轴。"
+    },
+    {
+      "id": "erins_corpse",
+      "title": "艾琳的尸体",
+      "type": "character",
+      "x": 600,
+      "y": 600,
+      "description": "艾琳被固定在骨骼内部，面色惨白。",
+      "actions": [
+        {
+          "id": "measure_body_temperature",
+          "label": "测量尸温",
+          "unlockIds": ["abnormal_temperature_degradation"],
+          "toast": "你使用测温设备对尸体进行检测……"
+        }
+      ]
+    },
+    {
+      "id": "abnormal_temperature_degradation",
+      "title": "非正常体温降解",
+      "type": "item",
+      "x": 460,
+      "y": 480,
+      "description": "尸体核心温度极低，且降温曲线异常平直。这表明死者在遇害后，曾被人刻意置于极度寒冷的环境中加速冷却。"
+    },
+    {
+      "id": "joint_anti_reverse_lock_pin",
+      "title": "关节点防逆锁销",
+      "type": "item",
+      "x": 760,
+      "y": 720,
+      "description": "外骨骼的膝关节和肘关节处，装有单向防逆齿轮锁销。一旦肢体弯曲到特定角度，锁销就会「咔哒」一声卡死，使该关节在不受外力解锁的情况下无法复位。"
+    },
+    {
+      "id": "ceramic_mask_heavy_makeup",
+      "title": "陶瓷假面与浓妆",
+      "type": "item",
+      "x": 680,
+      "y": 480,
+      "description": "死者脸上戴着一副微笑着的古典陶瓷面具，面具边缘被厚重、不自然的舞台油彩和闪粉死死黏合在皮肤上。"
+    },
+    {
+      "id": "abdominal_stab_wound_lubricant",
+      "title": "腹部刺伤与润滑油",
+      "type": "item",
+      "x": 820,
+      "y": 600,
+      "description": "死者腹部有一处锐器刺伤，出血量并不大。奇怪的是，伤口边缘的衣物上沾有大量黑色的工业钟表润滑油。"
+    },
+    {
+      "id": "stage_mechanism_tracks",
+      "title": "舞台机械与地轨",
+      "type": "location",
+      "x": 1320,
+      "y": 880,
+      "description": "舞台下方和地面上的机械装置，提供了整个表演的动力来源。",
+      "readUnlocks": ["rotating_stage_hidden_track", "central_drive_gear", "stage_overhead_suspension_wire", "counterweight_imbalance_base", "edge_white_chalk_mark"]
+    },
+    {
+      "id": "rotating_stage_hidden_track",
+      "title": "旋转舞台隐藏轨道",
+      "type": "item",
+      "x": 1480,
+      "y": 720,
+      "description": "旋转舞台的木地板上，隐蔽地开凿出了一条环状的槽轨，槽轨内有齿条结构。"
+    },
+    {
+      "id": "central_drive_gear",
+      "title": "中央驱动齿轮",
+      "type": "item",
+      "x": 1360,
+      "y": 600,
+      "description": "舞台下方的巨大发条动力源。",
+      "actions": [
+        {
+          "id": "check_drive_shaft",
+          "label": "检查咬合传动轴",
+          "unlockIds": ["hidden_mechanical_clutch"],
+          "toast": "你仔细检查齿轮的咬合结构……"
+        }
+      ]
+    },
+    {
+      "id": "hidden_mechanical_clutch",
+      "title": "暗设的机械离合器",
+      "type": "item",
+      "x": 1240,
+      "y": 480,
+      "description": "在主齿轮旁，新加装了一个可以通过舞台边缘踏板控制的电磁离合器。踩下踏板，传动轮会立刻与地轨齿条咬合，强行拖动轨道上的物体移动。"
+    },
+    {
+      "id": "stage_overhead_suspension_wire",
+      "title": "舞台上空吊线钢丝",
+      "type": "item",
+      "x": 1220,
+      "y": 720,
+      "description": "从格栅吊顶垂下的两根纤细但极具韧性的钢丝，钢丝末端的挂钩正紧扣在外骨骼的双腕关节处。"
+    },
+    {
+      "id": "counterweight_imbalance_base",
+      "title": "配重失衡的底座",
+      "type": "item",
+      "x": 1400,
+      "y": 480,
+      "description": "这具外骨骼原本设计有一个重达60公斤的铸铁平衡底座（以防舞者倾倒），但现在这个底座上的铸铁块已经被全部拆除。"
+    },
+    {
+      "id": "edge_white_chalk_mark",
+      "title": "边缘白色粉笔标记",
+      "type": "item",
+      "x": 1280,
+      "y": 560,
+      "description": "在地轨的起点和终点处，有几道新鲜的白色粉笔线，用于精确标记外骨骼足尖的站立位置。"
+    },
+    {
+      "id": "erins_dressing_room",
+      "title": "艾琳的化妆间",
+      "type": "location",
+      "x": 660,
+      "y": 960,
+      "description": "首席舞者艾琳的私人化妆间。",
+      "readUnlocks": ["trash_saltwater_ice_bags", "cut_ballet_shoe_ribbons", "heating_patches", "designer_toolbox", "designer_secret_manuscript"]
+    },
+    {
+      "id": "trash_saltwater_ice_bags",
+      "title": "垃圾桶里的盐水冰袋",
+      "type": "item",
+      "x": 480,
+      "y": 820,
+      "description": "垃圾桶里堆着十几个已经融化的工业盐水冰袋。这种冰袋的降温效果远超普通冰袋。"
+    },
+    {
+      "id": "cut_ballet_shoe_ribbons",
+      "title": "被剪断的舞鞋丝带",
+      "type": "item",
+      "x": 600,
+      "y": 700,
+      "description": "梳妆台上散落着被剪断的舞鞋丝带碎片，切口平整，像是被利器刻意剪断。"
+    },
+    {
+      "id": "heating_patches",
+      "title": "暖宝宝加热贴",
+      "type": "item",
+      "x": 720,
+      "y": 820,
+      "description": "梳妆台上散落着几个已经拆封、尚有余温的化学加热贴。"
+    },
+    {
+      "id": "designer_toolbox",
+      "title": "设计师的工具箱",
+      "type": "item",
+      "x": 560,
+      "y": 560,
+      "description": "舞台木偶设计师的专业箱。里面整齐地码放着扳手、螺丝刀以及几罐与死者伤口处吻合的黑色钟表润滑油。"
+    },
+    {
+      "id": "designer_secret_manuscript",
+      "title": "设计师的秘密手稿",
+      "type": "item",
+      "x": 720,
+      "y": 560,
+      "description": "一张手绘的草图，上面详细计算了「50公斤人体重量在关节锁死状态下，配合外骨骼所能达到的动态力学平衡常数」。",
+      "actions": [
+        {
+          "id": "check_back_door",
+          "label": "检查化妆间后门",
+          "unlockIds": ["locked_dressing_room_back_door"],
+          "toast": "你注意到化妆间还有一扇后门……"
+        }
+      ]
+    },
+    {
+      "id": "locked_dressing_room_back_door",
+      "title": "锁死的化妆间后门",
+      "type": "item",
+      "x": 640,
+      "y": 440,
+      "description": "通往后台小巷的木门从内部被用三枚大号木螺丝死死钉住了，门锁有被暴力撬拨的痕迹。"
+    },
+    {
+      "id": "audio_visual_testimony",
+      "title": "视听反馈与证词",
+      "type": "location",
+      "x": 1340,
+      "y": 960,
+      "description": "来自观众、灯光师、乐团指挥等各方的证词，揭示了表演中的异常。",
+      "readUnlocks": ["audience_celebrity_testimony", "lighting_control_testimony", "stage_manager_schedule", "orchestra_conductor_extra_testimony", "forensic_joint_autopsy_report"]
+    },
+    {
+      "id": "audience_celebrity_testimony",
+      "title": "观众席名流的口供",
+      "type": "item",
+      "x": 1480,
+      "y": 800,
+      "description": "「艾琳今晚的表演太完美了！那种关节一卡一顿的僵硬感，简直把发条木偶演活了！尤其是最后那个单腿站立、身体前倾的谢幕动作，保持了整整十秒钟，纹丝不动，平衡感令人惊叹！」"
+    },
+    {
+      "id": "lighting_control_testimony",
+      "title": "灯光控制师的口供",
+      "type": "item",
+      "x": 1340,
+      "y": 680,
+      "description": "「木偶设计师在开演前特别叮嘱我，今晚艾琳的独奏部分必须关闭所有正面追光，只保留一束高强度的蓝色逆光（从背后打来）。他说这样最符合「机械木偶」的神秘轮廓感。」"
+    },
+    {
+      "id": "stage_manager_schedule",
+      "title": "舞台监督的排班表",
+      "type": "item",
+      "x": 1220,
+      "y": 800,
+      "description": "「下午16点半，艾琳进入化妆间，说要独自静养准备演出，锁上了门。直到18点半，我敲门没有回应，但里面传来了外骨骼机械关节调试的「咔哒」声，我们便以为她一直在里面准备。」"
+    },
+    {
+      "id": "orchestra_conductor_extra_testimony",
+      "title": "乐团指挥的额外证词",
+      "type": "item",
+      "x": 1420,
+      "y": 560,
+      "description": "「平时艾琳跳舞时，因为足尖鞋落地，舞台木地板会传来节奏沉重的「咚咚」声。但今天很奇怪，在她的独舞段落里，我完全听不到任何脚步落地的震动，只有背景音乐里伴奏的管弦乐声。」"
+    },
+    {
+      "id": "forensic_joint_autopsy_report",
+      "title": "法医的关节尸检报告",
+      "type": "item",
+      "x": 1260,
+      "y": 560,
+      "description": "死者四肢关节的尸僵已经极度严重。奇怪的是，其双腿和双臂的关节僵硬形态呈现出非自然的、极为规整的90度和180度直角锁定。这在常规平躺死亡的尸体中是绝对不可能出现的。"
+    },
+    {
+      "id": "intermediate_artificial_freeze_rigor",
+      "title": "中间结论：人工冷冻成型尸僵",
+      "type": "conclusion",
+      "x": 400,
+      "y": 360,
+      "description": "法医报告指出死者呈现非自然的90度与180度直角尸僵，而垃圾桶内有大量能实现超低温冷却的工业盐水冰袋。说明死者在遇害后，立刻被置于极度严寒的环境中，使肢体在特定角度下被急速冻结，强行催化出规则的直角尸僵。"
+    },
+    {
+      "id": "intermediate_rigid_lock_dismount_weight",
+      "title": "中间结论：刚性锁定与拆卸配重",
+      "type": "conclusion",
+      "x": 600,
+      "y": 360,
+      "description": "外骨骼关节处的单向防逆锁销能让肢体一旦弯曲便无法复位，而原本用于防倾倒的60公斤铸铁平衡底座被拆除。说明外骨骼内的支撑结构必须依靠一个具有极高刚性的「人体承重骨架」来维持其静态自平衡。"
+    },
+    {
+      "id": "intermediate_ground_track_glide_path",
+      "title": "中间结论：地轨传动的滑行路径",
+      "type": "conclusion",
+      "x": 900,
+      "y": 360,
+      "description": "旋转舞台上的隐藏环状槽轨，与电磁离合器直接相连。只要踩下踏板，下方的动力源就能强行拖拽地轨上的外骨骼底座，在轨道上进行圆周运动和自转。"
+    },
+    {
+      "id": "intermediate_wire_suspension_micro_suspension",
+      "title": "中间结论：钢丝拉吊与微悬空",
+      "type": "conclusion",
+      "x": 1100,
+      "y": 360,
+      "description": "吊顶垂下的高韧性钢丝挂钩扣在外骨骼的双腕处，而乐团指挥在演出中听不到任何脚步落地震动的沉重声音。说明死者双足并非踩在地面上发力起跳，而是利用钢丝将身体的大部分重力微微悬空。"
+    },
+    {
+      "id": "intermediate_strong_backlight_mask_silhouette",
+      "title": "中间结论：强逆光与假面剪影",
+      "type": "conclusion",
+      "x": 1400,
+      "y": 360,
+      "description": "背后的高强度强逆光只在黑暗中勾勒出唯美的黑色剪影，遮蔽了死者没有呼吸起伏的胸腹细节；而紧贴在面部的陶瓷面具和不自然舞台浓妆则彻底遮掩了死者闭合的双眼和苍白发青的脸色。"
+    },
+    {
+      "id": "conclusion_rigor_mortis_steel_bone",
+      "title": "结论：尸僵固定的自平衡承重钢骨",
+      "type": "conclusion",
+      "x": 500,
+      "y": 180,
+      "description": "凶手于下午16点杀害艾琳后，立刻将她温热的尸体套入外骨骼衣甲，并在关节处卡上防逆锁销，强行调整为芭蕾舞经典的「单腿站立」直角姿态。接着，凶手用大量盐水冰袋对尸体进行急速冷冻。低温加速了尸僵的产生，使艾琳的肌肉和关节在大戏开演前就彻底硬化，与钢制外骨骼融为一体。硬化的尸体本身替代了被拆除的60公斤铁配重，成为了外骨骼坚固的自平衡主承重轴，从而确保骨架不会倾倒。"
+    },
+    {
+      "id": "conclusion_track_wire_puppet_dance",
+      "title": "结论：轨道与钢丝联动的傀儡假舞",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 140,
+      "description": "艾琳其实根本没有「跳舞」。舞台地面的隐蔽地轨通过离合器启动后，强行推着外骨骼在轨道上作圆周运动和自转。而她垂挂在舞台上空钢丝上的双腕，随着舞台旋转带来的拉力变化，在空中作周期性的上下摆动。没有肌肉在发力，尸体只是被轨道和钢丝机械式地拖拽着滑动。由于足尖自始至终被固定悬空在轨道滑块上，因此没有发出任何脚步落地声。"
+    },
+    {
+      "id": "conclusion_backlight_mask_visual_blind",
+      "title": "结论：强逆光与假面构筑的视觉盲区",
+      "type": "conclusion",
+      "x": 1500,
+      "y": 180,
+      "description": "这是一场利用视觉和触觉偏差完成的完美欺瞒。陶瓷面具和浓重的闪粉油彩彻底遮盖了艾琳死后无血色的面部和紧闭的双眼，高强度的背后逆光（剪影效果）让观众和舞台监督只能看到她优美的肢体轮廓，根本看不清她没有呼吸起伏的胸腔。而敷在面具内侧和耳后的暖宝宝加热贴，则成功在舞台监督上前慰问时，提供了「体温尚存」的短暂触觉假象。"
+    },
+    {
+      "id": "truth_clockwork_puppet",
+      "title": "发条木偶的真相",
+      "type": "truth",
+      "x": 1000,
+      "y": 80,
+      "description": ""
+    }
+  ],
+  "combinations": [
+    {
+      "ids": ["forensic_joint_autopsy_report", "trash_saltwater_ice_bags"],
+      "resultId": "intermediate_artificial_freeze_rigor",
+      "toast": "直角尸僵 + 盐水冰袋——死者在遇害后被置于极度严寒中，强行催化出规则的直角尸僵。"
+    },
+    {
+      "ids": ["joint_anti_reverse_lock_pin", "counterweight_imbalance_base"],
+      "resultId": "intermediate_rigid_lock_dismount_weight",
+      "toast": "防逆锁销 + 拆除配重——外骨骼必须依靠一个「人体承重骨架」来维持静态自平衡。"
+    },
+    {
+      "ids": ["intermediate_artificial_freeze_rigor", "intermediate_rigid_lock_dismount_weight"],
+      "resultId": "conclusion_rigor_mortis_steel_bone",
+      "toast": "冰冻的尸僵取代了被拆除的铸铁配重——尸体成为了外骨骼最坚固的自平衡主承重轴。"
+    },
+    {
+      "ids": ["rotating_stage_hidden_track", "hidden_mechanical_clutch"],
+      "resultId": "intermediate_ground_track_glide_path",
+      "toast": "隐藏槽轨 + 电磁离合器——踩下踏板即可强行拖动外骨骼在轨道上作圆周运动和自转。"
+    },
+    {
+      "ids": ["stage_overhead_suspension_wire", "orchestra_conductor_extra_testimony"],
+      "resultId": "intermediate_wire_suspension_micro_suspension",
+      "toast": "钢丝挂钩 + 无落地声——死者双足并非踩地发力，而是被钢丝将大部分重力微微悬空。"
+    },
+    {
+      "ids": ["intermediate_ground_track_glide_path", "intermediate_wire_suspension_micro_suspension"],
+      "resultId": "conclusion_track_wire_puppet_dance",
+      "toast": "地轨推动身体 + 钢丝拉扯双臂——那是一具被机械拖拽滑动的傀儡，没有一处舞蹈是死者自身肌肉发力完成的。"
+    },
+    {
+      "ids": ["lighting_control_testimony", "ceramic_mask_heavy_makeup"],
+      "resultId": "intermediate_strong_backlight_mask_silhouette",
+      "toast": "背后强逆光 + 陶瓷面具——黑色剪影遮蔽了死者无呼吸的胸腹细节，假面掩盖了苍白发青的脸色。"
+    },
+    {
+      "ids": ["intermediate_strong_backlight_mask_silhouette", "heating_patches"],
+      "resultId": "conclusion_backlight_mask_visual_blind",
+      "toast": "逆光剪影视觉欺骗 + 暖宝宝伪造余温——在台前台后构筑了完美的感官盲区。"
+    }
+  ]
+}

@@ -1,0 +1,849 @@
+{
+  "id": "chapter3_part6",
+  "title": "第六节：黄金剧院的终曲",
+  "overview": {
+    "title": "背景概述",
+    "text": "你踏入了歌剧院最深处的后台机械总控制室，这里是控制舞台吊杆、大幕和转盘的中心。正中央的控制台上，一根粗大的弹性发条轴正紧紧绷起。在角落里，一个用来收集锅炉冷凝水的蓄水箱正在缓慢积水，一旦积满，水力重锤将砸下触发雷汞引信，引爆整座剧院底部的蒸汽管道。而那个戴着黄金假面、隐姓埋名的「木偶设计师」，正冷冷地看着你……"
+  },
+  "startNodeIds": ["central_clock_tower_control_room"],
+  "hints": [
+    "走遍每一个区域，认真阅读每条线索。",
+    "尝试关联两条线索，它们之间可能相互矛盾、彼此印证，或是存在因果关联。",
+    "五重差速齿轮箱与折断的黄铜主发条之间可能存在联系",
+    "暗格里气压联动活塞与主轴动力分配原理结论之间可能存在联系",
+    "3号舞台吊杆配重改制草图与重力气压混动中枢结论之间可能存在联系",
+    "气动延时阀阻力计算表与首案时序结论之间可能存在联系",
+    "外骨骼地轨电磁离合草图与声学时序结论之间可能存在联系",
+    "毒冰球融速与重力倾角草稿与舞台傀儡时序结论之间可能存在联系",
+    "气密门水漏滴速刻度表与晚宴毒冰时序结论之间可能存在联系",
+    "齿轮箱侧壁刻字与全案时序物理总控结论之间可能存在联系",
+    "老调音师死亡档案与五位受害者共同债务名单之间可能存在联系",
+    "孙女失踪记录与复仇动机结论之间可能存在联系",
+    "助听器专用微型电池与唯一继承人结论之间可能存在联系",
+    "老调音师黄铜音叉与复仇者的生理缺陷结论之间可能存在联系",
+    "音叉表面的旧划痕与音差骨传导调音法结论之间可能存在联系",
+    "抽屉底座隐藏指纹与共振金粉触觉结论之间可能存在联系",
+    "工业强力除锈酸液与生锈的铸铁大挂锁结论之间可能存在联系",
+    "红色泄压紧急拉杆与化学应力开裂结论之间可能存在联系",
+    "泄压杠杆端的重力配重桶与被高气压顶死的气锁结论之间可能存在联系",
+    "卡死的泄压阀安全销与逆向流体压力结论之间可能存在联系",
+    "所有结论都得出后，点击「黄金剧院的真相」揭晓完整案情。"
+  ],
+  "truthAssembly": {
+    "truthNodeId": "truth_golden_theater_finale",
+    "appearWhenAllDiscovered": ["conclusion_multidimensional_master_clock", "conclusion_avenger_identity_physical_evidence", "conclusion_reverse_fluid_self_destruction"],
+    "requiredIds": ["conclusion_multidimensional_master_clock", "conclusion_avenger_identity_physical_evidence", "conclusion_reverse_fluid_self_destruction"],
+    "title": "拼合真相：黄金剧院终曲",
+    "epilogue": "齿轮缓缓停转，高压蒸汽顺着排气阀喷涌而出，化作白雾散去。在这座复仇迷宫中，真相已然大白。\n\n这是一场长达十五年的谢幕演出，死去的首席小提琴手肖恩、阿尔伯特勋爵、女舞者艾琳、剧院经理唐纳德、钢琴家亚伦，在十五年前为了侵吞黄金剧院，逼死了老调音师。而老调音师那个患有左耳听力障碍的孙女，改换多重身份重返剧院。她既是首席音响师，亦是所有人眼中的「木偶设计师」。\n\n她不需要用耳朵去听那些伪善的谎言。工作中，她沿用祖父传下的技艺，将黄铜音叉末端抵在耳后颞骨处，依靠传统骨传导法，借头骨振动分辨音准、感知设备运转的细微震动。凭借这一专长，她在钟楼内精准把控舞台幕布与各类道具的运作时序。她留下的五张手绘机关草图，记录了她利用蜡烛燃烧、暖气阀延时、转盘离合、香槟倾角和水桶滴漏等极为日常的物理手段，完成了复仇。\n\n在最后的对峙中，她启动了蒸汽锅炉的自毁装置。但我们利用工业除锈强酸溶解了锁死泄压阀的挂锁，并利用力学原理——将水箱里的积水灌入另一端的配重桶中，依靠重力杠杆平衡阀体承受的蒸汽压力。卡死的安全销瞬间松动，我们在危急关头拔出销栓、拉动操作杆，成功完成泄压。\n\n黄金面具脱落，露出了她平静的脸。她没有挣扎，因为这场以机械与物理谱写的复仇乐章，早已完美谢幕……\n\n【第六节：黄金剧院的终曲】已解开。\n\n<strong>【第三章：锈蚀的交响曲】已全部解开。</strong>"
+  },
+  "nodes": [
+    {
+      "id": "central_clock_tower_control_room",
+      "title": "后台机械总控制室",
+      "type": "location",
+      "x": 1000,
+      "y": 1040,
+      "description": "你终于踏入了歌剧院最深处、隐藏在舞台上方的机械控制室。这里没有高科技仪器，只有一排排拉动舞台布景的粗大麻绳、滑轮组、蒸汽散热管道，以及一台发出规律滴答声的老式大自鸣钟。",
+      "readUnlocks": ["central_gear_control_panel", "mastermind_secret_room", "steam_self_destruct_pipe_network", "past_murders_causal_link"]
+    },
+    {
+      "id": "central_gear_control_panel",
+      "title": "舞台机械主控制台",
+      "type": "location",
+      "x": 600,
+      "y": 880,
+      "description": "控制全剧院各大舞台布景、转盘和吊杆的主控制台，旁边散落着几张带有折痕的手绘机械草图。",
+      "readUnlocks": [
+        "quintuple_differential_gearbox",
+        "rusted_copper_counterweight",
+        "console_side_spring_hole",
+        "broken_brass_main_spring",
+        "gearbox_eccentric_camshaft",
+        "hidden_pneumatic_piston",
+        "schematic_stage_rigging",
+        "schematic_acoustic_valve",
+        "schematic_exoskeleton_track",
+        "schematic_ice_sphere_thermodynamics",
+        "schematic_airtight_leak_scale"
+      ]
+    },
+    {
+      "id": "quintuple_differential_gearbox",
+      "title": "五重差速齿轮箱",
+      "type": "item",
+      "x": 420,
+      "y": 720,
+      "description": "控制全剧院各大机关的主变速箱，由五个不同传动比的轮系组成。"
+    },
+    {
+      "id": "gearbox_sidewall_hatred_engraving",
+      "title": "齿轮箱侧壁「仇恨」刻字",
+      "type": "item",
+      "x": 320,
+      "y": 440,
+      "description": "五重齿轮箱侧板上用钢刀刻着一行字：「让他们死于自己最引以为傲的作品之中。」"
+    },
+    {
+      "id": "rusted_copper_counterweight",
+      "title": "生锈的红铜配重砝码",
+      "type": "item",
+      "x": 540,
+      "y": 600,
+      "description": "挂在齿轮箱下方的重力源，用于提供持续扭矩。砝码表面布满了岁月的锈迹。"
+    },
+    {
+      "id": "console_side_spring_hole",
+      "title": "控制台侧面的主发条孔",
+      "type": "item",
+      "x": 660,
+      "y": 720,
+      "description": "用于手动上紧系统总发条的插孔，孔口边缘有被反复摩擦留下的金属抛光痕迹。"
+    },
+    {
+      "id": "broken_brass_main_spring",
+      "title": "折断的黄铜主发条",
+      "type": "item",
+      "x": 760,
+      "y": 600,
+      "description": "控制台内的主要弹性动力源，如今已在极限扭矩下崩断。断口处显示出极高张力的金属疲劳特征。"
+    },
+    {
+      "id": "gearbox_eccentric_camshaft",
+      "title": "齿轮箱内的偏心轮轴",
+      "type": "item",
+      "x": 580,
+      "y": 480,
+      "description": "不规则的凸轮结构，可在特定时刻推动顶杆进行机械变速。"
+    },
+    {
+      "id": "hidden_pneumatic_piston",
+      "title": "暗格里的气压联动活塞",
+      "type": "item",
+      "x": 700,
+      "y": 480,
+      "description": "由黄铜管道连接的气动装置，可接收或向外发送压缩空气压力。"
+    },
+    {
+      "id": "schematic_stage_rigging",
+      "title": "3号舞台吊杆配重改制草图",
+      "type": "item",
+      "x": 440,
+      "y": 360,
+      "description": "第一案中吊起肖恩的机关草图。画着吊索、沙袋和白蜡烛，上面写着：『烛芯高度3厘米，燃烧速度约每10分钟1厘米。自19:30点燃，至20:00麻绳烧断，配重下坠，尸体吊起』。"
+    },
+    {
+      "id": "schematic_acoustic_valve",
+      "title": "气动延时阀阻力计算表",
+      "type": "item",
+      "x": 560,
+      "y": 360,
+      "description": "第二案中的暖气管路手稿。写着：『20:00管风琴合奏开始，拧松东侧阀门。利用暖气系统残余气压，气流通过狭缝的延迟耗时15分钟，20:15气动敲击器发声』。"
+    },
+    {
+      "id": "schematic_exoskeleton_track",
+      "title": "外骨骼地轨电磁离合时序草本",
+      "type": "item",
+      "x": 680,
+      "y": 360,
+      "description": "第三案舞台转盘的运转参数。记录着：『发条能量于20:40完全释放。控制台电磁扣合拢，地轨旋转启动。带着外骨骼机械起舞，持续20分钟』。"
+    },
+    {
+      "id": "schematic_ice_sphere_thermodynamics",
+      "title": "毒冰球融速与重力倾角草稿",
+      "type": "item",
+      "x": 800,
+      "y": 360,
+      "description": "第四案中特制冰球的滑落条件。画着醒酒器的剖面：『冰球卡在底部凹槽。倒前三杯酒时瓶身倾斜小于60度。倒完最后一杯香槟，瓶身倾角达80度，冰球自然滑出』。"
+    },
+    {
+      "id": "schematic_airtight_leak_scale",
+      "title": "气密门水漏滴速刻度表",
+      "type": "item",
+      "x": 520,
+      "y": 260,
+      "description": "第五案密室房门的自锁草图。画着一个挂在门后的滴水铁漏斗：『水重800克，滴空耗时40分钟。漏斗变轻，门锁弹簧拉回，门轴反锁』。",
+      "actions": [
+        {
+          "id": "check_hydraulic_damper",
+          "label": "检查液压阻尼装置",
+          "unlockIds": ["master_shaft_hydraulic_damper"],
+          "toast": "你注意到阀门侧面的液压阻尼器……"
+        },
+        {
+          "id": "magnify_spring_teeth",
+          "label": "用放大镜检查发条轮齿",
+          "unlockIds": ["main_spring_grease_stains"],
+          "toast": "你仔细检查主发条旁的齿轮……"
+        }
+      ]
+    },
+    {
+      "id": "master_shaft_hydraulic_damper",
+      "title": "总控轴液压阻尼",
+      "type": "item",
+      "x": 640,
+      "y": 260,
+      "description": "阀门侧面的液压油阻尼器，限制主控发条的瞬间释放速度。"
+    },
+    {
+      "id": "main_spring_grease_stains",
+      "title": "主发条齿轮上的机油污渍",
+      "type": "item",
+      "x": 760,
+      "y": 260,
+      "description": "齿轮咬合处残留着一些常备的黑色防锈润滑机油，以及极细微的粉末，看起来这台发条经常有人用普通工具手动上紧和维护。"
+    },
+    {
+      "id": "mastermind_secret_room",
+      "title": "调音师的旧值班室",
+      "type": "location",
+      "x": 1400,
+      "y": 880,
+      "description": "钟楼一角的旧值班室。这里摆放着各种乐器维修工具、几本陈旧的调音手册。",
+      "readUnlocks": ["desk_handwritten_ledger", "locked_steel_safe", "left_handed_drawing_scissors", "hearing_aid_battery", "photo_15_years_ago", "bloody_doctor_scalpel", "letter_to_my_puppets", "wax_candle_wicks_under_desk"]
+    },
+    {
+      "id": "desk_handwritten_ledger",
+      "title": "书桌上的手写总账本",
+      "type": "item",
+      "x": 1220,
+      "y": 720,
+      "description": "详细记录了剧院近十五年来的资金往来。账目上有多处被圈出的「异常收入」。"
+    },
+    {
+      "id": "locked_steel_safe",
+      "title": "带锁的精钢保险箱",
+      "type": "item",
+      "x": 1420,
+      "y": 600,
+      "description": "带有六位数密码锁的定制坚固保险箱。箱门打开后，里面放着一件令人震惊的物品。",
+      "actions": [
+        {
+          "id": "check_drawer_fingerprint",
+          "label": "检查抽屉底座指纹",
+          "unlockIds": ["drawer_base_hidden_fingerprint"],
+          "toast": "你用滑石粉在抽屉拉手反面提取指纹……"
+        },
+        {
+          "id": "check_diary_morse_code",
+          "label": "检查日记空白页",
+          "unlockIds": ["diary_morse_code_traces"],
+          "toast": "你仔细检查日记本空白页……"
+        },
+        {
+          "id": "check_shelf_bottles",
+          "label": "检查密室药剂架",
+          "unlockIds": ["industrial_rust_remover"],
+          "toast": "你注意到工具架上的塑料瓶……"
+        }
+      ]
+    },
+    {
+      "id": "golden_mask_inside_safe",
+      "title": "保险箱内的黄金面具",
+      "type": "item",
+      "x": 1520,
+      "y": 600,
+      "description": "一副雕刻着流泪百合花图案的纯金半面具，百合花纹路与老调音师家族的徽章惊人地相似。"
+    },
+    {
+      "id": "half_theater_blueprint",
+      "title": "半张剧院建筑设计图",
+      "type": "item",
+      "x": 1340,
+      "y": 480,
+      "description": "缺失了地下排水与锅炉房部分的古旧羊皮纸蓝图，被撕掉的边缘留下了明显的撕扯痕迹。"
+    },
+    {
+      "id": "left_handed_drawing_scissors",
+      "title": "左撇子专用的绘图剪刀",
+      "type": "item",
+      "x": 1260,
+      "y": 600,
+      "description": "一把造型奇特的左手专用纯银剪刀，刃口磨损严重，证明使用者频繁使用它进行精密工作。"
+    },
+    {
+      "id": "hearing_aid_battery",
+      "title": "助听器专用的微型电池",
+      "type": "item",
+      "x": 1380,
+      "y": 480,
+      "description": "散落在桌角上的锌空纽扣电池，是高档助听器才会使用的型号。"
+    },
+    {
+      "id": "photo_15_years_ago",
+      "title": "15年前的合影",
+      "type": "item",
+      "x": 1500,
+      "y": 480,
+      "description": "老调音师与一个十一二岁、左耳戴着助听器的小女孩的泛黄合影，女孩的眼神中透出一种超越年龄的专注与智慧。"
+    },
+    {
+      "id": "bloody_doctor_scalpel",
+      "title": "带血的医生手术刀",
+      "type": "item",
+      "x": 1240,
+      "y": 480,
+      "description": "一把极锋利的手术刀，刀刃上沾有陈旧的褐色血迹。"
+    },
+    {
+      "id": "letter_to_my_puppets",
+      "title": "一封信件",
+      "type": "item",
+      "x": 1460,
+      "y": 360,
+      "description": "一封未寄出的信，信中将剧院的几位人物（前几位受害者）称为「被贪婪丝线操控的滑稽木偶」。"
+    },
+    {
+      "id": "wax_candle_wicks_under_desk",
+      "title": "桌底的废弃石蜡烛芯",
+      "type": "item",
+      "x": 1320,
+      "y": 360,
+      "description": "在密室桌下扫出来的几根白色石蜡烛芯，其规格与前几关出现的石蜡完全一致。"
+    },
+    {
+      "id": "drawer_base_hidden_fingerprint",
+      "title": "抽屉底座的隐藏指纹",
+      "type": "item",
+      "x": 1280,
+      "y": 260,
+      "description": "用滑石粉在抽屉拉手反面提取到的一枚极细小的女性指纹。指纹细腻，与案发现场的任何已知指纹都不匹配。"
+    },
+    {
+      "id": "diary_morse_code_traces",
+      "title": "日记中的痕迹",
+      "type": "item",
+      "x": 1400,
+      "y": 260,
+      "description": "日记本空白页上的痕迹，用笔扫过后内容是「我的耳朵听不见他们的惨叫，但正合我意」。"
+    },
+    {
+      "id": "industrial_rust_remover",
+      "title": "工业强力除锈酸液",
+      "type": "item",
+      "x": 1520,
+      "y": 260,
+      "description": "维修工具架上常见的一瓶强力除锈酸液。里面装有高浓度的强酸，用来腐蚀锈死的金属锁具效果极佳。"
+    },
+    {
+      "id": "steam_self_destruct_pipe_network",
+      "title": "剧院蒸汽锅炉房",
+      "type": "location",
+      "x": 600,
+      "y": 960,
+      "description": "这里连通着全剧院的采暖与舞台蒸汽效果锅炉。目前管道内热气蒸腾，蒸汽水压已经严重超标，自毁一触即发。",
+      "readUnlocks": [
+        "main_boiler_pressure_gauge",
+        "red_pressure_release_pull_rod",
+        "rusted_heavy_padlock",
+        "steam_pipe_tee_manifold",
+        "rusted_safety_lever_pin",
+        "acid_corroded_padlock_shackle",
+        "condensate_collection_pipe",
+        "homemade_hydraulic_delay_trigger_hammer",
+        "brass_dial",
+        "boiler_unburned_anthracite"
+      ]
+    },
+    {
+      "id": "main_boiler_pressure_gauge",
+      "title": "主锅炉水压表",
+      "type": "item",
+      "x": 420,
+      "y": 820,
+      "description": "显示当前管道压力已逼近极限临界红区（20个大气压 / 约2.0 MPa），指针正在缓缓向红色禁区移动。"
+    },
+    {
+      "id": "red_pressure_release_pull_rod",
+      "title": "红色的泄压紧急拉杆",
+      "type": "item",
+      "x": 540,
+      "y": 700,
+      "description": "控制紧急泄压阀的机械拉杆，泄压阀另一端连着平衡配重。目前拉杆因高压阻力根本无法拉动。"
+    },
+    {
+      "id": "rusted_heavy_padlock",
+      "title": "生锈的铸铁大挂锁",
+      "type": "item",
+      "x": 660,
+      "y": 820,
+      "description": "锁死泄压阀门的一把重型铸铁防盗锁。由于长期处于潮湿的地下，锁芯和弹子已经完全锈合死，即使用钥匙也无法转动。"
+    },
+    {
+      "id": "steam_pipe_tee_manifold",
+      "title": "蒸汽管道上的三通歧管",
+      "type": "item",
+      "x": 560,
+      "y": 560,
+      "description": "主管道分流口，将高压蒸汽分往剧院主楼和地下蓄水箱。歧管处的金属接缝处有明显的焊接加固痕迹。"
+    },
+    {
+      "id": "rusted_safety_lever_pin",
+      "title": "卡死的泄压阀安全销",
+      "type": "item",
+      "x": 720,
+      "y": 700,
+      "description": "一根插在拉杆底座的固定精钢安全销。因为阀门内正承受着20个大气压的恐怖蒸汽力，把这根安全销死死卡住，产生了几百公斤的剪切阻力，光靠手拔根本纹丝不动。"
+    },
+    {
+      "id": "acid_corroded_padlock_shackle",
+      "title": "被酸液腐蚀变形的锁扣",
+      "type": "item",
+      "x": 780,
+      "y": 560,
+      "description": "大挂锁的锁环根部。因为接触了某种除锈酸液，泛起了一层白色的氧化泡沫，锁舌已经有些许松脱变形。"
+    },
+    {
+      "id": "condensate_collection_pipe",
+      "title": "正在滴漏的冷凝水收集管",
+      "type": "item",
+      "x": 500,
+      "y": 560,
+      "description": "一根由于高温蒸汽冷凝、正在不断滴下水滴的黄铜管道。水滴以稳定的频率滴入下方的某个容器。"
+    },
+    {
+      "id": "homemade_hydraulic_delay_trigger_hammer",
+      "title": "自制的水力延时触发锤",
+      "type": "item",
+      "x": 640,
+      "y": 440,
+      "description": "冷凝水积聚在下方一个活动的杠杆水斗中，一旦水斗灌满（约需5分钟），重锤就会砸落触发引信。",
+      "actions": [
+        {
+          "id": "check_mercury_float",
+          "label": "检查自毁水箱内部",
+          "unlockIds": ["counterweight_bucket_water_balance"],
+          "toast": "你小心地检查蓄水箱……"
+        },
+        {
+          "id": "check_steam_whistle",
+          "label": "检查蒸汽排气口",
+          "unlockIds": ["steam_exhaust_pneumatic_whistle"],
+          "toast": "你注意到高压蒸汽喷出孔处的装置……"
+        },
+        {
+          "id": "check_magnetic_base",
+          "label": "检查泄压阀旁磁力装置",
+          "unlockIds": ["pressure_release_valve_magnetic_suction_cup"],
+          "toast": "你发现泄压阀旁有一个强力电磁底座……"
+        }
+      ]
+    },
+    {
+      "id": "brass_dial",
+      "title": "黄铜刻度盘",
+      "type": "item",
+      "x": 720,
+      "y": 440,
+      "description": "泄压阀底部的机械刻度指示器。指针显示当前压力为正常工作压力的210%。"
+    },
+    {
+      "id": "boiler_unburned_anthracite",
+      "title": "锅炉下未烧完的无烟煤炭",
+      "type": "item",
+      "x": 600,
+      "y": 440,
+      "description": "锅炉炉膛内堆积着大量高发热量的优质无烟煤，煤块表面覆盖着一层灰白色的煤灰。"
+    },
+    {
+      "id": "counterweight_bucket_water_balance",
+      "title": "泄压杠杆端的重力配重桶",
+      "type": "item",
+      "x": 560,
+      "y": 320,
+      "description": "泄压阀拉柄的另一端挂着一个用来平衡阀芯阻力的空铁桶。如果能利用水箱里的积水装满这个铁桶，增加的重力就能通过杠杆作用，往回顶住阀芯，使蒸汽张力降低。"
+    },
+    {
+      "id": "steam_exhaust_pneumatic_whistle",
+      "title": "蒸汽排气口的气动哨笛",
+      "type": "item",
+      "x": 640,
+      "y": 320,
+      "description": "高压蒸汽喷出孔处装有一枚机械共鸣哨，能够发出特定频率的尖啸。"
+    },
+    {
+      "id": "pressure_release_valve_magnetic_suction_cup",
+      "title": "泄压阀旁的磁力吸盘",
+      "type": "item",
+      "x": 720,
+      "y": 320,
+      "description": "一个用于临时固定控制金属阀门不产生位移的强力电磁底座。"
+    },
+    {
+      "id": "past_murders_causal_link",
+      "title": "黑板上的被害人关联线索",
+      "type": "location",
+      "x": 1400,
+      "y": 960,
+      "description": "旧值班室的黑板上钉着前几起命案的现场草图和死者名单，用红线交织地连在一起，布满了复仇的执念。",
+      "readUnlocks": ["case1_left_handed_impact", "case2_acoustic_reflection_blueprint", "case3_exoskeleton_dynamics", "case4_silver_bead_gravity_chute", "case5_reduced_iron_oxygen_record", "five_victims_common_debt", "theater_previous_tuner_death_file", "old_tuner_brass_tuning_fork"]
+    },
+    {
+      "id": "case1_left_handed_impact",
+      "title": "第一案：左撇子指挥",
+      "type": "item",
+      "x": 1220,
+      "y": 800,
+      "description": "第一关证明袭击者为左撇子的飞溅血迹方向证据，血迹呈从右向左的抛射轨迹。"
+    },
+    {
+      "id": "case2_acoustic_reflection_blueprint",
+      "title": "第二案：声学反射图纸",
+      "type": "item",
+      "x": 1420,
+      "y": 680,
+      "description": "第二关利用抛物面聚焦声学原理杀人的弧线草图，图纸上用铅笔标注了焦点计算。"
+    },
+    {
+      "id": "case3_exoskeleton_dynamics",
+      "title": "第三案：外骨骼动力学公式",
+      "type": "item",
+      "x": 1520,
+      "y": 800,
+      "description": "第三关将尸僵作为支撑，利用地轨和吊线起舞的计算手稿。复杂的力学公式覆盖了整张羊皮纸。"
+    },
+    {
+      "id": "case4_silver_bead_gravity_chute",
+      "title": "第四案：银珠重力滑槽数据",
+      "type": "item",
+      "x": 1340,
+      "y": 680,
+      "description": "第四关在醒酒器底槽利用重力与倾角延时落毒的数据。包含倾角-滑动时间的精确表格。"
+    },
+    {
+      "id": "case5_reduced_iron_oxygen_record",
+      "title": "第五案：还原铁粉吸氧量记录",
+      "type": "item",
+      "x": 1460,
+      "y": 680,
+      "description": "第五关利用铁粉无声生锈吸干30立方米琴房氧气的实验记录。数据精确到每分钟的氧浓度变化。"
+    },
+    {
+      "id": "five_victims_common_debt",
+      "title": "五位受害者的共同债务名单",
+      "type": "item",
+      "x": 1300,
+      "y": 560,
+      "description": "之前所有死者（小提琴手肖恩、阿尔伯特勋爵、女舞者艾琳、经理唐纳德、钢琴家亚伦）的共同签名文件，证明他们曾合谋侵吞了一笔属于老调音师的巨额资产。",
+      "actions": [
+        {
+          "id": "check_debt_seal",
+          "label": "检查债务单背面封印",
+          "unlockIds": ["debt_note_red_wax_seal"],
+          "toast": "你翻转债务单查看背面……"
+        },
+        {
+          "id": "check_tuner_granddaughter",
+          "label": "查阅老调音师家族档案",
+          "unlockIds": ["old_tuner_granddaughter_missing_record"],
+          "toast": "你仔细检查老调音师的档案……"
+        },
+        {
+          "id": "check_tuning_fork_engraving",
+          "label": "检查音叉侧面刻痕",
+          "unlockIds": ["tuning_fork_scratches"],
+          "toast": "你用放大镜观察音叉侧面……"
+        },
+        {
+          "id": "check_spring_resonance_sound",
+          "label": "聆听主发条共鸣音",
+          "unlockIds": ["main_spring_resonance_hum"],
+          "toast": "你靠近主发条仔细聆听……"
+        }
+      ]
+    },
+    {
+      "id": "theater_previous_tuner_death_file",
+      "title": "剧院前任老调音师死亡档案",
+      "type": "item",
+      "x": 1420,
+      "y": 560,
+      "description": "十五年前，剧院老调音师因拒绝交出剧院机械总图纸，被上述五人联手构陷，最终在绝望中跳楼自杀。档案照片上的老人面容悲怆。"
+    },
+    {
+      "id": "old_tuner_brass_tuning_fork",
+      "title": "老调音师黄铜音叉",
+      "type": "item",
+      "x": 1500,
+      "y": 560,
+      "description": "一只极沉重的普通黄铜音叉，表面有多次撞击调音留下的磨损痕迹。老一辈调音师常用的工作器具。"
+    },
+    {
+      "id": "tuning_fork_scratches",
+      "title": "音叉表面的旧划痕",
+      "type": "item",
+      "x": 1360,
+      "y": 440,
+      "description": "音叉手柄上刻着她祖父名字的缩写。她因为左耳失聪，调音时习惯把音叉尾端紧紧抵在耳后的颅骨上——这是乐器行里非常常见的『骨传导调音法』，用以在嘈杂的剧院中依靠骨骼震动判断绝对音准。"
+    },
+    {
+      "id": "debt_note_red_wax_seal",
+      "title": "债务单背面红蜡封印",
+      "type": "item",
+      "x": 1440,
+      "y": 440,
+      "description": "债务单背面印有老调音师家族的百合花徽记，这与保险箱内的黄金面具完全吻合。"
+    },
+    {
+      "id": "old_tuner_granddaughter_missing_record",
+      "title": "老调音师孙女失踪记录",
+      "type": "item",
+      "x": 1520,
+      "y": 440,
+      "description": "档案显示老调音师有一个患有先天性听力障碍（左耳失聪）但对物理振动极其敏感的孙女，在十五年前失踪。"
+    },
+    {
+      "id": "main_spring_resonance_hum",
+      "title": "主控发条发出的共鸣音",
+      "type": "item",
+      "x": 1400,
+      "y": 320,
+      "description": "紧绷的总发条轴在高速旋转时散发着沉闷的机械轰鸣，发出低沉、令人烦躁的嗡嗡共鸣声。"
+    },
+    {
+      "id": "intermediate_spindle_power_distribution",
+      "title": "中间结论：主轴动力分配原理",
+      "type": "conclusion",
+      "x": 700,
+      "y": 420,
+      "description": "控制台主发条轴释放动力时，会将力量传递给不同的机械拉线与齿轮减速装置。"
+    },
+    {
+      "id": "intermediate_gravity_pneumatic_hub",
+      "title": "中间结论：重力与气压混动中枢",
+      "type": "conclusion",
+      "x": 560,
+      "y": 280,
+      "description": "该控制台不仅连接齿轮，也控制着通往各舞台区域布景拉索、以及散热管道气流的阀门中枢。"
+    },
+    {
+      "id": "intermediate_first_case_timing_sync",
+      "title": "中间结论：首案时序同步",
+      "type": "conclusion",
+      "x": 420,
+      "y": 200,
+      "description": "利用手稿算出的蜡烛燃烧长度与时间，确保第一案在晚上20:00准时触发。"
+    },
+    {
+      "id": "intermediate_acoustic_timing_sync",
+      "title": "中间结论：声学时序同步",
+      "type": "conclusion",
+      "x": 560,
+      "y": 180,
+      "description": "根据气阻阀门传导手稿，确保第二案气动阀在合奏开始15分钟后（即晚上20:15）准时积气并发出伪装枪击声。"
+    },
+    {
+      "id": "intermediate_stage_puppet_timing_sync",
+      "title": "中间结论：舞台傀儡时序同步",
+      "type": "conclusion",
+      "x": 700,
+      "y": 200,
+      "description": "根据地轨离合时序草稿，确保第三案中驱动女舞者尸体旋转滑行的装置在20:40节目开始时自动咬合运转。"
+    },
+    {
+      "id": "intermediate_poison_timing_sync",
+      "title": "中间结论：宴会毒酒时序同步",
+      "type": "conclusion",
+      "x": 620,
+      "y": 150,
+      "description": "根据冰球重力倾角手稿，由于瓶身倾倒角度在最后一杯时达到极限，冰球失去摩擦力滚落入酒杯，完成投毒。"
+    },
+    {
+      "id": "intermediate_full_case_timing_master_chain",
+      "title": "中间结论：全案时序物理总控",
+      "type": "conclusion",
+      "x": 560,
+      "y": 100,
+      "description": "结合第五案水漏滴尽反锁门栓的时间点，五个命案的时序完整串联。"
+    },
+    {
+      "id": "intermediate_revenge_motive_loop",
+      "title": "中间结论：复仇的动机闭环",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 420,
+      "description": "之前死去的五名受害者，正是十五年前合谋害死老调音师并侵吞其财产的幕后黑手。"
+    },
+    {
+      "id": "intermediate_sole_heir_executor",
+      "title": "中间结论：唯一的继承人与执行者",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 280,
+      "description": "失踪的老调音师孙女拥有最直接的复仇动机和继承自祖父的机械天分。"
+    },
+    {
+      "id": "intermediate_avenger_physiological_match",
+      "title": "中间结论：复仇者的生理缺陷吻合",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 200,
+      "description": "复仇者是一名严重的左耳失聪患者，需要长期佩戴高档助听器，其左手专用剪刀证明她惯用左手，与第一案的打击血迹证据完全吻合。"
+    },
+    {
+      "id": "intermediate_bone_conduction_tuning",
+      "title": "中间结论：音差骨传导调音法",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 120,
+      "description": "由于听力障碍，她不靠双耳在嘈杂环境下听音，而是将音叉底端抵在耳后的颅骨上，利用最普通但也最实用的骨传导振动调音法判断乐器以及机械装置的发条咬合情况。"
+    },
+    {
+      "id": "intermediate_resonance_tuning_imprint",
+      "title": "中间结论：共鸣调音手艺印记",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 60,
+      "description": "音叉上的摩擦痕迹，正是她在值班室调试乐器和舞台大幕定时发条时留下的日常操作痕迹。"
+    },
+    {
+      "id": "padlock_broken_by_rust_remover",
+      "title": "中间结论：锁头被除锈剂熔断",
+      "type": "conclusion",
+      "x": 1300,
+      "y": 420,
+      "description": "将强力除锈酸液倒入已经锈死的铁锁孔中，快速溶解并破坏了生锈的铸铁锁梁，成功将其拆卸。"
+    },
+    {
+      "id": "lever_jammed_by_steam_tension",
+      "title": "中间结论：拉杆被高压卡死",
+      "type": "conclusion",
+      "x": 1300,
+      "y": 280,
+      "description": "挂锁虽拆，但由于锅炉内超限的蒸汽压力将气阀顶死，安全销上承受着数百公斤的拉力，根本无法拔出。"
+    },
+    {
+      "id": "lever_gravity_balance",
+      "title": "中间结论：杠杆重力平衡解开安全销",
+      "type": "conclusion",
+      "x": 1300,
+      "y": 200,
+      "description": "向泄压阀拉柄另一端的配重铁桶内灌入冷凝水，当水箱里的重水重量通过杠杆作用，顶住阀门，与蒸汽推力达成重力平衡的一瞬间，卡死的安全销松脱了。"
+    },
+    {
+      "id": "conclusion_multidimensional_master_clock",
+      "title": "结论：舞台机械的总控",
+      "type": "conclusion",
+      "x": 500,
+      "y": 180,
+      "description": "五桩命案看似彼此独立、跨越不同房间，但它们背后的时间延迟、电磁和重力触发机关装置，完全由一人所设计实施。"
+    },
+    {
+      "id": "conclusion_avenger_identity_physical_evidence",
+      "title": "结论：复仇者身份的物理实证",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 140,
+      "description": "伪装成「木偶设计师」的黄金面具人，其实正是老调音师的孙女。她戴着面具和助听器，隐姓埋名主导了这场多重谋杀。她在前几关利用化妆和职务便利，分别伪装扮演了「指挥」和「音响师」，在台前幕后实施了复仇。"
+    },
+    {
+      "id": "conclusion_reverse_fluid_self_destruction",
+      "title": "结论：重力杠杆与安全阀泄压",
+      "type": "conclusion",
+      "x": 1500,
+      "y": 180,
+      "description": "利用除锈酸液腐蚀拆掉铁锁。接着利用简单的“重力配重杠杆”，将冷凝水注入铁桶，抵消掉高压蒸汽压死阀门的侧向张力。力学平衡的一瞬间拔出防爆钢销，拉动紧急拉杆排气，自毁装置得以彻底解除。"
+    },
+    {
+      "id": "truth_golden_theater_finale",
+      "title": "黄金剧院的真相",
+      "type": "truth",
+      "x": 1000,
+      "y": 80,
+      "description": ""
+    }
+  ],
+  "combinations": [
+    {
+      "ids": ["quintuple_differential_gearbox", "broken_brass_main_spring"],
+      "resultId": "intermediate_spindle_power_distribution",
+      "toast": "中央发条轴在总钟楼中释放，将动力传递给各减速分支系统。"
+    },
+    {
+      "ids": ["intermediate_spindle_power_distribution", "hidden_pneumatic_piston"],
+      "resultId": "intermediate_gravity_pneumatic_hub",
+      "toast": "该主轴不仅连接齿轮，也通过拉索和空气散热管道阀门同步各剧院机械。"
+    },
+    {
+      "ids": ["intermediate_gravity_pneumatic_hub", "schematic_stage_rigging"],
+      "resultId": "intermediate_first_case_timing_sync",
+      "toast": "结合吊杆配重改制图纸，确定第一案的蜡烛定时落体时点锁定在晚上20:00。"
+    },
+    {
+      "ids": ["intermediate_first_case_timing_sync", "schematic_acoustic_valve"],
+      "resultId": "intermediate_acoustic_timing_sync",
+      "toast": "通过暖气管道改延时阀手稿，推导出第二案的声学击发延迟机关定位在20:15。"
+    },
+    {
+      "ids": ["intermediate_acoustic_timing_sync", "schematic_exoskeleton_track"],
+      "resultId": "intermediate_stage_puppet_timing_sync",
+      "toast": "结合地轨离合时序草稿，计算出第三案案的外骨骼地轨滑行始于晚上20:40。"
+    },
+    {
+      "ids": ["intermediate_stage_puppet_timing_sync", "schematic_ice_sphere_thermodynamics"],
+      "resultId": "intermediate_poison_timing_sync",
+      "toast": "结合冰球倾角测定，计算出第四案中倒香槟动作触发冰球脱落的临界时间。"
+    },
+    {
+      "ids": ["intermediate_poison_timing_sync", "schematic_airtight_leak_scale"],
+      "resultId": "intermediate_full_case_timing_master_chain",
+      "toast": "结合水漏刻度表，确保第五案中气密门锁死动作按时触发。"
+    },
+    {
+      "ids": ["intermediate_full_case_timing_master_chain", "gearbox_sidewall_hatred_engraving"],
+      "resultId": "conclusion_multidimensional_master_clock",
+      "toast": "五桩命案看似彼此独立，实际全部由一人设计并实施。"
+    },
+    {
+      "ids": ["theater_previous_tuner_death_file", "five_victims_common_debt"],
+      "resultId": "intermediate_revenge_motive_loop",
+      "toast": "之前死去的五名受害者，正是十五年前合谋害死老调音师并侵吞其财产的幕后黑手。"
+    },
+    {
+      "ids": ["intermediate_revenge_motive_loop", "old_tuner_granddaughter_missing_record"],
+      "resultId": "intermediate_sole_heir_executor",
+      "toast": "失踪的老调音师孙女拥有最直接的复仇动机和继承自祖父的机械天分。"
+    },
+    {
+      "ids": ["intermediate_sole_heir_executor", "hearing_aid_battery"],
+      "resultId": "intermediate_avenger_physiological_match",
+      "toast": "复仇者是一名严重的左耳失聪患者，需要长期佩戴高档助听器。"
+    },
+    {
+      "ids": ["intermediate_avenger_physiological_match", "old_tuner_brass_tuning_fork"],
+      "resultId": "intermediate_bone_conduction_tuning",
+      "toast": "由于听力障碍，她不靠双耳听音，而是将音叉尾端抵在耳后的颅骨上利用最普通的骨传导振动调音。"
+    },
+    {
+      "ids": ["intermediate_bone_conduction_tuning", "tuning_fork_scratches"],
+      "resultId": "intermediate_resonance_tuning_imprint",
+      "toast": "音叉上的特定刮擦痕迹，正是她在调音和调试这些舞台大幕与道具延时锁时日常磨损留下的印记。"
+    },
+    {
+      "ids": ["intermediate_resonance_tuning_imprint", "drawer_base_hidden_fingerprint"],
+      "resultId": "conclusion_avenger_identity_physical_evidence",
+      "toast": "本该只出现在桌子底部的秀气女性指纹，揭示了黄金面具下「木偶设计师」的真正身份。"
+    },
+    {
+      "ids": ["rusted_heavy_padlock", "industrial_rust_remover"],
+      "resultId": "padlock_broken_by_rust_remover",
+      "toast": "将除锈剂倒入锈死锁孔，快速软化并溶解生锈大锁。"
+    },
+    {
+      "ids": ["padlock_broken_by_rust_remover", "red_pressure_release_pull_rod"],
+      "resultId": "lever_jammed_by_steam_tension",
+      "toast": "锁虽然坏了，但泄压拉杆被蒸汽顶死，插在底部的安全钢销仍卡得极深，无法拔出。"
+    },
+    {
+      "ids": ["lever_jammed_by_steam_tension", "counterweight_bucket_water_balance"],
+      "resultId": "lever_gravity_balance",
+      "toast": "在拉杆另一端的铁桶中灌满水。依靠重力杠杆顶住阀芯，抗衡锅炉推力，使得安全销的挤压阻力消失。"
+    },
+    {
+      "ids": ["lever_gravity_balance", "rusted_safety_lever_pin"],
+      "resultId": "conclusion_reverse_fluid_self_destruction",
+      "toast": "在力学平衡的一瞬间拉出安全销，用力拉下红色阀门杆，蒸汽安全排出，危险成功解除。"
+    }
+  ]
+}

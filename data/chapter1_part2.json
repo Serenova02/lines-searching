@@ -1,0 +1,276 @@
+{
+  "id": "chapter1_part2",
+  "title": "第二节：204客房的「自杀」者",
+  "overview": {
+    "title": "背景概述",
+    "text": "弟弟杀害哥哥后仓皇逃跑。根据线索，你追踪他来到了破败的“红星招待所”204客房。然而，当你打开房门时，弟弟已经再也醒不过来了……"
+  },
+  "startNodeIds": ["room204"],
+  "hints": [
+    "走遍每一个区域，认真阅读每条线索。",
+    "尝试关联两条线索，它们之间可能相互矛盾、彼此印证，或是存在因果关联。",
+    "偷渡船票与安眠药之间可能存在矛盾",
+    "地毯上44码泥脚印与床边40码干净球鞋之间可能存在矛盾",
+    "雪茄与欠条上的气味之间可能存在联系",
+    "电视新闻与债主结论之间可能存在联系",
+    "所有结论都得出后，点击「204客房的真相」揭晓完整案情。"
+  ],
+  "truthAssembly": {
+    "truthNodeId": "truth_204",
+    "appearWhenAllDiscovered": ["conclusion_fake_suicide", "conclusion_visitor", "conclusion_motive"],
+    "requiredIds": ["conclusion_fake_suicide", "conclusion_visitor", "conclusion_motive"],
+    "title": "拼合真相：204客房的「自杀」者",
+    "epilogue": "弟弟在杀害哥哥后，逃到招待所，用仅剩的现金买好了黑市船票准备今晚偷渡。\n\n然而，高利贷债主（穿44码鞋的人）通过某种渠道追踪到了这里。债主在房间里一边抽着雪茄一边逼迫弟弟还钱，却在此时看到了电视新闻，得知弟弟不仅没拿到保险单，还成了杀人通缉犯。\n\n意识到弟弟已成废棋且随时可能引来警察，债主决定杀人灭口。他强行按住弟弟的手腕，捏脱臼他的下巴，将一整瓶安眠药灌了下去。\n\n随后，债主从内部反锁房门，制造了密室自杀的假象，自己则翻窗逃走……\n\n【第二节：204客房的「自杀」者】已解开。"
+  },
+  "nodes": [
+    {
+      "id": "room204",
+      "title": "204客房",
+      "type": "location",
+      "x": 1000,
+      "y": 1040,
+      "description": "破败的红星招待所，走廊里弥漫着霉味。你打开204房门——弟弟已经一动不动了。",
+      "readUnlocks": ["door_area", "single_bed", "writing_desk", "bathroom"]
+    },
+    {
+      "id": "door_area",
+      "title": "房门处",
+      "type": "location",
+      "x": 760,
+      "y": 880,
+      "description": "门后是狭窄的门厅，地毯被踩得发黑。",
+      "readUnlocks": ["door_lock", "carpet_footprints"]
+    },
+    {
+      "id": "door_lock",
+      "title": "门锁",
+      "type": "item",
+      "x": 620,
+      "y": 760,
+      "description": "老式球形锁，从内部反锁，没有被暴力破坏的痕迹；门缝底下塞着几张招嫖小卡片。"
+    },
+    {
+      "id": "carpet_footprints",
+      "title": "地毯脚印",
+      "type": "item",
+      "x": 720,
+      "y": 640,
+      "description": "门后劣质地毯上有一串带泥的脚印，花纹很深。看尺寸，至少是44码的男鞋留下的。"
+    },
+    {
+      "id": "single_bed",
+      "title": "单人床",
+      "type": "location",
+      "x": 1240,
+      "y": 880,
+      "description": "近乎塌陷的单人床，被褥凌乱，像有人匆忙收拾过。",
+      "readUnlocks": ["travel_bag", "sneakers"]
+    },
+    {
+      "id": "sneakers",
+      "title": "运动鞋",
+      "type": "item",
+      "x": 1380,
+      "y": 720,
+      "description": "弟弟脱在床边的白色运动鞋，鞋底只有灰尘没有泥巴，鞋标显示尺码为40码。"
+    },
+    {
+      "id": "travel_bag",
+      "title": "旅行包",
+      "type": "item",
+      "x": 1120,
+      "y": 720,
+      "description": "敞开的帆布包，塞满了换洗衣物。",
+      "actions": [
+        {
+          "id": "search_bag",
+          "label": "翻找",
+          "unlockIds": ["fake_id", "boat_ticket"],
+          "toast": "你在夹层里摸到了硬纸片……"
+        }
+      ]
+    },
+    {
+      "id": "fake_id",
+      "title": "假身份证",
+      "type": "item",
+      "x": 1040,
+      "y": 560,
+      "description": "做工粗糙的假证件，照片是弟弟，名字却是另一个。"
+    },
+    {
+      "id": "boat_ticket",
+      "title": "一张船票",
+      "type": "item",
+      "x": 1180,
+      "y": 560,
+      "description": "一张今晚11点开往东南亚的黑市偷渡船票，价值不菲。"
+    },
+    {
+      "id": "writing_desk",
+      "title": "写字台",
+      "type": "location",
+      "x": 1000,
+      "y": 760,
+      "description": "掉漆的写字台上堆着烟灰与旧报纸。",
+      "readUnlocks": ["old_tv", "ashtray", "wastebasket"]
+    },
+    {
+      "id": "old_tv",
+      "title": "老式电视",
+      "type": "item",
+      "x": 860,
+      "y": 560,
+      "description": "电视开着，正在播报午夜新闻：“郊区老屋发生命案，警方已锁定嫌疑人，正在全力通缉……”"
+    },
+    {
+      "id": "ashtray",
+      "title": "烟灰缸",
+      "type": "item",
+      "x": 1000,
+      "y": 520,
+      "description": "堆满了平价香烟的烟头。但在最上面，突兀地按灭着大半截粗大的雪茄。"
+    },
+    {
+      "id": "wastebasket",
+      "title": "纸篓",
+      "type": "item",
+      "x": 1140,
+      "y": 560,
+      "description": "装满了垃圾，最上面是一堆被撕碎的纸片。",
+      "actions": [
+        {
+          "id": "puzzle_pieces",
+          "label": "拼合碎片",
+          "unlockIds": ["heavy_iou"],
+          "toast": "碎片在指尖拼出刺眼的数字……"
+        }
+      ]
+    },
+    {
+      "id": "heavy_iou",
+      "title": "巨额欠条",
+      "type": "item",
+      "x": 1280,
+      "y": 420,
+      "description": "拼好后是一张高利贷欠条，借款人是弟弟，金额高达五百万；纸面上残留着浓烈的雪茄味。"
+    },
+    {
+      "id": "bathroom",
+      "title": "卫生间",
+      "type": "location",
+      "x": 1000,
+      "y": 920,
+      "description": "瓷砖发黄，镜面布满水渍。",
+      "readUnlocks": ["bathtub"]
+    },
+    {
+      "id": "bathtub",
+      "title": "浴缸",
+      "type": "location",
+      "x": 1000,
+      "y": 640,
+      "description": "没水的浴缸里躺着一个人影。",
+      "readUnlocks": ["brother_corpse"]
+    },
+    {
+      "id": "brother_corpse",
+      "title": "弟弟的尸体",
+      "type": "character",
+      "x": 1000,
+      "y": 460,
+      "description": "弟弟穿着整齐躺在没水的浴缸里，面色铁青，已经失去生命体征，右手虚握着一个东西。",
+      "actions": [
+        {
+          "id": "examine_body",
+          "label": "检查尸体",
+          "unlockIds": ["sleeping_pills_empty", "neck_and_wrists"],
+          "toast": "你俯身检查尸体细节……"
+        }
+      ]
+    },
+    {
+      "id": "sleeping_pills_empty",
+      "title": "安眠药空瓶",
+      "type": "item",
+      "x": 820,
+      "y": 340,
+      "description": "掉在尸体右手边的空瓶，标签上写着：强效安眠药，适量服用，过量可致死。"
+    },
+    {
+      "id": "neck_and_wrists",
+      "title": "颈部与手腕",
+      "type": "item",
+      "x": 1180,
+      "y": 340,
+      "description": "尸体的衣服领口有被大力撕扯的痕迹，双侧手腕有深深的紫红色勒痕，下颌骨有脱臼迹象。"
+    },
+    {
+      "id": "conclusion_fake_suicide",
+      "title": "结论：伪造的自杀",
+      "type": "conclusion",
+      "x": 720,
+      "y": 200,
+      "description": "一场拙劣的谋杀戏码。"
+    },
+    {
+      "id": "conclusion_visitor",
+      "title": "结论：神秘的访客",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 200,
+      "description": "44码的闯入者。"
+    },
+    {
+      "id": "conclusion_creditor",
+      "title": "结论：债主逼门",
+      "type": "conclusion",
+      "x": 1280,
+      "y": 260,
+      "description": "催命的雪茄味。"
+    },
+    {
+      "id": "conclusion_motive",
+      "title": "结论：灭口动机",
+      "type": "conclusion",
+      "x": 1280,
+      "y": 120,
+      "description": "通缉令与债务叠加，废棋只能被清掉。"
+    },
+    {
+      "id": "truth_204",
+      "title": "204客房的真相",
+      "type": "truth",
+      "x": 1000,
+      "y": 80,
+      "description": ""
+    }
+  ],
+  "combinations": [
+    {
+      "ids": ["sleeping_pills_empty", "boat_ticket"],
+      "resultId": "conclusion_fake_suicide",
+      "toast": "求生与自尽无法自洽"
+    },
+    {
+      "ids": ["sleeping_pills_empty", "neck_and_wrists"],
+      "resultId": "conclusion_fake_suicide",
+      "toast": "勒痕与脱臼说明药是被强行灌入的"
+    },
+    {
+      "ids": ["carpet_footprints", "sneakers"],
+      "resultId": "conclusion_visitor",
+      "toast": "尺码与鞋底状态完全对不上"
+    },
+    {
+      "ids": ["ashtray", "heavy_iou"],
+      "resultId": "conclusion_creditor",
+      "toast": "雪茄与欠条上的气味指向同一个人"
+    },
+    {
+      "ids": ["old_tv", "conclusion_creditor"],
+      "resultId": "conclusion_motive",
+      "toast": "新闻突发——灭口成了唯一选项"
+    }
+  ]
+}

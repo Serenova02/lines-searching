@@ -1,0 +1,306 @@
+{
+  "id": "chapter2_part3",
+  "title": "第三节：替身",
+  "overview": {
+    "title": "背景概述",
+    "text": "随着证据浮出水面，大少爷的嫌疑被洗清了多半，凶手必定是宅邸内的第三人——私人律师。但他矢口否认，坚称自己当时在一楼客厅。你决定重返雨夜的花园小径，去寻找那个「伪装者」留下的致命破绽……"
+  },
+  "startNodeIds": ["rain_garden"],
+  "hints": [
+    "走遍每一个区域，认真阅读每条线索。",
+    "尝试关联两条线索，它们之间可能相互矛盾、彼此印证，或是存在因果关联。",
+    "受力特征与扁平足之间可能存在矛盾",
+    "步幅特征与少爷身高之间可能存在矛盾",
+    "律师的皮鞋与大尺码脚印之间可能存在联系",
+    "不吻合的足底受力与短步幅之间可能存在联系",
+    "增高鞋垫与伪装者结论之间可能存在联系",
+    "夫人证词、踩高跷的律师与被阻挡的视线之间可能存在联系",
+    "所有结论都得出后，点击「不在场证明的真相」揭晓完整案情。"
+  ],
+  "truthAssembly": {
+    "truthNodeId": "truth_alibi_breakdown",
+    "appearWhenAllDiscovered": ["conclusion_big_shoes_disguise", "conclusion_lawyer_on_stilts", "conclusion_blind_spot_puppet"],
+    "requiredIds": ["conclusion_big_shoes_disguise", "conclusion_lawyer_on_stilts", "conclusion_blind_spot_puppet"],
+    "title": "拼合真相：替身",
+    "epilogue": "这根本不是什么幽灵，这是一场利用生物学缺陷和视觉盲区上演的绝妙木偶戏！\n\n真正的凶手是私人律师。傍晚，他趁停电潜入大少爷房间，偷走了42码的皮鞋和灰色风衣。为了让自己170的身高和39码的脚能装进大少爷的躯壳里，他使用了那双5cm厚的增高鞋垫。\n\n他穿着这双极其不合脚的「高跷」，步履蹒跚地走向地下室。因为鞋垫太高，他只能垫着脚尖，留下了那串不符合扁平足特征、前深后浅且步幅局促的诡异脚印。\n\n为了防止被二楼的夫人识破真面目，他砸碎了地灯，巧妙地利用樟树的树冠作为遮掩，将雨伞压得很低。在夫人视线的盲区里，没有头，没有肩膀，只有一件熟悉的长风衣和一双大皮鞋在移动。夫人顺理成章地将这个「幻影」脑补成了大少爷。\n\n律师用这招完美的「移花接木」，将杀害林老爷的罪名死死扣在了大少爷的头上，自己则安然坐在客厅里「阅读晚报」。现在，证据确凿，是时候逮捕他了！\n\n【第三节：替身】已解开。"
+  },
+  "nodes": [
+    {
+      "id": "rain_garden",
+      "title": "暴雨洗礼后的花园",
+      "type": "location",
+      "x": 1000,
+      "y": 1040,
+      "description": "随着证据浮出水面，大少爷的嫌疑被洗清了多半，凶手必定是昨晚宅邸内的第三人——私人律师。但他矢口否认，坚称自己当时在一楼客厅。你决定重返雨夜的花园小径，去寻找那个「伪装者」留下的致命破绽。",
+      "readUnlocks": ["muddy_path", "wife_balcony_second_floor", "young_master_dressing_room", "lawyer_guest_room"]
+    },
+    {
+      "id": "muddy_path",
+      "title": "泥泞小径",
+      "type": "location",
+      "x": 720,
+      "y": 880,
+      "description": "通往地下室的花园小径，昨晚经历了暴雨的洗礼。",
+      "readUnlocks": ["clear_footprints", "broken_garden_lamp", "ancient_camphor_tree"]
+    },
+    {
+      "id": "broken_garden_lamp",
+      "title": "破碎的庭院地灯",
+      "type": "item",
+      "x": 520,
+      "y": 760,
+      "description": "人为砸碎的，导致昨晚这条小径漆黑一片，只能靠二楼透出的微光视物。"
+    },
+    {
+      "id": "ancient_camphor_tree",
+      "title": "茂密的百年樟树",
+      "type": "item",
+      "x": 620,
+      "y": 640,
+      "description": "巨大的树冠刚好延伸到小径上方，形成了一个天然的遮蔽伞。"
+    },
+    {
+      "id": "clear_footprints",
+      "title": "一串清晰的脚印",
+      "type": "item",
+      "x": 820,
+      "y": 720,
+      "description": "泥地上留下的一串清晰脚印，等待进一步鉴定。",
+      "actions": [
+        {
+          "id": "footprint_analysis",
+          "label": "足迹鉴定",
+          "unlockIds": ["size_characteristic", "weight_characteristic", "stride_characteristic"],
+          "toast": "你仔细分析这串脚印的特征……"
+        }
+      ]
+    },
+    {
+      "id": "size_characteristic",
+      "title": "尺码特征",
+      "type": "item",
+      "x": 700,
+      "y": 560,
+      "description": "鞋印长28cm，标准的42码男鞋留下的痕迹。"
+    },
+    {
+      "id": "weight_characteristic",
+      "title": "受力特征",
+      "type": "item",
+      "x": 860,
+      "y": 560,
+      "description": "泥地上的脚印呈现出极其怪异的状态——前脚掌深陷泥中，而后脚跟的印记却非常浅。"
+    },
+    {
+      "id": "stride_characteristic",
+      "title": "步幅特征",
+      "type": "item",
+      "x": 920,
+      "y": 560,
+      "description": "两个脚印之间的跨度（步幅）仅为60厘米，显得非常局促。"
+    },
+    {
+      "id": "young_master_dressing_room",
+      "title": "大少爷的更衣室",
+      "type": "location",
+      "x": 1280,
+      "y": 880,
+      "description": "大少爷的私人更衣室。",
+      "readUnlocks": ["master_medical_report", "master_custom_suit", "shoe_cabinet"]
+    },
+    {
+      "id": "master_medical_report",
+      "title": "体检报告",
+      "type": "item",
+      "x": 1120,
+      "y": 720,
+      "description": "报告显示大少爷患有极其严重的扁平足，且长期未矫正。"
+    },
+    {
+      "id": "master_custom_suit",
+      "title": "少爷的高定西装",
+      "type": "item",
+      "x": 1280,
+      "y": 720,
+      "description": "定制标签上写着客户体型数据：身高185cm。"
+    },
+    {
+      "id": "shoe_cabinet",
+      "title": "鞋柜",
+      "type": "item",
+      "x": 1400,
+      "y": 720,
+      "description": "里面少了一双42码的英伦做旧皮鞋，以及一件标志性的灰色长款风衣。"
+    },
+    {
+      "id": "lawyer_guest_room",
+      "title": "律师的客房",
+      "type": "location",
+      "x": 1000,
+      "y": 760,
+      "description": "私人律师临时居住的客房。",
+      "readUnlocks": ["lawyer_leather_shoes", "lawyer_medical_check", "wet_briefcase"]
+    },
+    {
+      "id": "lawyer_leather_shoes",
+      "title": "律师的皮鞋",
+      "type": "item",
+      "x": 860,
+      "y": 560,
+      "description": "床底下一双尺码为39码的平底皮鞋。"
+    },
+    {
+      "id": "lawyer_medical_check",
+      "title": "律师的体检单",
+      "type": "item",
+      "x": 1000,
+      "y": 520,
+      "description": "身高170cm。"
+    },
+    {
+      "id": "wet_briefcase",
+      "title": "湿漉漉的公文包",
+      "type": "item",
+      "x": 1140,
+      "y": 560,
+      "description": "律师随身携带的公文包，表面湿漉漉的。",
+      "actions": [
+        {
+          "id": "empty_compartment",
+          "label": "清空夹层",
+          "unlockIds": ["height_insoles"],
+          "toast": "你清空公文包的夹层……"
+        }
+      ]
+    },
+    {
+      "id": "height_insoles",
+      "title": "一双特制增高鞋垫",
+      "type": "item",
+      "x": 1080,
+      "y": 420,
+      "description": "足足有5厘米厚的硅胶内增高鞋垫，表面沾满了雨水和少许黄泥。"
+    },
+    {
+      "id": "wife_balcony_second_floor",
+      "title": "二楼夫人阳台",
+      "type": "location",
+      "x": 1000,
+      "y": 920,
+      "description": "年轻夫人目击「大少爷」的位置。",
+      "readUnlocks": ["wife_testimony_review", "balcony_overhead_view"]
+    },
+    {
+      "id": "wife_testimony_review",
+      "title": "夫人的证词复盘",
+      "type": "item",
+      "x": 860,
+      "y": 640,
+      "description": "「我绝对没看错！他穿着那件灰风衣，打着黑伞，脚上是那双英伦皮鞋。因为他太高了，风衣下摆不到膝盖，所以我一眼就认出了那是大少爷！」"
+    },
+    {
+      "id": "balcony_overhead_view",
+      "title": "阳台俯视视角",
+      "type": "item",
+      "x": 1000,
+      "y": 640,
+      "description": "从夫人的阳台向下俯视的视角。",
+      "actions": [
+        {
+          "id": "simulate_sight",
+          "label": "模拟视线",
+          "unlockIds": ["blocked_sight"],
+          "toast": "你模拟夫人当时的视线……"
+        }
+      ]
+    },
+    {
+      "id": "blocked_sight",
+      "title": "被阻挡的视线",
+      "type": "item",
+      "x": 1140,
+      "y": 640,
+      "description": "从这个角度看下去，由于百年樟树的树冠遮挡，加上雨伞的阻碍，其实根本看不见伞下之人的头部和肩膀，只能看到胸口以下的躯干和脚。"
+    },
+    {
+      "id": "mismatched_foot_pressure",
+      "title": "不吻合的足底受力",
+      "type": "conclusion",
+      "x": 600,
+      "y": 320,
+      "description": "扁平足患者走路时足弓塌陷，全脚掌着地，脚印受力应该是极其均匀的，绝不可能踩出垫着脚尖般「前深后浅」的印记。"
+    },
+    {
+      "id": "awkward_short_stride",
+      "title": "违和的短步幅",
+      "type": "conclusion",
+      "x": 800,
+      "y": 320,
+      "description": "185cm的男性，正常步幅应该在75-80cm左右，只有矮个子或者行动不便的人才会走出60cm的短步幅。"
+    },
+    {
+      "id": "conclusion_big_shoes_disguise",
+      "title": "结论：穿大鞋的伪装者",
+      "type": "conclusion",
+      "x": 700,
+      "y": 180,
+      "description": "既然受力不对、步幅不对，这双42码的鞋里，绝对不是大少爷的脚！"
+    },
+    {
+      "id": "conclusion_lawyer_on_stilts",
+      "title": "结论：踩着高跷的律师",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 140,
+      "description": "律师为了填补鞋子的空隙，同时为了拔高自己170cm的身高来冒充大少爷，他把5cm的增高鞋垫塞进了大鞋里！这导致他脚后跟被严重垫高，只能「垫着脚尖」走路，完美解释了为什么脚印会「前深后浅」且「步幅局促」！"
+    },
+    {
+      "id": "conclusion_blind_spot_puppet",
+      "title": "结论：视线盲区里的木偶戏",
+      "type": "conclusion",
+      "x": 1300,
+      "y": 140,
+      "description": "律师早有预谋，他砸碎了地灯，特意走在樟树的阴影下。大树冠和黑雨伞挡住了他的上半身。由于视线盲区，夫人只能看到下半身。律师穿着那件标志性的长风衣，由于律师比较矮，风衣下摆本该拖到小腿，但他靠增高垫强行拔高了下半身比例，使得风衣下摆刚好停在膝盖上方，完美复刻了大少爷的身材比例！"
+    },
+    {
+      "id": "truth_alibi_breakdown",
+      "title": "不在场证明的真相",
+      "type": "truth",
+      "x": 1000,
+      "y": 80,
+      "description": ""
+    }
+  ],
+  "combinations": [
+    {
+      "ids": ["weight_characteristic", "master_medical_report"],
+      "resultId": "mismatched_foot_pressure",
+      "toast": "扁平足的脚印受力应该均匀，不可能前深后浅……"
+    },
+    {
+      "ids": ["stride_characteristic", "master_custom_suit"],
+      "resultId": "awkward_short_stride",
+      "toast": "185cm的壮汉不可能走出60cm的短步幅……"
+    },
+    {
+      "ids": ["mismatched_foot_pressure", "awkward_short_stride"],
+      "resultId": "conclusion_big_shoes_disguise",
+      "toast": "受力不对，步幅不对——这双鞋里的人，绝不是大少爷！"
+    },
+    {
+      "ids": ["lawyer_leather_shoes", "size_characteristic"],
+      "resultId": "conclusion_lawyer_on_stilts",
+      "toast": "39码的脚穿42码的鞋，除非里面塞了东西……等等，增高鞋垫！"
+    },
+    {
+      "ids": ["height_insoles", "conclusion_big_shoes_disguise"],
+      "resultId": "conclusion_lawyer_on_stilts",
+      "toast": "5cm的增高鞋垫塞进大鞋里——这完美解释了前深后浅和短步幅！"
+    },
+    {
+      "ids": ["conclusion_lawyer_on_stilts", "wife_testimony_review", "blocked_sight"],
+      "resultId": "conclusion_blind_spot_puppet",
+      "toast": "视线盲区里，只有下半身可见——律师靠增高垫完美复刻了少爷的比例！"
+    }
+  ]
+}

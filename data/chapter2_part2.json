@@ -1,0 +1,321 @@
+{
+  "id": "chapter2_part2",
+  "title": "第二节：停电",
+  "overview": {
+    "title": "背景概述",
+    "text": "林老爷的死亡时间被锁定在晚上的18:00到19:00之间。此刻，三名嫌疑人端坐在客厅里，每个人都宣称自己有完美的不在场证明，每个人都在指控别人。这是一场各怀鬼胎的罗生门……"
+  },
+  "startNodeIds": ["three_trial"],
+  "hints": [
+    "走遍每一个区域，认真阅读每条线索。",
+    "尝试关联两条线索，它们之间可能相互矛盾、彼此印证，或是存在因果关联。",
+    "雅马哈数码三角琴与跳闸记录之间可能存在矛盾",
+    "断电的钢琴与律师的旁证之间可能存在矛盾",
+    "恐吓信与地毯上的黄泥印之间可能存在联系",
+    "后门之约与夫人的指认之间可能存在矛盾",
+    "所有结论都得出后，点击「雨夜真相」揭晓完整案情。"
+  ],
+  "truthAssembly": {
+    "truthNodeId": "truth_rainy_rashomon",
+    "appearWhenAllDiscovered": ["conclusion_false_alibi", "conclusion_back_door_appointment", "conclusion_impossible_phantom"],
+    "requiredIds": ["conclusion_false_alibi", "conclusion_back_door_appointment", "conclusion_impossible_phantom"],
+    "title": "拼合真相：停电",
+    "epilogue": "没有一句实话，这个华丽的客厅里，流淌的全是谎言与欲望。\n\n大少爷根本没有弹琴。晚上停电时，那架断电的钢琴戳穿了律师包庇的伪证。大少爷之所以撒谎，是因为他在18:30偷偷溜到了后门荒地，去偿还见不得光的高利贷。\n\n然而，最令人毛骨悚然的并非他们的谎言，而是年轻夫人的证词。既然大少爷在18:30去了后门，夫人又怎么可能在同一时刻，看到「大少爷」走入前花园的地下室？\n\n分身乏术的幻影揭示了一个可怕的事实：夫人没有说谎，但她看到的根本不是大少爷。在这个雷雨交加的夜晚，真正的凶手穿上了大少爷标志性的灰色风衣，撑着黑伞，故意走进了夫人的视线，完成了一场完美的嫁祸与不在场证明的塑造。\n\n那么，是谁伪装成了大少爷？\n\n凶手，就坐在这三个人之中。【第二节：停电】已解开。"
+  },
+  "nodes": [
+    {
+      "id": "three_trial",
+      "title": "三堂会审",
+      "type": "location",
+      "x": 1000,
+      "y": 1040,
+      "description": "林老爷的死亡时间被锁定在晚上的18:00到19:00之间。此刻，三名嫌疑人端坐在客厅里，每个人都宣称自己有完美的不在场证明，每个人都在指控别人。这是一场各怀鬼胎的罗生门。",
+      "readUnlocks": ["objective_environment", "young_master_testimony", "lawyer_testimony", "young_wife_testimony"]
+    },
+    {
+      "id": "objective_environment",
+      "title": "客观环境档案",
+      "type": "location",
+      "x": 720,
+      "y": 880,
+      "description": "验证证词的基石，记录了案发当晚的客观事实。",
+      "readUnlocks": ["forensic_death_time", "weather_data", "mansion_electric_room", "back_door_hall"]
+    },
+    {
+      "id": "forensic_death_time",
+      "title": "法医的死亡推断",
+      "type": "item",
+      "x": 520,
+      "y": 760,
+      "description": "林老爷死于晚上18:00到19:00之间。"
+    },
+    {
+      "id": "weather_data",
+      "title": "气象局数据",
+      "type": "item",
+      "x": 620,
+      "y": 640,
+      "description": "下午17:00开始本市遭遇特大雷暴雨，伴随极强的雷电天气。"
+    },
+    {
+      "id": "mansion_electric_room",
+      "title": "古宅电控室",
+      "type": "location",
+      "x": 820,
+      "y": 720,
+      "description": "古宅的电力控制中心。",
+      "readUnlocks": ["power_trip_record", "backup_generator"]
+    },
+    {
+      "id": "power_trip_record",
+      "title": "智能跳闸记录",
+      "type": "item",
+      "x": 700,
+      "y": 560,
+      "description": "系统日志显示，晚上18:45因落雷导致外网电涌，全宅停电，直到18:55才恢复供电。"
+    },
+    {
+      "id": "backup_generator",
+      "title": "备用发电机",
+      "type": "item",
+      "x": 860,
+      "y": 560,
+      "description": "因为年久失修，并没有启动。"
+    },
+    {
+      "id": "back_door_hall",
+      "title": "后门玄关勘察",
+      "type": "location",
+      "x": 920,
+      "y": 720,
+      "description": "古宅后门的玄关区域。",
+      "readUnlocks": ["back_door_mud_prints", "waste_paper_basket"]
+    },
+    {
+      "id": "back_door_mud_prints",
+      "title": "地毯上的黄泥印",
+      "type": "item",
+      "x": 800,
+      "y": 560,
+      "description": "后门通往宅邸外的荒地，地毯上留有新鲜的黄泥脚印。"
+    },
+    {
+      "id": "waste_paper_basket",
+      "title": "废纸篓",
+      "type": "item",
+      "x": 960,
+      "y": 560,
+      "description": "玄关角落的废纸篓。",
+      "actions": [
+        {
+          "id": "search_waste_basket",
+          "label": "翻找",
+          "unlockIds": ["threat_letter"],
+          "toast": "翻出了一张揉碎的字条……"
+        }
+      ]
+    },
+    {
+      "id": "threat_letter",
+      "title": "揉皱的恐吓信",
+      "type": "item",
+      "x": 880,
+      "y": 420,
+      "description": "一张匿名字条：「欠我的高利贷该还了。今晚18:30，带现金到后门外的荒地见我，否则打断你的腿。——黑力」"
+    },
+    {
+      "id": "young_master_testimony",
+      "title": "大少爷的口供",
+      "type": "location",
+      "x": 1280,
+      "y": 880,
+      "description": "大少爷的陈述与相关证据。",
+      "readUnlocks": ["young_master_claimed_location", "young_master_accusation", "second_floor_piano_room"]
+    },
+    {
+      "id": "young_master_claimed_location",
+      "title": "声称的行踪",
+      "type": "item",
+      "x": 1120,
+      "y": 720,
+      "description": "「18:00到19:00，因为打雷我心情烦躁，一直把自己关在二楼琴房里，一刻不停地弹了整整一个小时的钢琴！」"
+    },
+    {
+      "id": "young_master_accusation",
+      "title": "大少爷的指控",
+      "type": "item",
+      "x": 1280,
+      "y": 720,
+      "description": "「肯定是那个恶毒的继母干的！老爷子前天刚说要把遗产全留给我，她急了！」"
+    },
+    {
+      "id": "second_floor_piano_room",
+      "title": "二楼琴房勘察",
+      "type": "location",
+      "x": 1400,
+      "y": 720,
+      "description": "大少爷声称弹琴的二楼琴房。",
+      "readUnlocks": ["beethoven_scores", "yamaha_digital_piano"]
+    },
+    {
+      "id": "beethoven_scores",
+      "title": "散落的贝多芬琴谱",
+      "type": "item",
+      "x": 1280,
+      "y": 560,
+      "description": "琴房内散落着贝多芬的琴谱。"
+    },
+    {
+      "id": "yamaha_digital_piano",
+      "title": "雅马哈数码三角琴",
+      "type": "item",
+      "x": 1460,
+      "y": 560,
+      "description": "一架极其昂贵的高端电子数码钢琴，只有插上电才能发出声音。"
+    },
+    {
+      "id": "lawyer_testimony",
+      "title": "私人律师的口供",
+      "type": "location",
+      "x": 1000,
+      "y": 760,
+      "description": "私人律师的陈述与相关证据。",
+      "readUnlocks": ["lawyer_claimed_location", "decisive_alibi_evidence", "lawyer_briefcase"]
+    },
+    {
+      "id": "lawyer_claimed_location",
+      "title": "声称的行踪",
+      "type": "item",
+      "x": 860,
+      "y": 560,
+      "description": "「18:00到19:00，我一直在一楼客厅的沙发上阅读当天的晚报，没有离开过。」"
+    },
+    {
+      "id": "decisive_alibi_evidence",
+      "title": "决定性的旁证",
+      "type": "item",
+      "x": 1000,
+      "y": 520,
+      "description": "「我可以用我的职业生涯担保，大少爷没有说谎。因为一楼客厅正好在琴房正下方，我清清楚楚地听到上面连续不断地弹了一个小时的曲子，直到19点少爷下楼。」"
+    },
+    {
+      "id": "lawyer_briefcase",
+      "title": "律师的随身公文包",
+      "type": "item",
+      "x": 1140,
+      "y": 560,
+      "description": "律师随身携带的公文包。",
+      "actions": [
+        {
+          "id": "check_briefcase",
+          "label": "检查",
+          "unlockIds": ["lottery_tickets"],
+          "toast": "你检查了律师的公文包……"
+        }
+      ]
+    },
+    {
+      "id": "lottery_tickets",
+      "title": "大额马彩废票",
+      "type": "item",
+      "x": 1080,
+      "y": 420,
+      "description": "一堆大额的马彩废票，最近似乎极度缺钱，可能会为了钱帮人作伪证甚至杀人。"
+    },
+    {
+      "id": "young_wife_testimony",
+      "title": "年轻夫人的口供",
+      "type": "location",
+      "x": 1000,
+      "y": 920,
+      "description": "年轻夫人的陈述与相关证据。",
+      "readUnlocks": ["young_wife_claimed_location", "fatal_identification", "wife_balcony_view"]
+    },
+    {
+      "id": "young_wife_claimed_location",
+      "title": "声称的行踪",
+      "type": "item",
+      "x": 860,
+      "y": 640,
+      "description": "「我有些偏头痛，18点钟吃完药就一直在二楼我的主卧里躺着休息。」"
+    },
+    {
+      "id": "fatal_identification",
+      "title": "致命的指认",
+      "type": "item",
+      "x": 1000,
+      "y": 640,
+      "description": "「大少爷在撒谎！18:30整的时候，我被雷声惊醒，走到窗边。我清清楚楚地看到，大少爷穿着他那件标志性的灰色风衣，打着黑伞，正穿过花园小径，走向案发的地下室！」"
+    },
+    {
+      "id": "wife_balcony_view",
+      "title": "夫人阳台的视野",
+      "type": "item",
+      "x": 1140,
+      "y": 640,
+      "description": "从夫人的阳台向下看，确实能将通往地下室的花园小径尽收眼底。"
+    },
+    {
+      "id": "silent_piano_during_blackout",
+      "title": "断电的钢琴",
+      "type": "conclusion",
+      "x": 700,
+      "y": 320,
+      "description": "停电期间，这架琴根本无法发出声音。"
+    },
+    {
+      "id": "conclusion_false_alibi",
+      "title": "结论：包庇的伪证",
+      "type": "conclusion",
+      "x": 700,
+      "y": 140,
+      "description": "律师声称听到了停电期间根本不存在的琴声，说明他在做伪证，大少爷的不在场证明是两人串通好的谎言！"
+    },
+    {
+      "id": "conclusion_back_door_appointment",
+      "title": "结论：18点30分的后门之约",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 200,
+      "description": "这张字条解释了大少爷的去向，他为了掩盖自己借了巨额高利贷的丑闻，才让律师帮他撒谎弹琴。"
+    },
+    {
+      "id": "conclusion_impossible_phantom",
+      "title": "结论：分身乏术",
+      "type": "conclusion",
+      "x": 1300,
+      "y": 140,
+      "description": "一个人是不可能在18点30分同时出现在「后门荒地」和「前花园」的。客观证据（恐吓信和泥印）证明大少爷确实去了后门。那么，夫人看到的人是谁？"
+    },
+    {
+      "id": "truth_rainy_rashomon",
+      "title": "雨夜真相",
+      "type": "truth",
+      "x": 1000,
+      "y": 80,
+      "description": ""
+    }
+  ],
+  "combinations": [
+    {
+      "ids": ["yamaha_digital_piano", "power_trip_record"],
+      "resultId": "silent_piano_during_blackout",
+      "toast": "停电期间，这架琴根本无法发出声音……"
+    },
+    {
+      "ids": ["silent_piano_during_blackout", "decisive_alibi_evidence"],
+      "resultId": "conclusion_false_alibi",
+      "toast": "律师声称听到了停电期间根本不存在的琴声，他在做伪证！"
+    },
+    {
+      "ids": ["threat_letter", "back_door_mud_prints"],
+      "resultId": "conclusion_back_door_appointment",
+      "toast": "这张字条解释了大少爷的去向……"
+    },
+    {
+      "ids": ["conclusion_back_door_appointment", "fatal_identification"],
+      "resultId": "conclusion_impossible_phantom",
+      "toast": "一个人不可能在同一时刻出现在两个地方……夫人看到的人是谁？"
+    }
+  ]
+}

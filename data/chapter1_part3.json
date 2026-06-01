@@ -1,0 +1,289 @@
+{
+  "id": "chapter1_part3",
+  "title": "第三节：17号仓库的「黄雀」",
+  "overview": {
+    "title": "背景概述",
+    "text": "根据“船票”，你连夜追查到了海风腥咸的偷渡码头——17号废弃仓库。然而，当你推开沉重的铁门，那个44码鞋的债主并没有逃走，而是永远地留在了这里……"
+  },
+  "startNodeIds": ["warehouse17"],
+  "hints": [
+    "走遍每一个区域，认真阅读每条线索。",
+    "尝试关联两条线索，它们之间可能相互矛盾、彼此印证，或是存在因果关联。",
+    "铁皮箱需要钥匙和密码同时组合开启",
+    "脚印与死者尸体上的勒痕之间可能存在联系",
+    "杯子中的粉末与上吊结论之间可能存在联系",
+    "怀表与幕后黄雀结论之间可能存在联系",
+    "所有结论都得出后，点击「连环迷局的真相」揭晓完整案情。"
+  ],
+  "truthAssembly": {
+    "truthNodeId": "truth_warehouse17",
+    "appearWhenAllDiscovered": ["conclusion_drugged_and_strangled", "conclusion_hidden_liu", "conclusion_timing_0130"],
+    "requiredIds": ["conclusion_drugged_and_strangled", "conclusion_hidden_liu", "conclusion_timing_0130"],
+    "title": "拼合真相：17号仓库的「黄雀」",
+    "epilogue": "一切的真相终于浮出水面。\n\n这并非一起冲动的谋杀，而是一场因贪婪而起、最终“黑吃黑”的连环悲剧。\n\n身为保险代理人的刘某，暗中利用职务之便，将客户（哥哥）投保的天价保单受益人由原本的弟弟篡改为了自己，并给哥哥留了一份假保单。随后，他教唆同伙债主不断向弟弟逼债，间接导致了老屋和招待所的两起命案。如今哥哥已经死亡，理赔条件已经达成，此时只要拿着这份保单原件，刘某就能去保险公司兑现巨额现金。\n\n然而，作为同谋的债主深知刘某诡计多端。为了防止刘某在拿到钱后独吞巨款并除掉自己，债主强行夺走了这份已经改好受益人的“天价保单”以及刘某的公文包（内含其金丝眼镜），锁进了17号仓库的铁皮箱里，作为逼迫刘某分赃的“抵押物/要挟筹码”。\n\n刘某无法忍受要挟，于凌晨1点半来到仓库，用下了迷药的咖啡迷晕债主，随后从背后将其勒死，并踩着木箱将其悬吊在横梁上伪造成畏罪自杀。他杀人的核心目的本是抢回这份保单并杀人灭口。但他万万没想到，防备心极强的债主已将箱子钥匙藏在了冷咖啡杯底。搜身无果后，眼看时间紧迫，刘某只能拉下电闸掩盖荧光脚印，把写有密码的日历扔进碎纸机企图毁灭线索，被迫丢下铁箱里的保单，慌乱地消失在茫茫夜色中……\n\n螳螂捕蝉，黄雀在后，但他最终满盘皆输。\n\n【第三节：17号仓库的「黄雀」】已解开。连环命案告破，警方根据你从保险箱内起获的决定性物证（保单与眼镜），成功截获了正准备出境潜逃的刘某。\n\n<strong>【第一章：血色保单】已全部解开。</strong>"
+  },
+  "nodes": [
+    {
+      "id": "warehouse17",
+      "title": "17号仓库",
+      "type": "location",
+      "x": 1000,
+      "y": 1080,
+      "description": "海风腥咸的偷渡码头，一座废弃的17号仓库。你推开沉重的铁门，黑暗中弥漫着咸湿与死亡的气息。",
+      "readUnlocks": ["hanging_corpse", "messy_desk", "corner_distribution_box"]
+    },
+    {
+      "id": "hanging_corpse",
+      "title": "悬吊的尸体",
+      "type": "character",
+      "x": 700,
+      "y": 920,
+      "description": "那个穿44码鞋的男人（债主）被一根麻绳吊在横梁上，脚边踢倒了一个木箱。",
+      "readUnlocks": ["deceased_face", "deceased_pocket"]
+    },
+    {
+      "id": "deceased_face",
+      "title": "死者的脸",
+      "type": "item",
+      "x": 540,
+      "y": 780,
+      "description": "面部极度充血。奇怪的是，脖颈上的勒痕是平行向后的，而不是向上的倒V字型。"
+    },
+    {
+      "id": "deceased_pocket",
+      "title": "死者的口袋",
+      "type": "item",
+      "x": 860,
+      "y": 780,
+      "description": "口袋被翻找过，不仅没有船票，连防身用的弹簧刀也不见了，只剩下一块表面碎裂的机械怀表。",
+      "readUnlocks": ["mechanical_pocket_watch"]
+    },
+    {
+      "id": "mechanical_pocket_watch",
+      "title": "机械怀表",
+      "type": "item",
+      "x": 860,
+      "y": 620,
+      "description": "表针永远停在了凌晨一点三十分。"
+    },
+    {
+      "id": "messy_desk",
+      "title": "杂乱的办公桌",
+      "type": "location",
+      "x": 1000,
+      "y": 880,
+      "description": "堆满杂物的办公桌，上面散落着烟头、文件和一杯冷透的咖啡。",
+      "readUnlocks": ["mug", "old_shredder", "password_iron_box"]
+    },
+    {
+      "id": "mug",
+      "title": "马克杯",
+      "type": "item",
+      "x": 820,
+      "y": 720,
+      "description": "一杯早就冷透的黑咖啡，底部有一层未溶解的白色粉末。",
+      "actions": [
+        {
+          "id": "pour_coffee",
+          "label": "倒掉咖啡",
+          "unlockIds": ["coffee_stained_copper_key"],
+          "toast": "你倒掉冷咖啡，杯底露出一把铜钥匙……"
+        }
+      ]
+    },
+    {
+      "id": "coffee_stained_copper_key",
+      "title": "沾着咖啡的铜钥匙",
+      "type": "item",
+      "x": 700,
+      "y": 580,
+      "description": "从马克杯底找到的一把铜钥匙，表面还沾着咖啡渍。"
+    },
+    {
+      "id": "old_shredder",
+      "title": "老式碎纸机",
+      "type": "item",
+      "x": 1000,
+      "y": 720,
+      "description": "里面塞满了纸条，但机器指示灯不亮，按压开关毫无反应（处于断电状态）。"
+    },
+    {
+      "id": "working_shredder",
+      "title": "运转的碎纸机",
+      "type": "item",
+      "x": 1000,
+      "y": 560,
+      "description": "通电后，碎纸机指示灯亮起，里面塞满了被切碎的纸条。",
+      "actions": [
+        {
+          "id": "reverse_shredder",
+          "label": "按下反转键",
+          "unlockIds": ["shredded_paper"],
+          "toast": "碎纸机启动反转，卡在入纸口的碎纸陆续退了出来……"
+        }
+      ]
+    },
+    {
+      "id": "shredded_paper",
+      "title": "碎纸",
+      "type": "item",
+      "x": 820,
+      "y": 440,
+      "description": "从碎纸机里吐出的一堆碎纸条，需要仔细拼合才能看清内容。",
+      "actions": [
+        {
+          "id": "assemble_paper",
+          "label": "拼合碎片",
+          "unlockIds": ["torn_calendar_page"],
+          "toast": "碎片在你手中慢慢拼合……"
+        }
+      ]
+    },
+    {
+      "id": "torn_calendar_page",
+      "title": "撕碎的日历页",
+      "type": "item",
+      "x": 1000,
+      "y": 320,
+      "description": "一张过期的日历，上面用红笔画了个圈，旁边写着四个小字：「0925，收网」。"
+    },
+    {
+      "id": "password_iron_box",
+      "title": "密码铁皮箱",
+      "type": "item",
+      "x": 1180,
+      "y": 720,
+      "description": "一个极其坚固的箱子，需要钥匙和四位数字密码双重解锁。"
+    },
+    {
+      "id": "briefcase",
+      "title": "公文包",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 200,
+      "description": "铁皮箱被打开了，里面有一副斯文的金丝眼镜，以及一份受益人更改为「刘XX（保险代理人）」的天价保单——这显然是债主扣留下来、用以要挟刘经理按时分赃的‘抵押物’。",
+      "readUnlocks": ["gold_rimmed_glasses", "sky_high_policy"]
+    },
+    {
+      "id": "gold_rimmed_glasses",
+      "title": "金丝眼镜",
+      "type": "item",
+      "x": 860,
+      "y": 120,
+      "description": "一副精致的金丝眼镜，镜框上刻着细微的「L.L」缩写。"
+    },
+    {
+      "id": "sky_high_policy",
+      "title": "天价保单",
+      "type": "item",
+      "x": 1140,
+      "y": 120,
+      "description": "一份金额惊人的人寿保单，受益人已更改为保险代理人刘某某。"
+    },
+    {
+      "id": "corner_distribution_box",
+      "title": "墙角配电箱",
+      "type": "location",
+      "x": 1300,
+      "y": 920,
+      "description": "仓库的总闸，保险丝完好，但闸刀被拉下了。",
+      "actions": [
+        {
+          "id": "close_switch",
+          "label": "合上闸刀",
+          "unlockIds": ["uv_lamp", "working_shredder"],
+          "toast": "咔哒——仓库通电了。灯亮起的同时，你注意到某些东西在发光……"
+        }
+      ]
+    },
+    {
+      "id": "uv_lamp",
+      "title": "头顶的诱捕灯",
+      "type": "location",
+      "x": 1220,
+      "y": 760,
+      "description": "散发着幽蓝光芒的灭蚊灯，这种灯能放射出紫外线，在它的照射下，办公桌周围的地板上竟然显现出了一串常人肉眼无法察觉的荧光脚印……",
+      "readUnlocks": ["glowing_footprints"]
+    },
+    {
+      "id": "glowing_footprints",
+      "title": "发光脚印",
+      "type": "item",
+      "x": 1140,
+      "y": 600,
+      "description": "尺码很小，大概只有39码的皮鞋印，多疑的债主在桌椅和铁箱周围暗中撒了防盗用的无色‘荧光追踪粉’，凶手踩到了粉末，脚印在马克杯和死者脚下的木箱之间来回踱步。"
+    },
+    {
+      "id": "conclusion_staged_hanging",
+      "title": "结论：被布置的上吊",
+      "type": "conclusion",
+      "x": 620,
+      "y": 500,
+      "description": "平行勒痕说明是从背后被勒死，而非上吊，凶手踩着木箱将尸体挂了上去。"
+    },
+    {
+      "id": "conclusion_drugged_and_strangled",
+      "title": "结论：迷药与绞杀",
+      "type": "conclusion",
+      "x": 520,
+      "y": 340,
+      "description": "身材高大的债主为什么会被轻易勒死？因为他喝了被凶手下了迷药的咖啡，失去了反抗能力。"
+    },
+    {
+      "id": "conclusion_hidden_liu",
+      "title": "结论：幕后黄雀刘代理",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 80,
+      "description": "斯文的皮鞋、金丝眼镜、更改的保单，将凶手指引向了一个体面的专业人士——保险代理人。"
+    },
+    {
+      "id": "conclusion_timing_0130",
+      "title": "结论：一点三十分的谋杀",
+      "type": "conclusion",
+      "x": 1360,
+      "y": 340,
+      "description": "刘代理在凌晨1点半，趁债主药效发作时将其勒死并布置了现场，随后逃之夭夭。"
+    },
+    {
+      "id": "truth_warehouse17",
+      "title": "连环迷局的真相",
+      "type": "truth",
+      "x": 1000,
+      "y": 40,
+      "description": ""
+    }
+  ],
+  "combinations": [
+    {
+      "ids": ["deceased_face", "glowing_footprints"],
+      "resultId": "conclusion_staged_hanging",
+      "toast": "勒痕与脚印的位置吻合——这是被布置的上吊现场。"
+    },
+    {
+      "ids": ["mug", "conclusion_staged_hanging"],
+      "resultId": "conclusion_drugged_and_strangled",
+      "toast": "杯底的白色粉末痕迹，揭示了完整的作案手法。"
+    },
+    {
+      "ids": ["sky_high_policy", "gold_rimmed_glasses"],
+      "resultId": "conclusion_hidden_liu",
+      "toast": "保单受益人、金丝眼镜、39码皮鞋——所有线索都指向刘代理。"
+    },
+    {
+      "ids": ["conclusion_hidden_liu", "mechanical_pocket_watch"],
+      "resultId": "conclusion_timing_0130",
+      "toast": "刘代理在凌晨1点半完成了他的「谋杀」……"
+    },
+    {
+      "ids": ["password_iron_box", "coffee_stained_copper_key", "torn_calendar_page"],
+      "resultId": "briefcase",
+      "toast": "钥匙转动，密码0925，铁皮箱应声而开。"
+    },
+    {
+      "ids": ["coffee_stained_copper_key", "torn_calendar_page"],
+      "resultId": "briefcase",
+      "toast": "钥匙转动，密码0925，铁皮箱应声而开。"
+    }
+  ]
+}

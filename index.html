@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <title>字里寻因</title>
+  <link rel="stylesheet" href="css/game.css" />
+  <link rel="stylesheet" href="css/cover.css" />
+</head>
+<body>
+  <div id="cover-screen" class="cover-screen" role="dialog" aria-modal="true" aria-labelledby="cover-title">
+    <div class="cover-ui">
+      <header class="cover-title-block">
+        <h1 id="cover-title" class="cover-title">
+          <span class="cover-title-char cover-title-blood">字</span><span class="cover-title-char cover-title-blood">里</span><span class="cover-title-char cover-title-blood">寻</span><span class="cover-title-char cover-title-blood">因</span>
+        </h1>
+        <p class="cover-subtitle">
+          <span class="cover-subtitle-rule" aria-hidden="true"></span>
+          <span class="cover-subtitle-text"> 语言之外 暗藏玄机 </span>
+          <span class="cover-subtitle-rule" aria-hidden="true"></span>
+        </p>
+      </header>
+
+      <nav class="cover-nav" aria-label="主菜单">
+        <ul class="cover-menu">
+          <li><button type="button" class="cover-menu-item" id="cover-start">开始游戏</button></li>
+          <li><button type="button" class="cover-menu-item" id="cover-levels">关卡选择</button></li>
+          <li><button type="button" class="cover-menu-item" id="cover-settings">设置</button></li>
+          <li><button type="button" class="cover-menu-item cover-menu-item-exit" id="cover-exit">退出游戏</button></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div id="app">
+    <header class="top-bar">
+      <div class="chapter-title">
+        <span id="chapter-section">第一章 血色保单</span>
+        <span id="chapter-label">第一关：老屋</span>
+        <span class="progress" id="progress-label"></span>
+      </div>
+      <div class="top-actions">
+        <button type="button" class="btn-ghost" id="btn-hint">提示</button>
+        <button type="button" class="btn-ghost" id="btn-restart">重新开始</button>
+        <button type="button" class="btn-ghost" id="btn-back">返回</button>
+      </div>
+    </header>
+
+    <main class="main-stage">
+      <div class="graph-wrap" id="graph-wrap">
+        <div class="graph-viewport" id="graph-viewport">
+          <div class="graph-inner" id="graph-inner">
+            <svg class="edge-layer" id="edge-layer" aria-hidden="true"></svg>
+            <div class="nodes-layer" id="nodes-layer"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="detail-panel" id="detail-panel" hidden>
+      <div class="detail-inner">
+        <h2 class="detail-title" id="detail-title"></h2>
+        <p class="detail-body" id="detail-body"></p>
+        <div class="detail-actions" id="detail-actions"></div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+
+  <div class="modal vintage-settings-modal" id="modal-cover-settings" hidden>
+    <div class="vintage-settings-card">
+      <button type="button" class="vintage-settings-close" id="modal-cover-settings-close" aria-label="关闭">&times;</button>
+      <h2 class="vintage-settings-title">设置</h2>
+      <p class="vintage-settings-hint">更多选项将在后续版本开放。</p>
+      <div class="vintage-setting-group">
+        <h3 class="vintage-setting-group-title">界面风格选择</h3>
+        <div class="vintage-setting-row vintage-setting-row-inline">
+          <div class="vintage-radio-inline">
+            <input type="radio" id="setting-theme-normal" name="setting-theme" class="vintage-checkbox" checked />
+            <label for="setting-theme-normal" class="vintage-setting-label">正常模式</label>
+          </div>
+          <div class="vintage-radio-inline">
+            <input type="radio" id="setting-theme-work" name="setting-theme" class="vintage-checkbox" />
+            <label for="setting-theme-work" class="vintage-setting-label">摸鱼模式</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-chapters" hidden>
+    <div class="modal-card modal-wide chapter-select-card">
+      <button type="button" class="vintage-settings-close" id="modal-chapters-close" aria-label="关闭">&times;</button>
+      <h3>关卡选择</h3>
+      <div class="chapter-list" id="chapter-list"></div>
+      <p class="chapter-end-note">—— 未完待续 ——</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-truth" hidden>
+    <div class="modal-card modal-wide">
+      <h3 id="truth-modal-title">拼合真相</h3>
+      <p class="modal-hint" id="truth-modal-hint"></p>
+      <div class="truth-slots" id="truth-slots"></div>
+      <div id="truth-pick"></div>
+      <button type="button" class="btn-gold full" id="btn-verify-truth">验证真相</button>
+      <button type="button" class="btn-ghost full" id="modal-truth-close">取消</button>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-epilogue" hidden>
+    <div class="modal-card modal-scroll">
+      <h3>真相拼凑完毕</h3>
+      <div class="epilogue-body" id="epilogue-body"></div>
+      <button type="button" class="btn-gold full" id="btn-next-chapter" hidden>下一关</button>
+      <button type="button" class="btn-ghost full" id="modal-epilogue-close">返回</button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-overview" hidden>
+    <div class="story-modal">
+      <button type="button" class="close-btn" id="modal-overview-close" aria-label="关闭">&times;</button>
+      <h3 class="modal-title" id="overview-title">背景概述</h3>
+      <p class="modal-text" id="overview-text"></p>
+      <button type="button" class="confirm-btn" id="modal-overview-confirm">开始调查</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

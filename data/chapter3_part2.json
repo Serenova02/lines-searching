@@ -1,0 +1,330 @@
+{
+  "id": "chapter3_part2",
+  "title": "第二节：双重回响",
+  "overview": {
+    "title": "背景概述",
+    "text": "歌剧院二楼的至尊VIP包厢内，剧院赞助人阿尔伯特勋爵仰躺在天鹅绒沙发上，胸口中弹，已经失去了生息。根据多名目击者的证词，在晚上20点15分听到了一声刺耳的枪响。奇怪的是，被指控为嫌疑人的首席音响师，在20点05分至20点20分之间，一直与剧院经理在远处的音响控制室内排查设备故障，拥有无懈可击的不在场证明……"
+  },
+  "startNodeIds": ["luxury_vip_box_scene"],
+  "hints": [
+    "走遍每一个区域，认真阅读每条线索。",
+    "尝试关联两条线索，它们之间可能相互矛盾、彼此印证，或是存在因果关联。",
+    "胸口的弹孔血迹与残留的石蜡痕迹之间可能存在联系",
+    "真实遇害时间与管风琴记录之间可能存在联系",
+    "邻座名媛与保安的证词之间可能存在联系",
+    "穹顶抛物面结构与异位声源感知结论之间可能存在联系",
+    "铜管空气压力泵与延迟风压调节阀之间可能存在联系",
+    "微型气动击发器与延迟风压积蓄装置结论之间可能存在联系",
+    "所有结论都得出后，点击「双重回响的真相」揭晓完整案情。"
+  ],
+  "truthAssembly": {
+    "truthNodeId": "truth_double_echo",
+    "appearWhenAllDiscovered": ["conclusion_acoustic_masking", "conclusion_parabolic_reflection", "conclusion_pneumatic_delay"],
+    "requiredIds": ["conclusion_acoustic_masking", "conclusion_parabolic_reflection", "conclusion_pneumatic_delay"],
+    "title": "拼合真相：双重回响",
+    "epilogue": "耳听不一定为实，即使是在最神圣的音乐殿堂里，物理学定律也成了凶手操弄感官的帮凶。\n\n真正的刺杀发生在晚上20点00分，凶手步入VIP包厢A，趁管风琴音量达到峰值时开枪行凶，双层隔音玻璃与乐曲轰鸣，完美掩盖了枪声。勋爵当场死亡，凶手将预先滴有石蜡的机械怀表指针拨至20点15分，伪装成受枪击震停的模样，误导众人认定案发时间为此刻。\n\n随后他启动气压装置，借助调节阀延时，让气压在15分钟后（也就是20:15）触发气动击发器。依托歌剧院抛物面穹顶的传声效果，东侧发出的异响被折射至VIP包厢B，多名目击者都听到了类似枪响的声音。\n\n彼时，凶手正和剧院经理在控制室里排查故障，完美撇清了嫌疑。但死者发黑凝固的血迹和怀表齿轮间细微的石蜡，最终让这曲由声学与气压交织的「双重回响」伪奏，露出了致命的破绽……\n\n【第二节：双重回响】已解开。"
+  },
+  "nodes": [
+    {
+      "id": "luxury_vip_box_scene",
+      "title": "豪华VIP包厢现场",
+      "type": "location",
+      "x": 1000,
+      "y": 1040,
+      "description": "顺着铺满红地毯的螺旋台阶向上，你来到了歌剧院二楼的至尊VIP包厢A。包厢内，著名的剧院赞助人阿尔伯特勋爵仰躺在天鹅绒沙发上，胸口中弹，已经失去了生息。包厢面向舞台的一侧装有昂贵的双层隔音玻璃，此时正紧紧关闭。空气中弥漫着火药味与高档红酒的混合气息。",
+      "readUnlocks": ["vip_box_a_first_scene", "dome_echo_gallery", "audio_control_room", "witness_forensic_report"]
+    },
+    {
+      "id": "vip_box_a_first_scene",
+      "title": "VIP包厢A（第一现场）",
+      "type": "location",
+      "x": 720,
+      "y": 880,
+      "description": "至尊VIP包厢内部，天鹅绒沙发与高级地毯尽显奢华，此刻这里却成了凶杀现场。",
+      "readUnlocks": ["lord_albert_corpse", "chest_bullet_hole_blood", "closed_soundproof_glass", "broken_mechanical_pocket_watch"]
+    },
+    {
+      "id": "lord_albert_corpse",
+      "title": "阿尔伯特勋爵的尸体",
+      "type": "character",
+      "x": 560,
+      "y": 720,
+      "description": "勋爵坐在沙发上，身体微微前倾，脸上凝固着惊讶与愤怒的表情。"
+    },
+    {
+      "id": "chest_bullet_hole_blood",
+      "title": "胸口的弹孔与血迹",
+      "type": "item",
+      "x": 680,
+      "y": 600,
+      "description": "左胸口有一处9mm口径的弹孔。伤口周围的血迹呈现极为深沉的黑褐色，且血液已经完全凝固、失去弹性。"
+    },
+    {
+      "id": "closed_soundproof_glass",
+      "title": "紧闭的隔音双层玻璃",
+      "type": "item",
+      "x": 800,
+      "y": 720,
+      "description": "面向舞台的整面双层中空玻璃。这种设计能完全阻隔外界声响，此时玻璃完好无损，且紧紧关闭锁死。"
+    },
+    {
+      "id": "broken_mechanical_pocket_watch",
+      "title": "摔坏的机械怀表",
+      "type": "item",
+      "x": 620,
+      "y": 480,
+      "description": "勋爵腰间佩戴的金壳怀表在受到冲击时跌落在地，表盘玻璃碎裂，指针永久停留在20点15分。",
+      "actions": [
+        {
+          "id": "dismantle_movement_check",
+          "label": "拆解机芯查看",
+          "unlockIds": ["residual_paraffin_traces"],
+          "toast": "你小心地拆开怀表的机械机芯……"
+        }
+      ]
+    },
+    {
+      "id": "residual_paraffin_traces",
+      "title": "残留的石蜡痕迹",
+      "type": "item",
+      "x": 500,
+      "y": 360,
+      "description": "在怀表的游丝摆轮缝隙中，黏附着极其微小的白色石蜡碎片。这导致摆轮在遭到撞击前，就已经因蜡质凝固而提前停止了运转。"
+    },
+    {
+      "id": "dome_echo_gallery",
+      "title": "穹顶回音廊（高空通道）",
+      "type": "location",
+      "x": 1280,
+      "y": 880,
+      "description": "剧院三楼上方的穹顶回音廊，一条环绕着巨大穹顶的高空通道。",
+      "readUnlocks": ["dome_parabolic_structure", "acoustic_reflection_focus", "weathered_sound_brass_pipe", "metal_gunpowder_residue"]
+    },
+    {
+      "id": "dome_parabolic_structure",
+      "title": "穹顶抛物面结构",
+      "type": "item",
+      "x": 1440,
+      "y": 720,
+      "description": "剧院三楼上方的穹顶采用半球状凹面抛物线设计，表面由光滑致密的水泥石膏抹平。这种结构极易反射高频声波。"
+    },
+    {
+      "id": "acoustic_reflection_focus",
+      "title": "声学反射焦点",
+      "type": "item",
+      "x": 1300,
+      "y": 600,
+      "description": "穹顶结构在物理学上存在两个对等的对称「焦点」。其中一个焦点正好位于回音廊的东侧尽头，另一个焦点则垂直投影在隔壁的VIP包厢B上空。"
+    },
+    {
+      "id": "weathered_sound_brass_pipe",
+      "title": "斑驳的传音铜管",
+      "type": "item",
+      "x": 1140,
+      "y": 720,
+      "description": "回音廊的栏杆下平铺着一根有些年头的黄铜管道，本是早期剧院用来向舞台传声的物理话筒，如今早已废弃，管道口积满灰尘。"
+    },
+    {
+      "id": "metal_gunpowder_residue",
+      "title": "金属火药残渣",
+      "type": "item",
+      "x": 1220,
+      "y": 480,
+      "description": "在回音廊东侧焦点的地面上，留有几点微小的黑色粉末，散发着硫磺味。",
+      "actions": [
+        {
+          "id": "deep_scrape_trace",
+          "label": "深度刮擦微量物",
+          "unlockIds": ["mini_pneumatic_trigger"],
+          "toast": "你用刮刀刮取地面的微量物质进行检测……"
+        }
+      ]
+    },
+    {
+      "id": "mini_pneumatic_trigger",
+      "title": "微型气动击发器",
+      "type": "item",
+      "x": 1100,
+      "y": 360,
+      "description": "一个固定在栏杆阴影里的微型黄铜击锤。它连接着一根通往管道深处的细小气阀。当气流压力达到临界点时，击锤会被强力释放，敲击前方的底火，发出类似枪鸣的巨响。"
+    },
+    {
+      "id": "audio_control_room",
+      "title": "音响控制室（控制中枢）",
+      "type": "location",
+      "x": 700,
+      "y": 960,
+      "description": "剧院后台的音响控制室，操纵着整栋建筑的声学设备。",
+      "readUnlocks": ["audio_console", "brass_air_pressure_pump", "organ_performance_record", "delayed_air_pressure_valve", "broken_bass_speaker"]
+    },
+    {
+      "id": "audio_console",
+      "title": "音响控制台",
+      "type": "item",
+      "x": 520,
+      "y": 820,
+      "description": "控制着全剧院声学设备的机械台面。台面侧方有一根暗设的黄铜气动管线，直通穹顶。"
+    },
+    {
+      "id": "brass_air_pressure_pump",
+      "title": "铜管空气压力泵",
+      "type": "item",
+      "x": 700,
+      "y": 700,
+      "description": "控制台下安装着一个手推式气压泵，通过控制铜管向穹顶输送高压空气。压力表指针目前处于归零状态。"
+    },
+    {
+      "id": "delayed_air_pressure_valve",
+      "title": "延迟风压调节阀",
+      "type": "item",
+      "x": 880,
+      "y": 820,
+      "description": "铜管接口处安装着一个带有刻度的微型风压溢出阀。刻度上的限流孔被拧到了最大阻尼位置。这意味着，即便对压力泵进行充气，气体也只能通过狭小的孔隙极为缓慢地流动。"
+    },
+    {
+      "id": "organ_performance_record",
+      "title": "管风琴演奏记录",
+      "type": "item",
+      "x": 620,
+      "y": 580,
+      "description": "剧院本周的排演日程显示：晚上20点00分整，舞台区进行管风琴独奏《D小调托卡塔与赋格》，该曲目拥有极强的低频声浪，演奏时的现场平均声压高达115分贝。"
+    },
+    {
+      "id": "broken_bass_speaker",
+      "title": "破损的低音扬声器",
+      "type": "item",
+      "x": 800,
+      "y": 580,
+      "description": "台面上放着一个破裂的重低音扬声器，周围散落着接线工具。看起来音响师确实在这里忙碌了很久。"
+    },
+    {
+      "id": "witness_forensic_report",
+      "title": "目击者与法医报告",
+      "type": "location",
+      "x": 1300,
+      "y": 960,
+      "description": "案件相关人员的证词与法医分析报告。",
+      "readUnlocks": ["socialite_neighbor_testimony", "patrol_security_testimony", "manager_alibi_testimony", "forensic_blood_analysis_report"]
+    },
+    {
+      "id": "socialite_neighbor_testimony",
+      "title": "邻座名媛的证词",
+      "type": "item",
+      "x": 1420,
+      "y": 800,
+      "description": "「当时我坐在VIP包厢B里。20点15分左右，我突然听到耳边传来一声极为清脆的枪响，方向像是从舞台前方或者头顶斜上方传来的。」"
+    },
+    {
+      "id": "patrol_security_testimony",
+      "title": "巡逻保安的证词",
+      "type": "item",
+      "x": 1260,
+      "y": 700,
+      "description": "「20点15分枪响时，我刚好走到三楼穹顶回音廊的西侧。我可以肯定，那声枪响绝对是在我正对面的东侧回音廊尽头发出来的，声音震得我耳朵嗡嗡作响。」"
+    },
+    {
+      "id": "manager_alibi_testimony",
+      "title": "经理的联合不在场证词",
+      "type": "item",
+      "x": 1100,
+      "y": 800,
+      "description": "「从晚上20点05分到20点20分，我一直和音响师在控制室里维修那个该死的扬声器。音响师寸步未离我的视线，他不可能去包厢杀人，更不可能在那个时间开枪。」"
+    },
+    {
+      "id": "forensic_blood_analysis_report",
+      "title": "法医的血液分析报告",
+      "type": "item",
+      "x": 1340,
+      "y": 560,
+      "description": "死者体温下降程度与血斑呈早期分布形态。值得注意的是，死者弹孔周围流出的血液高度黏稠且几乎没有生活反应（活性红细胞极低），这提示死者中弹时，其体内循环系统或心脏功能可能已经停止，或者实际死亡时间比表象要早15分钟左右。"
+    },
+    {
+      "id": "intermediate_real_death_time",
+      "title": "中间结论：真实遇害时间",
+      "type": "conclusion",
+      "x": 500,
+      "y": 320,
+      "description": "血液高度黏稠且几乎无生活反应，意味着中弹时体内循环已停止；而怀表停摆则是由于游丝上的石蜡提前凝固。两相印证，表明勋爵真实的遇害时间大约在20点00分整，而非表盘和枪声暗示的20点15分。"
+    },
+    {
+      "id": "intermediate_heterotopic_sound_source",
+      "title": "中间结论：异位的声源感知",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 320,
+      "description": "两名目击者都在20点15分听见枪声，但感知方向不同：名媛听到头顶斜上方（即VIP包厢B上方），保安听到对面的东侧回音廊。这表明声音在传播路径上存在奇特的几何分布。"
+    },
+    {
+      "id": "intermediate_delayed_air_pressure",
+      "title": "中间结论：延迟风压积蓄装置",
+      "type": "conclusion",
+      "x": 1500,
+      "y": 320,
+      "description": "控制室的气压泵通过铜管往三楼输气，但调节阀被拧到了阻尼最大、流速极缓的位置。这使得压力无法瞬时释放，气体只能以极慢的速度向管道内渗透、累积。"
+    },
+    {
+      "id": "conclusion_acoustic_masking",
+      "title": "结论：声学掩蔽的真实刺杀",
+      "type": "conclusion",
+      "x": 500,
+      "y": 180,
+      "description": "血液黏稠度及生活反应证实，勋爵真实的死亡时间在20点00分左右，怀表停摆也是因为凶手用石蜡提前固化了表针以伪造时间。而在20点00分整，全场正处于115分贝的管风琴轰鸣中。巨大的乐音在声学上产生了「掩蔽效应」，彻底压制了枪声，因此当时没有任何人听到真正的枪响。"
+    },
+    {
+      "id": "conclusion_parabolic_reflection",
+      "title": "结论：抛物面反射的听觉错觉",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 140,
+      "description": "名媛与保安在20点15分听到的「枪响」，实际上声源位于穹顶回音廊东侧的焦点处。由于凹面穹顶的声学反射特性，该焦点处发出的声波被几何式反射、聚焦，并完美传递到了对称的另一个焦点——即名媛所在的VIP包厢B上空，从而让相隔数十米的两人在同一秒听到了同一声「枪响」。"
+    },
+    {
+      "id": "conclusion_pneumatic_delay",
+      "title": "结论：气动延迟的伪装枪声",
+      "type": "conclusion",
+      "x": 1500,
+      "y": 180,
+      "description": "嫌疑人音响师利用了直通穹顶的废弃铜管。他在20点00分刺杀受害者之前（或更早），通过气压泵向管线内充入高压气体，并将调节阀调整至极高阻尼（15分钟延迟释放）。在20点05分与经理会合后，阀门内的气压随时间缓慢推移，终于在20点15分达到了临界值，推开气阀，触发了东侧焦点处的微型气动击发器，敲击底火产生爆炸声。这成功为他伪造了案发时的不在场证明。"
+    },
+    {
+      "id": "truth_double_echo",
+      "title": "双重回响的真相",
+      "type": "truth",
+      "x": 1000,
+      "y": 80,
+      "description": ""
+    }
+  ],
+  "combinations": [
+    {
+      "ids": ["chest_bullet_hole_blood", "residual_paraffin_traces"],
+      "resultId": "intermediate_real_death_time",
+      "toast": "黑褐色凝固血液与石蜡痕迹——真实遇害时间约在20点00分整。"
+    },
+    {
+      "ids": ["intermediate_real_death_time", "organ_performance_record"],
+      "resultId": "conclusion_acoustic_masking",
+      "toast": "20点整的115分贝管风琴轰鸣——真相被乐音完美掩蔽。"
+    },
+    {
+      "ids": ["socialite_neighbor_testimony", "patrol_security_testimony"],
+      "resultId": "intermediate_heterotopic_sound_source",
+      "toast": "名媛与保安在不同位置同时听到——枪声来源存在奇特的几何分布。"
+    },
+    {
+      "ids": ["intermediate_heterotopic_sound_source", "dome_parabolic_structure"],
+      "resultId": "conclusion_parabolic_reflection",
+      "toast": "抛物面穹顶的对称焦点效应——两人在同一秒听到了同一声「枪响」。"
+    },
+    {
+      "ids": ["brass_air_pressure_pump", "delayed_air_pressure_valve"],
+      "resultId": "intermediate_delayed_air_pressure",
+      "toast": "高阻尼调节阀——气体只能以极慢的速度向管道内渗透、累积。"
+    },
+    {
+      "ids": ["intermediate_delayed_air_pressure", "mini_pneumatic_trigger"],
+      "resultId": "conclusion_pneumatic_delay",
+      "toast": "15分钟后气压达到临界值——触发微型气动击发器，伪造案发时的不在场证明。"
+    }
+  ]
+}

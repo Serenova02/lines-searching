@@ -1,0 +1,504 @@
+{
+  "id": "chapter3_part5",
+  "title": "第五节：密闭琴房",
+  "overview": {
+    "title": "背景概述",
+    "text": "剧院顶层塔楼的琴房内，著名的钢琴家亚伦倒在钢琴旁，皮肤呈现出诡异的鲜红色（樱桃红），身上无任何挣扎或外伤痕迹。当人们发现异样时，钢门从内部被死死反锁。\n\n然而，第一发现人（保安）在用备用钥匙解锁后，却发现门仿佛被一股无形的力量死死吸住，直到他砸碎了门上小小的玻璃窥视孔，在一声刺耳的空气尖啸声后，门才得以轻松推开……"
+  },
+  "startNodeIds": ["sealed_piano_room_scene"],
+  "hints": [
+    "走遍每一个区域，认真阅读每条线索。",
+    "尝试关联两条线索，它们之间可能相互矛盾、彼此印证，或是存在因果关联。",
+    "红褐色粉末与强磁性之间可能存在联系",
+    "粉末中活性炭颗粒与氧化铁粉末结论之间可能存在联系",
+    "还原铁粉化学特性与高效除氧催化剂结论之间可能存在联系",
+    "死者气管显微镜检与耗氧反应结论之间可能存在联系",
+    "把手上空金属挂筒与挂筒底部针孔之间可能存在联系",
+    "门锁旋钮拉扯擦痕与重力水桶结论之间可能存在联系",
+    "门缝下细线印记与重力差门锁结论之间可能存在联系",
+    "门锁重力扭矩测试与机械拉力源结论之间可能存在联系",
+    "双层密封钢门与加厚气密橡胶圈之间可能存在联系",
+    "工程师分析与绝对气密屏障结论之间可能存在联系",
+    "第一发现人保安口供与大气压强真空吸力结论之间可能存在联系",
+    "所有结论都得出后，点击「密闭琴房的真相」揭晓完整案情。"
+  ],
+  "truthAssembly": {
+    "truthNodeId": "truth_sealed_room_ashes",
+    "appearWhenAllDiscovered": ["conclusion_silent_chemical_oxygen_depletion", "conclusion_hydraulic_gravity_delay_lock", "conclusion_negative_pressure_absolute_seal"],
+    "requiredIds": ["conclusion_silent_chemical_oxygen_depletion", "conclusion_hydraulic_gravity_delay_lock", "conclusion_negative_pressure_absolute_seal"],
+    "title": "拼合真相：密闭琴房",
+    "epilogue": "一扇隔绝了噪音的门，最终也隔绝了生命的通道。凶手利用极致的静音和物理常识，建造了这座无声的铁棺材。\n\n在亚伦服下安眠药熟睡后，凶手进入琴房。他彻底糊死了通风管道，并在风口的铜手炉内，堆放了大量掺有活性炭和盐水的活性还原铁粉。这种看似无害的化学混合物，在气密琴房内开始反应，并在无光、无烟的情况下，在2小时内默默将琴房内的氧气吞噬殆尽，导致亚伦在睡梦中因物理缺氧窒息而死。\n\n离开房间前，凶手在门内侧把手上挂上一只装满盐水的特制圆筒，其底部的针孔开始极慢地向外滴水。圆筒的重力一开始拉住旋钮防止其上锁。当凶手关上门并从外面拉出定位尼龙线后，随着时间推移，水滴干，容器变轻。失去重力压制的门锁弹簧自动回弹，完成了内部锁死。\n\n随着氧气耗尽，室内气压急速下降。室外强大的大气压死死压住了这扇向内开启的钢门，这也是为什么，即使保安用钥匙开了锁，大门仍宛如被水泥封死一般，直到砸碎玻璃、气压平衡后才能拉开。这场密室杀人案，自始至终没有火、没有烟、没有暴力痕迹，只有冰冷的物理与化学规律，无声地带走了一个天才的生命……\n\n【第五节：密闭琴房】已解开。"
+  },
+  "nodes": [
+    {
+      "id": "sealed_piano_room_scene",
+      "title": "密闭琴房现场",
+      "type": "location",
+      "x": 1000,
+      "y": 1040,
+      "description": "剧院顶层塔楼的琴房内，死寂得令人压抑。著名的钢琴家亚伦倒在钢琴旁，皮肤呈现出诡异的鲜红色（樱桃红），身上无任何挣扎或外伤痕迹。这间琴房为了极致的隔音效果，采用了双层气密钢门与加厚密封胶条，一旦关闭，便是一个与外界完全隔绝的「真空保险箱」。",
+      "readUnlocks": ["aaron_body_door_lock", "vent_red_brown_powder", "crystal_dripper_water_stains", "acoustic_test_external_testimony"]
+    },
+    {
+      "id": "aaron_body_door_lock",
+      "title": "亚伦的遗体与门锁",
+      "type": "location",
+      "x": 680,
+      "y": 880,
+      "description": "死者的遗体和琴房的门锁。",
+      "readUnlocks": ["aarons_corpse", "no_injury_cherry_skin", "double_seal_steel_door", "thick_aeroseal_rubber_ring", "handle_empty_metal_cylinder", "piano_empty_sleeping_pill_bottle"]
+    },
+    {
+      "id": "aarons_corpse",
+      "title": "亚伦的尸体",
+      "type": "character",
+      "x": 500,
+      "y": 720,
+      "description": "亚伦静静趴在琴键上，神态安详，仿佛只是在练习中睡着了。"
+    },
+    {
+      "id": "no_injury_cherry_skin",
+      "title": "无外伤与樱桃红肤色",
+      "type": "item",
+      "x": 600,
+      "y": 600,
+      "description": "全身无任何暴力外伤，皮肤血管呈现鲜艳的樱桃红色（提示极度缺氧窒息，且无典型一氧化碳中毒的乌黑反应）。"
+    },
+    {
+      "id": "double_seal_steel_door",
+      "title": "双层密封钢门",
+      "type": "item",
+      "x": 760,
+      "y": 720,
+      "description": "厚重的重型钢制门，为了防盗与隔音定制，向内开启。"
+    },
+    {
+      "id": "thick_aeroseal_rubber_ring",
+      "title": "加厚气密橡胶圈",
+      "type": "item",
+      "x": 680,
+      "y": 480,
+      "description": "门框四周镶嵌着完好、高弹性的中空密封胶条。当门合上时，内外空气流动被彻底切断。"
+    },
+    {
+      "id": "handle_empty_metal_cylinder",
+      "title": "把手上的空金属挂筒",
+      "type": "item",
+      "x": 820,
+      "y": 600,
+      "description": "挂在门内侧锁死旋钮把手上的一只空不锈钢圆筒。",
+      "actions": [
+        {
+          "id": "disassemble_test_water",
+          "label": "拆卸挂筒注水测试",
+          "unlockIds": ["cylinder_bottom_needle_hole"],
+          "toast": "你将挂筒拆卸下来，注入水进行测试……"
+        }
+      ]
+    },
+    {
+      "id": "cylinder_bottom_needle_hole",
+      "title": "挂筒底部针孔",
+      "type": "item",
+      "x": 740,
+      "y": 440,
+      "description": "挂筒最底部有一个直径不到0.5毫米、极其隐蔽的针孔。水注入后，会以非常微弱的流速向下滴漏。"
+    },
+    {
+      "id": "piano_empty_sleeping_pill_bottle",
+      "title": "钢琴旁空安眠药瓶",
+      "type": "item",
+      "x": 540,
+      "y": 480,
+      "description": "一瓶已经空了的速效安眠药，药瓶上只有死者自己的指纹。"
+    },
+    {
+      "id": "vent_red_brown_powder",
+      "title": "排风口与红褐粉末",
+      "type": "location",
+      "x": 1320,
+      "y": 880,
+      "description": "琴房的通风口和周围散落的红褐色粉末。",
+      "readUnlocks": ["vent_red_brown_powder_floor", "completely_sealed_vent_valve", "activated_carbon_in_powder", "residual_sodium_chloride", "copper_hand_warmer", "hand_warmer_wall_condensation"]
+    },
+    {
+      "id": "vent_red_brown_powder_floor",
+      "title": "风口下的红褐色粉末",
+      "type": "item",
+      "x": 1480,
+      "y": 720,
+      "description": "排风口下方的地板上，散落着一大滩红褐色的细密粉末，有些已经结成硬块。",
+      "actions": [
+        {
+          "id": "magnet_approach_powder",
+          "label": "用磁铁靠近粉末",
+          "unlockIds": ["red_brown_powder_strong_magnetism"],
+          "toast": "你拿出强力磁铁，靠近红褐色粉末……"
+        }
+      ]
+    },
+    {
+      "id": "red_brown_powder_strong_magnetism",
+      "title": "红褐色粉末的强磁性",
+      "type": "item",
+      "x": 1400,
+      "y": 600,
+      "description": "粉末瞬间被磁铁吸附，化验表明其主要成分为三氧化二铁。"
+    },
+    {
+      "id": "completely_sealed_vent_valve",
+      "title": "彻底封死的通风阀门",
+      "type": "item",
+      "x": 1220,
+      "y": 720,
+      "description": "墙壁上的通风百叶窗，其内部阀门从后侧被机械卡死。",
+      "actions": [
+        {
+          "id": "flashlight_deep_pipe",
+          "label": "用电筒照射管道深处",
+          "unlockIds": ["vent_pipe_plastic_film"],
+          "toast": "你用电筒向通风管道深处照射……"
+        }
+      ]
+    },
+    {
+      "id": "vent_pipe_plastic_film",
+      "title": "通风管塑料薄膜",
+      "type": "item",
+      "x": 1280,
+      "y": 480,
+      "description": "通风管深处被一层透明的塑料薄膜和封箱胶带彻底糊死，空气根本无法流通。"
+    },
+    {
+      "id": "activated_carbon_in_powder",
+      "title": "粉末中的活性炭颗粒",
+      "type": "item",
+      "x": 1400,
+      "y": 480,
+      "description": "红褐色粉末中，混杂着约15%比例的工业活性炭微粒。"
+    },
+    {
+      "id": "residual_sodium_chloride",
+      "title": "残留的氯化钠晶体",
+      "type": "item",
+      "x": 1320,
+      "y": 360,
+      "description": "粉末残留物中检测出微量的氯化钠（食盐）和水。"
+    },
+    {
+      "id": "copper_hand_warmer",
+      "title": "铜质暖手炉",
+      "type": "item",
+      "x": 1500,
+      "y": 560,
+      "description": "风口下放着一个巨大的敞口铜质暖手炉，里面堆满了那些红褐色粉末。"
+    },
+    {
+      "id": "hand_warmer_wall_condensation",
+      "title": "暖手炉壁上冷凝水珠",
+      "type": "item",
+      "x": 1160,
+      "y": 560,
+      "description": "手炉内壁上残留着细密的水珠，说明这里曾发生过剧烈的放热及蒸发反应。"
+    },
+    {
+      "id": "crystal_dripper_water_stains",
+      "title": "水晶滴滤壶与水渍",
+      "type": "location",
+      "x": 660,
+      "y": 960,
+      "description": "琴房内的水晶滴滤壶和散落的水渍，揭示了延时机械的构造。",
+      "readUnlocks": ["crystal_drip_filter", "drip_filter_fine_stopcock", "piano_key_water_stains", "door_lock_knob_scratches", "upside_down_empty_bucket", "rag_salt_water_smell"]
+    },
+    {
+      "id": "crystal_drip_filter",
+      "title": "水晶滴滤壶",
+      "type": "item",
+      "x": 480,
+      "y": 820,
+      "description": "放在钢琴旁的一只高档水晶咖啡滴滤壶，此时里面的水已经完全流空。"
+    },
+    {
+      "id": "drip_filter_fine_stopcock",
+      "title": "滴滤壶的精细旋塞",
+      "type": "item",
+      "x": 600,
+      "y": 700,
+      "description": "滴滤壶底部的金属旋塞，可以极度精确地调节每分钟滴落的水滴数。"
+    },
+    {
+      "id": "piano_key_water_stains",
+      "title": "琴键上的水滴痕迹",
+      "type": "item",
+      "x": 720,
+      "y": 820,
+      "description": "钢琴最高音区的几枚黑键上，有几点已经干涸呈白色的盐水渍。"
+    },
+    {
+      "id": "door_lock_knob_scratches",
+      "title": "门锁旋钮拉扯擦痕",
+      "type": "item",
+      "x": 560,
+      "y": 560,
+      "description": "内侧门锁把手金属表面，有被坚硬钢丝或挂钩反复用力拉扯、摩擦产生的新鲜刮痕。"
+    },
+    {
+      "id": "upside_down_empty_bucket",
+      "title": "倒扣的空水桶",
+      "type": "item",
+      "x": 720,
+      "y": 560,
+      "description": "门背后角落里放着一个倒扣的塑料桶，桶底有水渍残留。"
+    },
+    {
+      "id": "rag_salt_water_smell",
+      "title": "抹布上的淡盐水味",
+      "type": "item",
+      "x": 640,
+      "y": 440,
+      "description": "门把手下方的地板上放着一块微湿的抹布，闻上去有淡淡的盐水味。",
+      "actions": [
+        {
+          "id": "uv_light_door_gap",
+          "label": "用紫光灯照射门框底缝",
+          "unlockIds": ["door_gap_thread_mark"],
+          "toast": "你用紫外线灯仔细检查门框底部……"
+        }
+      ]
+    },
+    {
+      "id": "door_gap_thread_mark",
+      "title": "门缝下细线印记",
+      "type": "item",
+      "x": 520,
+      "y": 440,
+      "description": "气密门框的橡胶压条最下方，残留有一道极细的尼龙线压痕，顺着压痕一直延伸到门外；缝隙处还残留着水渍。"
+    },
+    {
+      "id": "acoustic_test_external_testimony",
+      "title": "隔音测试与外部证词",
+      "type": "location",
+      "x": 1340,
+      "y": 960,
+      "description": "来自外部的证词和专业测试报告。",
+      "readUnlocks": ["first_security_guard_testimony", "piano_room_acoustic_report", "hvac_engineer_analysis", "reduced_iron_powder_chemistry", "door_lock_gravity_torque_test", "aarons_health_record"]
+    },
+    {
+      "id": "first_security_guard_testimony",
+      "title": "第一发现人保安口供",
+      "type": "item",
+      "x": 1480,
+      "y": 800,
+      "description": "「当时我用备用钥匙转开了锁，但门沉重得像被焊死了一样。情急之下我砸碎了门上的钢化玻璃观察孔，瞬间听到了极其刺耳的空气吸入啸叫声，接着门就轻而易举地拉开了。」"
+    },
+    {
+      "id": "piano_room_acoustic_report",
+      "title": "琴房隔音测试报告",
+      "type": "item",
+      "x": 1340,
+      "y": 680,
+      "description": "专业报告显示：该琴房气密系数极高，若门窗关闭，室外噪声降低65分贝，空气交换率几乎为0。"
+    },
+    {
+      "id": "hvac_engineer_analysis",
+      "title": "暖通工程师的分析",
+      "type": "item",
+      "x": 1220,
+      "y": 800,
+      "description": "「在30立方米的气密空间内，若氧气被完全耗尽，室内会产生约0.2个大气压的负压差（室外气压大），这相当于有近600公斤的无形重力在大力推压这扇向内开启的钢门。」"
+    },
+    {
+      "id": "reduced_iron_powder_chemistry",
+      "title": "还原铁粉化学特性",
+      "type": "item",
+      "x": 1420,
+      "y": 560,
+      "description": "活性还原铁粉在活性炭和食盐水的催化下，会与空气中的氧气发生极其剧烈的氧化反应，在不产生任何有毒气体、无光、无烟的情况下，在短时间内将密闭空间内的氧气吸附殆尽。"
+    },
+    {
+      "id": "door_lock_gravity_torque_test",
+      "title": "门锁重力扭矩测试",
+      "type": "item",
+      "x": 1260,
+      "y": 560,
+      "description": "测试表明，内侧旋转门锁阻尼极小。只要在把手挂钩上施加超过2.5公斤的向下拉力，门锁就会自动旋转至锁死状态。"
+    },
+    {
+      "id": "aarons_health_record",
+      "title": "亚伦的健康档案",
+      "type": "item",
+      "x": 1340,
+      "y": 440,
+      "description": "死者患有严重的神经衰弱与失眠症，每晚雷打不动必须服用两颗唑吡坦安眠药。",
+      "actions": [
+        {
+          "id": "check_respiratory_microscope",
+          "label": "查阅呼吸道微观切片",
+          "unlockIds": ["deceased_trachea_microscope"],
+          "toast": "你查阅法医对死者呼吸道的微观切片报告……"
+        }
+      ]
+    },
+    {
+      "id": "deceased_trachea_microscope",
+      "title": "死者气管显微镜检",
+      "type": "item",
+      "x": 1220,
+      "y": 440,
+      "description": "显微镜下，死者气管及肺泡内异常干净，无任何烟雾微粒或一氧化碳中毒痕迹，证实其死于完全纯净的物理缺氧窒息。"
+    },
+    {
+      "id": "intermediate_iron_oxide_residue",
+      "title": "中间结论：氧化铁粉末残留",
+      "type": "conclusion",
+      "x": 800,
+      "y": 520,
+      "description": "粉末本质是高度氧化的铁锈。"
+    },
+    {
+      "id": "intermediate_high_efficiency_oxygen_catalyst",
+      "title": "中间结论：高效除氧催化剂",
+      "type": "conclusion",
+      "x": 640,
+      "y": 380,
+      "description": "混有活性炭与盐水的还原铁粉，是极其高效的工业除氧混合物。"
+    },
+    {
+      "id": "intermediate_silent_smokeless_oxygen_consumption",
+      "title": "中间结论：无声无烟耗氧反应",
+      "type": "conclusion",
+      "x": 480,
+      "y": 260,
+      "description": "该混合物能在无光无烟、不引起警觉的情况下，将密闭空间的氧气吸干。"
+    },
+    {
+      "id": "intermediate_self_draining_gravity_bucket",
+      "title": "中间结论：自泄流重力水桶",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 520,
+      "description": "挂筒是一个装满水后会极缓慢漏水减轻重量的重力容器。"
+    },
+    {
+      "id": "intermediate_gravity_difference_door_lock_pull",
+      "title": "中间结论：重力差门锁拉扯",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 380,
+      "description": "门锁旋钮曾被挂在把手上的重力容器强行向下扯动。"
+    },
+    {
+      "id": "intermediate_lost_mechanical_tension_source",
+      "title": "中间结论：流失的机械拉力源",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 260,
+      "description": "容器内的水慢慢漏光，导致原本施加在把手上的向下拉力随时间推移逐渐消失。"
+    },
+    {
+      "id": "intermediate_absolute_aeroseal_barrier",
+      "title": "中间结论：绝对气密屏障",
+      "type": "conclusion",
+      "x": 1200,
+      "y": 520,
+      "description": "琴房一旦关闭，内部便是一个毫无空气交换的绝对封闭空间。"
+    },
+    {
+      "id": "intermediate_atmospheric_pressure_vacuum_suction",
+      "title": "中间结论：大气压强真空吸力",
+      "type": "conclusion",
+      "x": 1360,
+      "y": 380,
+      "description": "氧气耗尽后，琴房内外产生的0.2个大气压差，会在钢门上施加高达600公斤的向内推力。"
+    },
+    {
+      "id": "conclusion_silent_chemical_oxygen_depletion",
+      "title": "结论：静默无烟的化学夺氧",
+      "type": "conclusion",
+      "x": 500,
+      "y": 180,
+      "description": "死者在安眠药作用下熟睡，凶手用还原铁粉在无烟状态下吸干了琴房氧气，使其在睡梦中因纯物理缺氧窒息死亡。"
+    },
+    {
+      "id": "conclusion_hydraulic_gravity_delay_lock",
+      "title": "结论：水力重力的延迟反锁",
+      "type": "conclusion",
+      "x": 1000,
+      "y": 140,
+      "description": "凶手离开时门没锁，他在内侧挂上装满水的漏水圆筒卡住门锁。随着水滴干，拉力消失，门锁内的机械弹簧在失去重力压制后自动回弹，将旋钮逆向拧至锁死状态，形成了物理延时反锁。"
+    },
+    {
+      "id": "conclusion_negative_pressure_absolute_seal",
+      "title": "结论：负压差造成的绝对闭锁",
+      "type": "conclusion",
+      "x": 1500,
+      "y": 180,
+      "description": "由于负压产生的巨大物理压力，使钢门在开锁后依然无法拉开，直到砸碎玻璃让空气涌入、气压平衡后门才得以开启。"
+    },
+    {
+      "id": "truth_sealed_room_ashes",
+      "title": "密闭琴房的真相",
+      "type": "truth",
+      "x": 1000,
+      "y": 80,
+      "description": ""
+    }
+  ],
+  "combinations": [
+    {
+      "ids": ["vent_red_brown_powder_floor", "red_brown_powder_strong_magnetism"],
+      "resultId": "intermediate_iron_oxide_residue",
+      "toast": "红褐色粉末是三氧化二铁——铁粉经过剧烈氧化后的产物。"
+    },
+    {
+      "ids": ["intermediate_iron_oxide_residue", "activated_carbon_in_powder"],
+      "resultId": "intermediate_high_efficiency_oxygen_catalyst",
+      "toast": "还原铁粉+活性炭+盐水——这是工业级的高效除氧混合物。"
+    },
+    {
+      "ids": ["intermediate_high_efficiency_oxygen_catalyst", "reduced_iron_powder_chemistry"],
+      "resultId": "intermediate_silent_smokeless_oxygen_consumption",
+      "toast": "这种混合物在无光无烟的情况下，能在2小时内将密闭空间的氧气耗尽。"
+    },
+    {
+      "ids": ["intermediate_silent_smokeless_oxygen_consumption", "deceased_trachea_microscope"],
+      "resultId": "conclusion_silent_chemical_oxygen_depletion",
+      "toast": "气管内无烟雾微粒——亚伦在安眠药作用下熟睡，被还原铁粉无声无息地夺走了生命。"
+    },
+    {
+      "ids": ["handle_empty_metal_cylinder", "cylinder_bottom_needle_hole"],
+      "resultId": "intermediate_self_draining_gravity_bucket",
+      "toast": "底部的针孔让挂筒成为一个极缓慢漏水的重力装置。"
+    },
+    {
+      "ids": ["intermediate_self_draining_gravity_bucket", "door_lock_knob_scratches"],
+      "resultId": "intermediate_gravity_difference_door_lock_pull",
+      "toast": "刮痕表明旋钮曾被向下的重力强行拉扯。"
+    },
+    {
+      "ids": ["intermediate_gravity_difference_door_lock_pull", "door_gap_thread_mark"],
+      "resultId": "intermediate_lost_mechanical_tension_source",
+      "toast": "门外的细线痕迹证实——漏水让拉力源随时间逐渐消失。"
+    },
+    {
+      "ids": ["intermediate_lost_mechanical_tension_source", "door_lock_gravity_torque_test"],
+      "resultId": "conclusion_hydraulic_gravity_delay_lock",
+      "toast": "水滴干后拉力消失，门锁弹簧回弹完成内部锁死——完美的延时反锁机关。"
+    },
+    {
+      "ids": ["double_seal_steel_door", "thick_aeroseal_rubber_ring"],
+      "resultId": "intermediate_absolute_aeroseal_barrier",
+      "toast": "双层钢门+加厚气密胶条——琴房是一个零空气交换的绝对封闭空间。"
+    },
+    {
+      "ids": ["intermediate_absolute_aeroseal_barrier", "hvac_engineer_analysis"],
+      "resultId": "intermediate_atmospheric_pressure_vacuum_suction",
+      "toast": "氧气耗尽产生0.2个大气压负压——600公斤的力量向内推压钢门。"
+    },
+    {
+      "ids": ["intermediate_atmospheric_pressure_vacuum_suction", "first_security_guard_testimony"],
+      "resultId": "conclusion_negative_pressure_absolute_seal",
+      "toast": "开锁后仍无法开门——那是外界大气压在「吸住」门，砸碎玻璃后气压平衡才得以开启。"
+    }
+  ]
+}
