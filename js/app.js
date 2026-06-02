@@ -695,37 +695,78 @@ async function startChapter(chapterIndex, levelIndex = 0) {
 function setupPanZoom() {
   const vp = els.graphViewport;
   const wrap = els.graphWrap;
+  let touches = [];
+  let initialPinchDistance = 0;
+  let initialPinchScale = 1;
 
   vp.addEventListener("pointerdown", (e) => {
     if (e.button !== 0 && e.pointerType === "mouse") return;
     if (e.target.closest(".node-chip")) return;
-    pan.dragging = true;
-    pan.px = e.clientX;
-    pan.py = e.clientY;
-    vp.classList.add("dragging");
+    
+    touches.push({ id: e.pointerId, x: e.clientX, y: e.clientY });
+    
+    if (touches.length === 1) {
+      pan.dragging = true;
+      pan.px = e.clientX;
+      pan.py = e.clientY;
+      vp.classList.add("dragging");
+    } else if (touches.length === 2) {
+      pan.dragging = false;
+      initialPinchDistance = getDistance(touches[0], touches[1]);
+      initialPinchScale = pan.s;
+    }
+    
     vp.setPointerCapture(e.pointerId);
   });
 
   vp.addEventListener("pointermove", (e) => {
-    if (!pan.dragging) return;
-    const dx = e.clientX - pan.px;
-    const dy = e.clientY - pan.py;
-    pan.px = e.clientX;
-    pan.py = e.clientY;
-    pan.x += dx;
-    pan.y += dy;
-    applyInnerTransform();
+    if (touches.length === 2) {
+      const touchIdx = touches.findIndex(t => t.id === e.pointerId);
+      if (touchIdx !== -1) {
+        touches[touchIdx] = { id: e.pointerId, x: e.clientX, y: e.clientY };
+        const currentDistance = getDistance(touches[0], touches[1]);
+        const scaleFactor = currentDistance / initialPinchDistance;
+        const newScale = Math.min(1.45, Math.max(0.38, initialPinchScale * scaleFactor));
+        
+        const r = wrap.getBoundingClientRect();
+        const midX = (touches[0].x + touches[1].x) / 2;
+        const midY = (touches[0].y + touches[1].y) / 2;
+        const mx = midX - r.left;
+        const my = midY - r.top;
+        const worldX = (mx - pan.x) / pan.s;
+        const worldY = (my - pan.y) / pan.s;
+        
+        pan.x = mx - worldX * newScale;
+        pan.y = my - worldY * newScale;
+        pan.s = newScale;
+        applyInnerTransform();
+      }
+    } else if (pan.dragging) {
+      const dx = e.clientX - pan.px;
+      const dy = e.clientY - pan.py;
+      pan.px = e.clientX;
+      pan.py = e.clientY;
+      pan.x += dx;
+      pan.y += dy;
+      applyInnerTransform();
+    }
   });
 
   const endDrag = (e) => {
-    pan.dragging = false;
-    vp.classList.remove("dragging");
+    touches = touches.filter(t => t.id !== e.pointerId);
+    
+    if (touches.length === 0) {
+      pan.dragging = false;
+      vp.classList.remove("dragging");
+    }
+    
     try {
       vp.releasePointerCapture(e.pointerId);
     } catch {
       /* ignore */
     }
   };
+  
   vp.addEventListener("pointerup", endDrag);
   vp.addEventListener("pointercancel", endDrag);
 
@@ -747,6 +788,12 @@ function setupPanZoom() {
     },
     { passive: false }
   );
+}
+
+function getDistance(t1, t2) {
+  const dx = t2.x - t1.x;
+  const dy = t2.y - t1.y;
+  return Math.sqrt(dx * dx + dy * dy);
 }
 
 function bindUi() {
