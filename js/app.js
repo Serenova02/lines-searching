@@ -35,7 +35,6 @@ const CHAPTERS = [
 ];
 
 const NOTES_KEY = "tinw_notes";
-const UNLOCK_CH2_KEY = "tinw_unlock_ch2";
 const LAST_CHAPTER_KEY = "tinw_last_chapter";
 const REDUCE_MOTION_KEY = "tinw_reduce_motion";
 const THEME_KEY = "tinw_theme";
@@ -86,7 +85,6 @@ const els = {
   modalEpilogueClose: $("#modal-epilogue-close"),
   coverScreen: $("#cover-screen"),
   coverStart: $("#cover-start"),
-  coverContinue: $("#cover-continue"),
   coverLevels: $("#cover-levels"),
   coverSettings: $("#cover-settings"),
   coverExit: $("#cover-exit"),
@@ -106,22 +104,6 @@ const els = {
 let currentChapterIndex = 0;
 let currentLevelIndex = 0;
 let pan = { x: 0, y: 0, s: 0.82, dragging: false, px: 0, py: 0 };
-
-function isCh2Unlocked() {
-  try {
-    return localStorage.getItem(UNLOCK_CH2_KEY) === "1";
-  } catch {
-    return false;
-  }
-}
-
-function unlockCh2() {
-  try {
-    localStorage.setItem(UNLOCK_CH2_KEY, "1");
-  } catch {
-    /* ignore */
-  }
-}
 
 function currentLevel() {
   return CHAPTERS[currentChapterIndex]?.levels?.[currentLevelIndex] ?? null;
@@ -146,16 +128,6 @@ function persistLastChapter() {
     );
   } catch {
     /* ignore */
-  }
-  updateCoverContinueState();
-}
-
-function updateCoverContinueState() {
-  if (!els.coverContinue) return;
-  try {
-    els.coverContinue.disabled = localStorage.getItem(LAST_CHAPTER_KEY) === null;
-  } catch {
-    els.coverContinue.disabled = true;
   }
 }
 
@@ -187,7 +159,6 @@ function hideCover() {
 
 function showCover() {
   if (els.coverScreen) els.coverScreen.hidden = false;
-  updateCoverContinueState();
 }
 
 function initLayoutFromLevel() {
@@ -214,6 +185,17 @@ function initLayoutFromLevel() {
       x: center.x + (n.x - center.x) * compactX,
       y: center.y + (n.y - center.y) * compactY,
     });
+  }
+  
+  const clueNodes = nodes.filter((n) => n.type !== "truth");
+  const truthNode = nodes.find((n) => n.type === "truth");
+  
+  if (clueNodes.length > 1) {
+    optimizeConnectedNodes(clueNodes);
+  }
+  
+  if (truthNode && clueNodes.length > 0) {
+    normalizeTruthNodePosition(clueNodes, truthNode);
   }
 }
 
@@ -265,6 +247,109 @@ function resolveOverlaps(visibleNodes) {
     it.x = Math.max(72, Math.min(1928, it.x));
     it.y = Math.max(72, Math.min(1928, it.y));
     layoutPos.set(it.n.id, { x: it.x, y: it.y });
+  }
+}
+
+/** 关联节点距离阈值（像素），超过此距离则优化靠近 */
+const CONNECTED_NODE_DISTANCE_THRESHOLD = 320;
+
+/**
+ * 优化关联节点的布局，使相互关联的节点更靠近
+ * @param {any[]} clueNodes 只包含线索节点（不含truth类型）
+ */
+function optimizeConnectedNodes(clueNodes) {
+  const connectedPairs = new Set();
+  
+  for (const e of engine.edges) {
+    const a = engine.getNode(e.from);
+    const b = engine.getNode(e.to);
+    if (a?.type === "truth" || b?.type === "truth") continue;
+    const key = [e.from, e.to].sort().join("|");
+    connectedPairs.add(key);
+  }
+  
+  for (const combo of (engine.level.combinations ?? [])) {
+    if (combo.ids.length === 2) {
+      const key = [...combo.ids].sort().join("|");
+      connectedPairs.add(key);
+    }
+  }
+  
+  const itemMap = new Map();
+  for (const n of clueNodes) {
+    const p = layoutPos.get(n.id) ?? { x: n.x, y: n.y };
+    itemMap.set(n.id, { n, x: p.x, y: p.y });
+  }
+  
+  for (const pairKey of connectedPairs) {
+    const [idA, idB] = pairKey.split("|");
+    const itemA = itemMap.get(idA);
+    const itemB = itemMap.get(idB);
+    if (!itemA || !itemB) continue;
+    
+    const dx = itemB.x - itemA.x;
+    const dy = itemB.y - itemA.y;
+    const dist = Math.hypot(dx, dy) || 0.001;
+    
+    if (dist > CONNECTED_NODE_DISTANCE_THRESHOLD) {
+      const optimalDist = Math.min(dist, CONNECTED_NODE_DISTANCE_THRESHOLD);
+      const ratio = optimalDist / dist;
+      const pullFactor = 0.15;
+      
+      const targetX = itemA.x + dx * ratio;
+      const targetY = itemA.y + dy * ratio;
+      const midX = (itemA.x + targetX) / 2;
+      const midY = (itemA.y + targetY) / 2;
+      
+      itemA.x += (midX - itemA.x) * pullFactor;
+      itemA.y += (midY - itemA.y) * pullFactor;
+      itemB.x += (midX - itemB.x) * pullFactor;
+      itemB.y += (midY - itemB.y) * pullFactor;
+    }
+  }
+  
+  for (const [id, item] of itemMap) {
+    layoutPos.set(id, { x: item.x, y: item.y });
+  }
+}
+
+/**
+ * 规范化真相节点位置，确保其在线索节点群范围之外
+ * @param {any[]} clueNodes 线索节点数组（不含truth）
+ * @param {any|null} truthNode 真相节点
+ */
+function normalizeTruthNodePosition(clueNodes, truthNode) {
+  if (!truthNode) return;
+  
+  let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+  for (const n of clueNodes) {
+    const p = layoutPos.get(n.id) ?? { x: n.x, y: n.y };
+    const margin = 50;
+    minX = Math.min(minX, p.x - margin);
+    maxX = Math.max(maxX, p.x + margin);
+    minY = Math.min(minY, p.y - margin);
+    maxY = Math.max(maxY, p.y + margin);
+  }
+  
+  const centerX = (minX + maxX) / 2;
+  const centerY = (minY + maxY) / 2;
+  const halfWidth = (maxX - minX) / 2 + 180;
+  const halfHeight = (maxY - minY) / 2 + 180;
+  
+  const currentPos = layoutPos.get(truthNode.id) ?? { x: truthNode.x, y: truthNode.y };
+  const dx = currentPos.x - centerX;
+  const dy = currentPos.y - centerY;
+  const distFromCenter = Math.hypot(dx, dy) || 0.001;
+  const minDistFromCenter = Math.max(halfWidth, halfHeight);
+  
+  if (distFromCenter < minDistFromCenter) {
+    const scale = minDistFromCenter / distFromCenter;
+    const newX = centerX + dx * scale;
+    const newY = centerY + dy * scale;
+    layoutPos.set(truthNode.id, { 
+      x: Math.max(72, Math.min(1928, newX)), 
+      y: Math.max(72, Math.min(1928, newY)) 
+    });
   }
 }
 
@@ -498,7 +583,20 @@ function renderNodes() {
       layoutPos.set(n.id, { x: n.x, y: n.y });
     }
   }
+  
+  const clueNodes = visible.filter((n) => n.type !== "truth");
+  const truthNode = visible.find((n) => n.type === "truth");
+  
+  if (clueNodes.length > 0) {
+    optimizeConnectedNodes(clueNodes);
+  }
+  
   resolveOverlaps(visible);
+  
+  if (truthNode && clueNodes.length > 0) {
+    normalizeTruthNodePosition(clueNodes, truthNode);
+    resolveOverlaps(visible);
+  }
 
   for (const n of visible) {
     const st = engine.states.get(n.id);
@@ -864,31 +962,6 @@ function bindCoverUi() {
     await startChapter(0, 0);
   });
 
-  els.coverContinue?.addEventListener("click", async () => {
-    let idx = 0;
-    let levelIdx = 0;
-    try {
-      const raw = localStorage.getItem(LAST_CHAPTER_KEY);
-      const parsed = raw ? JSON.parse(raw) : null;
-      idx = Number.isInteger(parsed?.chapter) ? parsed.chapter : 0;
-      levelIdx = Number.isInteger(parsed?.level) ? parsed.level : 0;
-    } catch {
-      idx = 0;
-      levelIdx = 0;
-    }
-    if (Number.isNaN(idx) || idx < 0) idx = 0;
-    if (idx >= CHAPTERS.length) idx = CHAPTERS.length - 1;
-    if (levelIdx < 0) levelIdx = 0;
-    if (levelIdx >= (CHAPTERS[idx]?.levels?.length ?? 1)) levelIdx = 0;
-    if (idx === 1 && !isCh2Unlocked()) {
-      idx = 0;
-      levelIdx = 0;
-      showToast("第二章尚未解锁，已从第一章进入。");
-    }
-    hideCover();
-    await startChapter(idx, levelIdx);
-  });
-
   els.coverLevels?.addEventListener("click", () => {
     openChapterList();
   });
@@ -946,7 +1019,6 @@ async function boot() {
   setupPanZoom();
   bindUi();
   bindCoverUi();
-  updateCoverContinueState();
 }
 
 boot().catch((err) => {
